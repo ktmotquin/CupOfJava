@@ -31,5 +31,11 @@ namespace OOAD_Project
                 "We hope you found everything you were looking for!");
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CreateAcc accountForm = new CreateAcc();
+            accountForm.Show();
+        }
     }
 }
