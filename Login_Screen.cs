@@ -27,11 +27,13 @@ namespace OOAD_Project
                 {
                     CustomerMenu Customer = new CustomerMenu();
                     Customer.Show();
+                    this.Close();
                 }
                 else if(log.Access() == 'A')
                 {
                     AdminMenu Admin = new AdminMenu();
                     Admin.Show();
+                    this.Close();
                 }
             }
             else
