@@ -27,6 +27,7 @@ namespace OOAD_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();        // Hide this window
             MessageBox.Show("Thank you for using our system.\n" +
                 "We hope you found everything you were looking for!");
             this.Close();
