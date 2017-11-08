@@ -12,6 +12,8 @@ namespace OOAD_Project
 {
     public partial class CustomerMenu : Form
     {
+        private MealList m = new MealList();
+
         public CustomerMenu()
         {
             InitializeComponent();
@@ -20,6 +22,62 @@ namespace OOAD_Project
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();   // Close this window
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mealSearch_Click(object sender, EventArgs e)
+        {
+            searchList.Items.Clear();
+            
+            string meal = searchBox.Text;
+            int search = m.searchList(meal);
+            if (search == -1)
+            {
+                MessageBox.Show("No Results Found!");
+            }
+                
+            else
+                searchList.Items.Add(meal);
+            if(fruitButton.Enabled == true)
+            {
+                string type = "fruit";
+                m.searchtype(type);
+
+            }
+        }
+
+        private void mealView_Click(object sender, EventArgs e)
+        {
+            string meal = searchList.GetItemText(searchList.SelectedIndex);            
+            int index = m.searchList(meal);
+            Meal_Screen mealForm = new Meal_Screen();
+            mealForm.Show();
+            //mealForm.
+        }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            Meal banana = new Meal("Banana", "Yellow", "Fruit", 1234);
+            m.addMeal(banana);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

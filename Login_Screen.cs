@@ -46,5 +46,10 @@ namespace OOAD_Project
         {
             this.Close();
         }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
