@@ -21,5 +21,12 @@ namespace OOAD_Project
         {
             this.Close();       // Close this window
         }
+
+        private void AddMeal_Click(object sender, EventArgs e)
+        {
+            AddMealPage adm = new AddMealPage();
+            this.Hide();
+            adm.Show();
+        }
     }
 }
