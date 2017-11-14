@@ -13,7 +13,6 @@ namespace OOAD_Project
     public partial class CustomerMenu : Form
     {
         private MealList m = new MealList();
-
         public CustomerMenu()
         {
             InitializeComponent();
@@ -51,11 +50,15 @@ namespace OOAD_Project
             }
                 
             else
-                searchList.Items.Add(meal);
+                searchList.Items.Add(m.sendmeal(search).name());
             if(fruitButton.Enabled == true)
             {
                 string type = "fruit";
-                m.searchtype(type);
+                if(m.checktype(search, type))
+                {
+                    m.searchtype(type);
+                }
+                
 
             }
         }

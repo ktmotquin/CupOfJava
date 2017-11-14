@@ -34,18 +34,24 @@ namespace OOAD_Project
         }
   public void searchtype(string type)
         {
-            if(type == "fruit")
+            for (int i = 0; i < count; i++)
             {
-                for (int i = 0; i < count; i++)
+                if (type == meals[i].mealtype())
                 {
-                  //  if (type == meals[i].mealtype)
-                   //     return i;
+ 
                 }
             }
         }
         public Meal sendmeal(int index)
         {
             return meals[index];
+        }
+        public bool checktype(int index, string type)
+        {
+            if (meals[index].mealtype() == type)
+                return true;
+            else
+                return false;
         }
         //addMeal()
            // name.ToLower()
