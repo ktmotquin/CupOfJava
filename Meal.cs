@@ -17,7 +17,7 @@ namespace OOAD_Project
         {
             n = name.ToLower();
             des = description;
-            type = mealtype;
+            type = mealtype.ToLower();
             numorder = 0;
 
         }

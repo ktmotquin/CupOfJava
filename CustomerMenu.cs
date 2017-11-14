@@ -51,12 +51,23 @@ namespace OOAD_Project
                 
             else
                 searchList.Items.Add(m.sendmeal(search).name());
+
             if(fruitButton.Enabled == true)
             {
+                bool valid = true;
                 string type = "fruit";
                 if(m.checktype(search, type))
                 {
-                    m.searchtype(type);
+                    int index = 0;
+                    while (valid)
+                    {
+                        if(m.searchtype(type, index, valid))
+                        {
+                           searchList.Items.Add(m.sendmeal(index).name());
+                        }
+                        index++;
+                    }
+                      
                 }
                 
 
@@ -75,7 +86,9 @@ namespace OOAD_Project
         private void cartButton_Click(object sender, EventArgs e)
         {
             Meal banana = new Meal("Banana", "Yellow", "Fruit", 1234);
+            Meal apple = new Meal("Apple", "Red", "Fruit", 5678);
             m.addMeal(banana);
+            m.addMeal(apple);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

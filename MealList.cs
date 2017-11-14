@@ -10,15 +10,15 @@ namespace OOAD_Project
     {
         int count = 0;
         Meal[] meals = new Meal[100];
- public       MealList()
+        public MealList()
         {
             count = 0;
             for (int i = 0; i < 100; i++)
                 meals[i] = null;
         }
-        
+
         public void addMeal(Meal newMeal)
-        {            
+        {
             meals[count] = newMeal;
             count++;
         }
@@ -32,15 +32,21 @@ namespace OOAD_Project
             }
             return -1;
         }
-  public void searchtype(string type)
+        public bool searchtype(string type, int index, bool valid)
         {
-            for (int i = 0; i < count; i++)
+            
+            if (index >= count)
             {
-                if (type == meals[i].mealtype())
-                {
- 
-                }
+                valid = false;
+                return false;
             }
+
+            if (type == meals[index].mealtype())
+            {
+                return true;
+            }
+            else
+                return false;
         }
         public Meal sendmeal(int index)
         {
@@ -54,6 +60,6 @@ namespace OOAD_Project
                 return false;
         }
         //addMeal()
-           // name.ToLower()
+        // name.ToLower()
     }
 }
