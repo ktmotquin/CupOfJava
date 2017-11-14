@@ -32,14 +32,8 @@ namespace OOAD_Project
             }
             return -1;
         }
-        public bool searchtype(string type, int index, bool valid)
+        public bool searchtype(string type, int index)
         {
-            
-            if (index >= count)
-            {
-                valid = false;
-                return false;
-            }
 
             if (type == meals[index].mealtype())
             {
@@ -58,6 +52,10 @@ namespace OOAD_Project
                 return true;
             else
                 return false;
+        }
+        public int getcount()
+        {
+            return count;
         }
         //addMeal()
         // name.ToLower()

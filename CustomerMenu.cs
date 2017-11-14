@@ -41,42 +41,48 @@ namespace OOAD_Project
         private void mealSearch_Click(object sender, EventArgs e)
         {
             searchList.Items.Clear();
-            
+
             string meal = searchBox.Text;
             int search = m.searchList(meal);
             if (search == -1)
             {
                 MessageBox.Show("No Results Found!");
             }
-                
+
             else
                 searchList.Items.Add(m.sendmeal(search).name());
-
-            if(fruitButton.Enabled == true)
+            string type = "";
+            if (fruitButton.Checked == true)
             {
-                bool valid = true;
-                string type = "fruit";
-                if(m.checktype(search, type))
+                type = "fruit";
+            }
+            if ()
+            {
+                type = " "
+            }
+
+            if (m.checktype(search, type))
+            {
+                int index = 0;
+                while (index < m.getcount())
                 {
-                    int index = 0;
-                    while (valid)
+                    if (m.searchtype(type, index))
                     {
-                        if(m.searchtype(type, index, valid))
+                        if (m.sendmeal(index).name() != m.sendmeal(search).name())
                         {
-                           searchList.Items.Add(m.sendmeal(index).name());
+                            searchList.Items.Add(m.sendmeal(index).name());
                         }
-                        index++;
+
                     }
-                      
+                    index++;
                 }
-                
 
             }
         }
 
         private void mealView_Click(object sender, EventArgs e)
         {
-            string meal = searchList.GetItemText(searchList.SelectedIndex);            
+            string meal = searchList.GetItemText(searchList.SelectedIndex);
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen();
             mealForm.Show();
