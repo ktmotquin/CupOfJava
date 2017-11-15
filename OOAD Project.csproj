@@ -70,6 +70,12 @@
     <Compile Include="CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStatsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStatsPage.Designer.cs">
+      <DependentUpon>ViewStatsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
