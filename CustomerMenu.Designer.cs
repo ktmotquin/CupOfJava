@@ -221,7 +221,7 @@
             this.panel1.Controls.Add(this.btnSandwich);
             this.panel1.Location = new System.Drawing.Point(815, 284);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 517);
+            this.panel1.Size = new System.Drawing.Size(259, 379);
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

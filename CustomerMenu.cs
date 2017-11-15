@@ -41,7 +41,6 @@ namespace OOAD_Project
         private void mealSearch_Click(object sender, EventArgs e)
         {
             searchList.Items.Clear();
-
             string meal = searchBox.Text;
             int search = m.searchList(meal);
             if (search == -1)
@@ -105,9 +104,19 @@ namespace OOAD_Project
                         index++;
                     }
                 }
-                else
+                else if(type == "")
                 {
-                    MessageBox.Show("No Results Found!");
+                    searchList.Items.Add(m.sendmeal(search).name());
+                    int index = 0;
+                    while (index < m.getcount())
+                    {
+                            if (m.sendmeal(index).name() != m.sendmeal(search).name())
+                            {
+                                searchList.Items.Add(m.sendmeal(index).name());
+                            }
+
+                        index++;
+                    }
                 }
             }
 
@@ -126,8 +135,10 @@ namespace OOAD_Project
         {
             Meal pasta = new Meal("pasta", "pasta", "PASTA", 1234);
             Meal apple = new Meal("Apple", "Red", "soup", 5678);
+            Meal pasta2 = new Meal("pasta2", "pasta", "pasta", 5432);
             m.addMeal(pasta);
             m.addMeal(apple);
+            m.addMeal(pasta2);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
