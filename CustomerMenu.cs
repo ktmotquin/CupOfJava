@@ -47,37 +47,70 @@ namespace OOAD_Project
             if (search == -1)
             {
                 MessageBox.Show("No Results Found!");
-            }
 
+            }
             else
-                searchList.Items.Add(m.sendmeal(search).name());
-            string type = "";
-            if (fruitButton.Checked == true)
             {
-                type = "fruit";
-            }
-            if ()
-            {
-                type = " "
-            }
-
-            if (m.checktype(search, type))
-            {
-                int index = 0;
-                while (index < m.getcount())
+                string type = "";
+                if (btnPasta.Checked == true)
                 {
-                    if (m.searchtype(type, index))
-                    {
-                        if (m.sendmeal(index).name() != m.sendmeal(search).name())
-                        {
-                            searchList.Items.Add(m.sendmeal(index).name());
-                        }
-
-                    }
-                    index++;
+                    type = "pasta";
                 }
+                else if (btnSalad.Checked == true)
+                {
+                    type = "salad";
+                }
+                else if (btnSalad.Checked == true)
+                {
+                    type = "dessert";
+                }
+                else if (btnSandwich.Checked == true)
+                {
+                    type = "sandwich";
+                }
+                else if (btnSoup.Checked == true)
+                {
+                    type = "soup";
+                }
+                else if (btnBakes.Checked == true)
+                {
+                    type = "bake";
+                }
+                else if (btnAppetizers.Checked == true)
+                {
+                    type = "appetizer";
+                }
+                else if (btnTortilla.Checked == true)
+                {
+                    type = "tortilla";
+                }
+                else if (btnRice.Checked == true)
+                {
+                    type = "rice";
+                }
+                if (m.checktype(search, type))
+                {
+                    searchList.Items.Add(m.sendmeal(search).name());
+                    int index = 0;
+                    while (index < m.getcount())
+                    {
+                        if (m.searchtype(type, index))
+                        {
+                            if (m.sendmeal(index).name() != m.sendmeal(search).name())
+                            {
+                                searchList.Items.Add(m.sendmeal(index).name());
+                            }
 
+                        }
+                        index++;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No Results Found!");
+                }
             }
+
         }
 
         private void mealView_Click(object sender, EventArgs e)
@@ -91,13 +124,13 @@ namespace OOAD_Project
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-            Meal banana = new Meal("Banana", "Yellow", "Fruit", 1234);
-            Meal apple = new Meal("Apple", "Red", "Fruit", 5678);
-            m.addMeal(banana);
+            Meal pasta = new Meal("pasta", "pasta", "PASTA", 1234);
+            Meal apple = new Meal("Apple", "Red", "soup", 5678);
+            m.addMeal(pasta);
             m.addMeal(apple);
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
