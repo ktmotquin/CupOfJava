@@ -13,15 +13,15 @@ namespace OOAD_Project
         string type;
         int numorder;
 
- public Meal(string name, string description, string mealtype, int ordernumber)
+        public Meal(string name, string description, 
+            string mealtype, int ordernumber)
         {
             n = name.ToLower();
             des = description;
             type = mealtype.ToLower();
             numorder = 0;
-
         }
- public       void changeDescription(string newdescription)
+        public void changeDescription(string newdescription)
         {
             des = newdescription;   
         }
@@ -33,7 +33,7 @@ namespace OOAD_Project
         {
             numorder++;
         }
-    public    string name()
+        public string name()
         {
             return n;
         }
