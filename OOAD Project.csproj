@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,12 +59,19 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAcc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateAcc.Designer.cs">
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +101,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestedMealQueue.cs" />
     <Compile Include="WelcomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
