@@ -164,6 +164,7 @@
          this.addToCartButton.TabIndex = 11;
          this.addToCartButton.Text = "Add to Cart";
          this.addToCartButton.UseVisualStyleBackColor = false;
+         this.addToCartButton.Click += new System.EventHandler(this.addToCartButton_Click);
          // 
          // Meal_Screen
          // 

@@ -21,5 +21,14 @@ namespace OOAD_Project
       {
 
       }
+
+      /** Clicking the "Add to Cart" button brings up a pop-up asking
+       * the user if they want to "Return to Search" or "View Cart". 
+       * */
+      private void addToCartButton_Click(object sender, EventArgs e)
+      {
+         MessageBox.Show("Meal has been added to the cart.\n Do you " +
+            "want to view your cart or return to the search page?");
+      }
    }
 }
