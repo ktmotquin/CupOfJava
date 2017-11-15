@@ -37,6 +37,10 @@
          this.instructionsLabel = new System.Windows.Forms.Label();
          this.instructionsDisplayBox = new System.Windows.Forms.RichTextBox();
          this.mealPhotoPlaceholder = new System.Windows.Forms.Label();
+         this.orderQuantityLabel = new System.Windows.Forms.Label();
+         this.mealQtyUpDown = new System.Windows.Forms.NumericUpDown();
+         this.addToCartButton = new System.Windows.Forms.Button();
+         ((System.ComponentModel.ISupportInitialize)(this.mealQtyUpDown)).BeginInit();
          this.SuspendLayout();
          // 
          // mealNameLabel
@@ -132,11 +136,43 @@
          this.mealPhotoPlaceholder.TabIndex = 8;
          this.mealPhotoPlaceholder.Text = "MealPhotoGoesHere";
          // 
+         // orderQuantityLabel
+         // 
+         this.orderQuantityLabel.AutoSize = true;
+         this.orderQuantityLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.orderQuantityLabel.Location = new System.Drawing.Point(152, 585);
+         this.orderQuantityLabel.Name = "orderQuantityLabel";
+         this.orderQuantityLabel.Size = new System.Drawing.Size(167, 29);
+         this.orderQuantityLabel.TabIndex = 9;
+         this.orderQuantityLabel.Text = "Order Quantity:";
+         // 
+         // mealQtyUpDown
+         // 
+         this.mealQtyUpDown.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.mealQtyUpDown.Location = new System.Drawing.Point(325, 583);
+         this.mealQtyUpDown.Name = "mealQtyUpDown";
+         this.mealQtyUpDown.Size = new System.Drawing.Size(50, 36);
+         this.mealQtyUpDown.TabIndex = 10;
+         // 
+         // addToCartButton
+         // 
+         this.addToCartButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+         this.addToCartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.addToCartButton.Location = new System.Drawing.Point(157, 625);
+         this.addToCartButton.Name = "addToCartButton";
+         this.addToCartButton.Size = new System.Drawing.Size(218, 37);
+         this.addToCartButton.TabIndex = 11;
+         this.addToCartButton.Text = "Add to Cart";
+         this.addToCartButton.UseVisualStyleBackColor = false;
+         // 
          // Meal_Screen
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(902, 589);
+         this.ClientSize = new System.Drawing.Size(902, 666);
+         this.Controls.Add(this.addToCartButton);
+         this.Controls.Add(this.mealQtyUpDown);
+         this.Controls.Add(this.orderQuantityLabel);
          this.Controls.Add(this.mealPhotoPlaceholder);
          this.Controls.Add(this.instructionsDisplayBox);
          this.Controls.Add(this.instructionsLabel);
@@ -149,6 +185,8 @@
          this.Margin = new System.Windows.Forms.Padding(2);
          this.Name = "Meal_Screen";
          this.Text = "Meal_Screen";
+         this.Load += new System.EventHandler(this.Meal_Screen_Load);
+         ((System.ComponentModel.ISupportInitialize)(this.mealQtyUpDown)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -165,5 +203,8 @@
       private System.Windows.Forms.Label instructionsLabel;
       private System.Windows.Forms.RichTextBox instructionsDisplayBox;
       private System.Windows.Forms.Label mealPhotoPlaceholder;
+      private System.Windows.Forms.Label orderQuantityLabel;
+      private System.Windows.Forms.NumericUpDown mealQtyUpDown;
+      private System.Windows.Forms.Button addToCartButton;
    }
 }

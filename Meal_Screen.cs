@@ -17,5 +17,9 @@ namespace OOAD_Project
             InitializeComponent();
         }
 
+      private void Meal_Screen_Load(object sender, EventArgs e)
+      {
+
+      }
    }
 }
