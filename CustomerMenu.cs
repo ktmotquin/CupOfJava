@@ -124,7 +124,8 @@ namespace OOAD_Project
 
         private void mealView_Click(object sender, EventArgs e)
         {
-            string meal = searchList.GetItemText(searchList.SelectedIndex);
+            string meal = searchList.SelectedItem.ToString();
+
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen();
             mealForm.Show();
@@ -145,5 +146,7 @@ namespace OOAD_Project
         {
 
         }
+
+
     }
 }

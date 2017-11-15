@@ -92,18 +92,21 @@
             // 
             this.searchList.FormattingEnabled = true;
             this.searchList.ItemHeight = 29;
+            this.searchList.Items.AddRange(new object[] {
+            "stuff"});
             this.searchList.Location = new System.Drawing.Point(77, 196);
             this.searchList.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.searchList.Name = "searchList";
             this.searchList.Size = new System.Drawing.Size(690, 874);
             this.searchList.TabIndex = 4;
+           
             // 
             // mealView
             // 
-            this.mealView.Location = new System.Drawing.Point(959, 986);
+            this.mealView.Location = new System.Drawing.Point(1342, 894);
             this.mealView.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.mealView.Name = "mealView";
-            this.mealView.Size = new System.Drawing.Size(217, 154);
+            this.mealView.Size = new System.Drawing.Size(428, 227);
             this.mealView.TabIndex = 5;
             this.mealView.Text = "View Meal";
             this.mealView.UseVisualStyleBackColor = true;
