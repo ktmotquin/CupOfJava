@@ -145,6 +145,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ItemStock.txt" />
     <Content Include="LoginInfo.txt" />
     <Content Include="Meals.txt" />
   </ItemGroup>
