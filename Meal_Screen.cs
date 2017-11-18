@@ -12,9 +12,11 @@ namespace OOAD_Project
 {
     public partial class Meal_Screen : Form
     {
-        public Meal_Screen()
+        public Meal_Screen(string name, string type)
         {
             InitializeComponent();
+           descriptionDisplayBox.Text = type;
+            mealNameText.Text = name;
         }
 
       private void Meal_Screen_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace OOAD_Project
             this.Close();
             Cart cartForm = new Cart(returnCust);
             cartForm.Show();
-            
+           
          }
          else
          {
@@ -46,5 +48,7 @@ namespace OOAD_Project
             menuForm.Show();
          }
       }
-   }
+
+
+    }
 }

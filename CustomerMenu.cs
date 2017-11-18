@@ -127,8 +127,9 @@ namespace OOAD_Project
             string meal = searchList.SelectedItem.ToString();
 
             int index = m.searchList(meal);
-            Meal_Screen mealForm = new Meal_Screen();
+            Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), m.sendmeal(index).mealtype());            
             mealForm.Show();
+       
         }
 
         private void cartButton_Click(object sender, EventArgs e)

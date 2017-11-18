@@ -18,9 +18,10 @@ namespace OOAD_Project
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            Login_Screen loginForm = new Login_Screen();
+        {            
+            Login_Screen loginForm = new Login_Screen();            
             loginForm.Show();
+            
             //new Login_Screen();
             //Application.Run(new Login_Screen());
         }
