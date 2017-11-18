@@ -27,8 +27,24 @@ namespace OOAD_Project
        * */
       private void addToCartButton_Click(object sender, EventArgs e)
       {
-         MessageBox.Show("Meal has been added to the cart.\n Do you " +
-            "want to view your cart or return to the search page?");
+         //Form YesOrNoForm = new Form();
+         //YesOrNoForm.ShowDialog();
+         if (MessageBox.Show("Meal has been added to the cart.\n " +
+            "Do you want to view your cart(yes) or return to the search page(no)?"
+            , "Meal Added to Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+         {
+            CustomerMenu returnCust = new CustomerMenu();
+            this.Close();
+            Cart cartForm = new Cart(returnCust);
+            cartForm.Show();
+            
+         }
+         else
+         {
+            this.Close();
+            CustomerMenu menuForm = new CustomerMenu();
+            menuForm.Show();
+         }
       }
    }
 }
