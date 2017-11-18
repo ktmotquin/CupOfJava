@@ -30,6 +30,7 @@
         {
             this.Logout = new System.Windows.Forms.Button();
             this.AddMeal = new System.Windows.Forms.Button();
+            this.ViewStatsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Logout
@@ -52,11 +53,22 @@
             this.AddMeal.UseVisualStyleBackColor = true;
             this.AddMeal.Click += new System.EventHandler(this.AddMeal_Click);
             // 
+            // ViewStatsButton
+            // 
+            this.ViewStatsButton.Location = new System.Drawing.Point(420, 12);
+            this.ViewStatsButton.Name = "ViewStatsButton";
+            this.ViewStatsButton.Size = new System.Drawing.Size(75, 23);
+            this.ViewStatsButton.TabIndex = 2;
+            this.ViewStatsButton.Text = "View Stats";
+            this.ViewStatsButton.UseVisualStyleBackColor = true;
+            this.ViewStatsButton.Click += new System.EventHandler(this.ViewStatsButton_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 388);
+            this.Controls.Add(this.ViewStatsButton);
             this.Controls.Add(this.AddMeal);
             this.Controls.Add(this.Logout);
             this.Name = "AdminMenu";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button AddMeal;
+        private System.Windows.Forms.Button ViewStatsButton;
     }
 }

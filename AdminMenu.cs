@@ -28,5 +28,12 @@ namespace OOAD_Project
             this.Hide();
             adm.Show();
         }
+
+        private void ViewStatsButton_Click(object sender, EventArgs e)
+        {
+            StatsPage sts = new StatsPage();
+            this.Hide();
+            sts.Show();
+        }
     }
 }
