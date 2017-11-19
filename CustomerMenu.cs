@@ -39,13 +39,7 @@ namespace OOAD_Project
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
-        Customer cust = list.returnCustomer(lblname.Text);
-            searchList.Items.Add(cust.getuser());
-            searchList.Items.Add(cust.getaddress());
-            searchList.Items.Add(cust.getname());
-            searchList.Items.Add(cust.getpassword());
-            searchList.Items.Add(cust.getphone());
-            searchList.Items.Add(cust.getemail());
+            Customer cust = list.returnCustomer(lblname.Text);
         }
 
         private void mealSearch_Click(object sender, EventArgs e)
@@ -144,12 +138,7 @@ namespace OOAD_Project
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-            Meal pasta = new Meal("pasta", "noodles", "PASTA", "Cook Forever", "has noodles in it");
-            Meal apple = new Meal("Apple", "Red", "soup", "Never boil", "contains stuff");
-            Meal pasta2 = new Meal("pasta2", "yellow", "pasta", "Mix with apples", "ususally is just itself");
-            m.addMeal(pasta);
-            m.addMeal(apple);
-            m.addMeal(pasta2);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

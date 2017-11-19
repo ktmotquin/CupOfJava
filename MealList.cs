@@ -46,11 +46,6 @@ namespace OOAD_Project
             fileStream.Close();
         }
 
-        public void addMeal(Meal newMeal)
-        {
-            meals[count] = newMeal;
-            count++;
-        }
         public int searchList(string mealname)
         {
             mealname = mealname.ToLower();
