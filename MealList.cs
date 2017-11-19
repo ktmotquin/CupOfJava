@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Drawing;
 
 namespace OOAD_Project
 {
@@ -11,6 +12,7 @@ namespace OOAD_Project
     {
         int count = 0;
         Meal[] meals = new Meal[100];
+        Image[] images = new Image[100];
         public MealList()
         {
             string text;
@@ -31,9 +33,9 @@ namespace OOAD_Project
                     {
                         if (!text.Equals("1"))
                         {
-                           String[] parts = text.Split('/');      // Breaks the current line into parts
-                           meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4]);
-                           count++;
+                            String[] parts = text.Split('$');      // Breaks the current line into parts
+                            meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
+                            count++;
                         }
 
                     }
@@ -44,11 +46,20 @@ namespace OOAD_Project
                 }
             }
             fileStream.Close();
+
+            for (int i = 0; i < count; i++)
+            {
+                string filestring = meals[i].getimg();
+                string test = Directory.GetCurrentDirectory() + @"\" + filestring;
+                images[i] = Image.FromFile(test);
+                // string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\" + filestring);
+
+            }
         }
 
         public int searchList(string mealname)
         {
-            mealname = mealname.ToLower();
+           // mealname = mealname.ToUpp();
             for (int i = 0; i < count; i++)
             {
                 if (mealname == meals[i].name())
@@ -72,6 +83,8 @@ namespace OOAD_Project
         }
         public bool checktype(int index, string type)
         {
+            if(index == -1)
+                return false;
             if (meals[index].mealtype() == type)
                 return true;
             else
@@ -80,6 +93,28 @@ namespace OOAD_Project
         public int getcount()
         {
             return count;
+        }
+        public Image getimg(int index)
+        {
+            return images[index];
+        }
+        public Image ScaleImage(Image image)
+        {
+            int maxWidth = 342;
+            int maxHeight = 229;
+            var ratioX = (double)maxWidth / image.Width;
+            var ratioY = (double)maxHeight / image.Height;
+            var ratio = Math.Min(ratioX, ratioY);
+
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
+
+            var newImage = new Bitmap(newWidth, newHeight);
+
+            using (var graphics = Graphics.FromImage(newImage))
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+
+            return newImage;
         }
         //addMeal()
         // name.ToLower()

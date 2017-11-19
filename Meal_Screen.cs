@@ -13,13 +13,14 @@ namespace OOAD_Project
     public partial class Meal_Screen : Form
     {
         public Meal_Screen(string name, string description, 
-            string instructions, string ingredients)
+            string instructions, string ingredients, Image img)
         {
             InitializeComponent();
-           descriptionDisplayBox.Text = description;
+           descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
             mealNameText.Text = name;
-            ingredientsDisplayBox.Text = ingredients;
-            instructionsDisplayBox.Text = instructions;
+            ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
+            instructionsDisplayBox.Text = instructions.Replace("~", "\n");
+            pictureBox1.Image = img;
 
 
         }
@@ -40,10 +41,10 @@ namespace OOAD_Project
             "Do you want to view your cart(yes) or return to the search page(no)?"
             , "Meal Added to Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
          {
-            //Customer returnCust = new Customer();
+         //   Customer returnCust = new Customer();
             this.Close();
-            //Cart cartForm = new Cart(returnCust);
-            //cartForm.Show();
+           // Cart cartForm = new Cart(returnCust);
+           // cartForm.Show();
            
          }
          else

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,18 @@ namespace OOAD_Project
         string type;
         string inst;
         string ing;
+        string img;
 
         public Meal(string name, string description, 
-            string mealtype, string instructions, string ingredients)
+            string mealtype, string instructions, string ingredients, string imgfilename)
         {
-            n = name.ToLower();
+            n = name.ToUpper();
             des = description;
             type = mealtype.ToLower();
             inst = instructions;
-            ing = ingredients.ToLower();
+            ing = ingredients;
+            img = imgfilename;
+            
         }
         public void changeDescription(string newdescription)
         {
@@ -54,6 +58,10 @@ namespace OOAD_Project
         public string ingredients()
         {
             return ing;
+        }
+        public string getimg()
+        {
+            return img;
         }
     }
 }

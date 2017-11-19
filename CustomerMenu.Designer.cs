@@ -46,6 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbluser = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
+            this.anytype = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,8 +93,6 @@
             // searchList
             // 
             this.searchList.FormattingEnabled = true;
-            this.searchList.Items.AddRange(new object[] {
-            "stuff"});
             this.searchList.Location = new System.Drawing.Point(33, 88);
             this.searchList.Margin = new System.Windows.Forms.Padding(2);
             this.searchList.Name = "searchList";
@@ -212,6 +211,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.anytype);
             this.panel1.Controls.Add(this.btnPasta);
             this.panel1.Controls.Add(this.btnRice);
             this.panel1.Controls.Add(this.btnSalad);
@@ -224,7 +224,7 @@
             this.panel1.Location = new System.Drawing.Point(349, 127);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(111, 170);
+            this.panel1.Size = new System.Drawing.Size(111, 208);
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -244,6 +244,17 @@
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(0, 13);
             this.lblname.TabIndex = 17;
+            // 
+            // anytype
+            // 
+            this.anytype.AutoSize = true;
+            this.anytype.Location = new System.Drawing.Point(20, 159);
+            this.anytype.Name = "anytype";
+            this.anytype.Size = new System.Drawing.Size(66, 17);
+            this.anytype.TabIndex = 15;
+            this.anytype.TabStop = true;
+            this.anytype.Text = "Anything";
+            this.anytype.UseVisualStyleBackColor = true;
             // 
             // CustomerMenu
             // 
@@ -289,5 +300,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.RadioButton anytype;
     }
 }

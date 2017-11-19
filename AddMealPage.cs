@@ -43,18 +43,19 @@ namespace OOAD_Project
 
         private void AddMeal_Click(object sender, EventArgs e)
         {
-            char delimiter = '~';
+            string replaceWith = "~";
             string overallText = "1\n";
             string temp, enteredInfo;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
             if (checkForEmpty())
             {
-               /* enteredInfo = ID.Text + "/" + MealName.Text + "/" + Type.Text + "/" + Keywords.Text.Replace(' ',delimiter)
-                    + " " + Calories.Text + "/" + Instructions.Text.Replace(' ', delimiter) + "/" 
-                    + Description.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);*/
-                enteredInfo = MealName.Text + "/" + Description.Text.Replace(' ', delimiter) + "/" + Type.Text + "/" 
- + Instructions.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);
+                /* enteredInfo = ID.Text + "/" + MealName.Text + "/" + Type.Text + "/" + Keywords.Text.Replace(' ',delimiter)
+                     + " " + Calories.Text + "/" + Instructions.Text.Replace(' ', delimiter) + "/" 
+                     + Description.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);*/
+                enteredInfo = MealName.Text + "$" + Description.Text.Replace("\r\n", replaceWith) + "$" + comboBox1.Text + "$"
+                                + Instructions.Text.Replace("\r\n", replaceWith) + "$" + 
+                                Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
                 System.Console.WriteLine(enteredInfo);
                 string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
                 var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
@@ -87,16 +88,29 @@ namespace OOAD_Project
                 fileStream.Close();
                 if (!found)
                 {
-                     
-                        overallText += enteredInfo+ "\n-1";
-                        System.IO.File.WriteAllText(fileName, overallText);
-                        this.Close();
+
+                    overallText += enteredInfo + "\n-1";
+                    System.IO.File.WriteAllText(fileName, overallText);
+                    //ID.Clear();
+                    MealName.Clear();
+                    //Type.Clear();
+                   // Keywords.Clear();
+                    imgfile.Clear();
+                    Instructions.Clear();
+                    Description.Clear();
+                    Ingredients.Clear();
                 }
                 else
                 {
                     MessageBox.Show("Error: meal info is not unique.");  // Display meal info already exists
                 }
             }
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please add BMP file to the folder where the .exe file exists\n" +
+    "Add name of BMP file to text box\n" + "Careful, do not add .bmp to filename");
         }
     }
 }

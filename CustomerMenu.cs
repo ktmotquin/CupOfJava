@@ -32,10 +32,6 @@ namespace OOAD_Project
            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
@@ -45,9 +41,9 @@ namespace OOAD_Project
         private void mealSearch_Click(object sender, EventArgs e)
         {
             searchList.Items.Clear();
-            string meal = searchBox.Text;
+            string meal = searchBox.Text.ToUpper();
             int search = m.searchList(meal);
-            if (search == -1)
+            if (search == -1 && meal != "")
             {
                 MessageBox.Show("No Results Found!");
 
@@ -63,7 +59,7 @@ namespace OOAD_Project
                 {
                     type = "salad";
                 }
-                else if (btnSalad.Checked == true)
+                else if (btnDessert.Checked == true)
                 {
                     type = "dessert";
                 }
@@ -77,7 +73,7 @@ namespace OOAD_Project
                 }
                 else if (btnBakes.Checked == true)
                 {
-                    type = "bake";
+                    type = "bakes";
                 }
                 else if (btnAppetizers.Checked == true)
                 {
@@ -85,19 +81,26 @@ namespace OOAD_Project
                 }
                 else if (btnTortilla.Checked == true)
                 {
-                    type = "tortilla";
+                    type = "tortilla based";
                 }
                 else if (btnRice.Checked == true)
                 {
-                    type = "rice";
+                    type = "rice based";
                 }
-                if (m.checktype(search, type))
+                else if (anytype.Checked == true)
                 {
+                    type = "";
+                }
+
+                if (m.checktype(search, type) || type == "")
+                {
+                    if (search == -1)
+                        search = 0;
                     searchList.Items.Add(m.sendmeal(search).name());
                     int index = 0;
                     while (index < m.getcount())
                     {
-                        if (m.searchtype(type, index))
+                        if (m.searchtype(type, index) || type == "")
                         {
                             if (m.sendmeal(index).name() != m.sendmeal(search).name())
                             {
@@ -108,19 +111,14 @@ namespace OOAD_Project
                         index++;
                     }
                 }
-                else if(type == "")
+                else if(search == -1)
                 {
-                    searchList.Items.Add(m.sendmeal(search).name());
-                    int index = 0;
-                    while (index < m.getcount())
+                    for(int i = 0; i < m.getcount(); i++)
                     {
-                            if (m.sendmeal(index).name() != m.sendmeal(search).name())
-                            {
-                                searchList.Items.Add(m.sendmeal(index).name());
-                            }
-
-                        index++;
+                        if(m.checktype(i, type))
+                            searchList.Items.Add(m.sendmeal(i).name());
                     }
+
                 }
             }
 
@@ -128,12 +126,22 @@ namespace OOAD_Project
 
         private void mealView_Click(object sender, EventArgs e)
         {
+
+            if(searchList.SelectedIndex > -1)
+            {
             Customer cust = list.returnCustomer(lblname.Text);
             string meal = searchList.SelectedItem.ToString();
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), 
-                m.sendmeal(index).description(), m.sendmeal(index).instructions(), m.sendmeal(index).ingredients());            
+                m.sendmeal(index).description(), m.sendmeal(index).instructions(),
+                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)));            
             mealForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select Meal!");
+            }
+
         }
 
         private void cartButton_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
             this.Instructions = new System.Windows.Forms.TextBox();
-            this.Servings = new System.Windows.Forms.TextBox();
+            this.imgfile = new System.Windows.Forms.TextBox();
             this.Calories = new System.Windows.Forms.TextBox();
             this.Keywords = new System.Windows.Forms.TextBox();
             this.Type = new System.Windows.Forms.TextBox();
@@ -48,6 +48,8 @@
             this.Ingredients = new System.Windows.Forms.TextBox();
             this.AddMeal = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
+            this.btnImage = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,11 +109,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 145);
+            this.label7.Location = new System.Drawing.Point(19, 145);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Servings: ";
+            this.label7.Text = "Image File:";
             // 
             // label8
             // 
@@ -147,12 +149,12 @@
             this.Instructions.Size = new System.Drawing.Size(268, 85);
             this.Instructions.TabIndex = 7;
             // 
-            // Servings
+            // imgfile
             // 
-            this.Servings.Location = new System.Drawing.Point(83, 142);
-            this.Servings.Name = "Servings";
-            this.Servings.Size = new System.Drawing.Size(100, 20);
-            this.Servings.TabIndex = 6;
+            this.imgfile.Location = new System.Drawing.Point(83, 142);
+            this.imgfile.Name = "imgfile";
+            this.imgfile.Size = new System.Drawing.Size(100, 20);
+            this.imgfile.TabIndex = 6;
             // 
             // Calories
             // 
@@ -220,11 +222,41 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(189, 140);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 23;
+            this.btnImage.Text = "Image Help";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Pasta",
+            "Salad",
+            "Dessert",
+            "Sandwich",
+            "Soup",
+            "Bakes",
+            "Appetizers",
+            "Tortilla Based",
+            "Rice Based"});
+            this.comboBox1.Location = new System.Drawing.Point(189, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 24;
+            // 
             // AddMealPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 471);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnImage);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.AddMeal);
             this.Controls.Add(this.Ingredients);
@@ -233,7 +265,7 @@
             this.Controls.Add(this.Type);
             this.Controls.Add(this.Keywords);
             this.Controls.Add(this.Calories);
-            this.Controls.Add(this.Servings);
+            this.Controls.Add(this.imgfile);
             this.Controls.Add(this.Instructions);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label9);
@@ -265,7 +297,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox Instructions;
-        private System.Windows.Forms.TextBox Servings;
+        private System.Windows.Forms.TextBox imgfile;
         private System.Windows.Forms.TextBox Calories;
         private System.Windows.Forms.TextBox Keywords;
         private System.Windows.Forms.TextBox Type;
@@ -274,5 +306,7 @@
         private System.Windows.Forms.TextBox Ingredients;
         private System.Windows.Forms.Button AddMeal;
         private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
