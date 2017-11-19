@@ -47,6 +47,7 @@
             this.lbluser = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
             this.anytype = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,6 +249,7 @@
             // anytype
             // 
             this.anytype.AutoSize = true;
+            this.anytype.Checked = true;
             this.anytype.Location = new System.Drawing.Point(20, 159);
             this.anytype.Name = "anytype";
             this.anytype.Size = new System.Drawing.Size(66, 17);
@@ -256,11 +258,21 @@
             this.anytype.Text = "Anything";
             this.anytype.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(113, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(361, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Select Search Meals without anything entered into textbox to view all meals";
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 533);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.lbluser);
             this.Controls.Add(this.panel1);
@@ -301,5 +313,6 @@
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.RadioButton anytype;
+        private System.Windows.Forms.Label label1;
     }
 }
