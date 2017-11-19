@@ -25,7 +25,7 @@ namespace OOAD_Project
             {
                 if(log.Access() == 'C')
                 {
-                    CustomerMenu Customer = new CustomerMenu();
+                    CustomerMenu Customer = new CustomerMenu(Username.Text);                    
                     Customer.Show();
                     this.Close();
                 }

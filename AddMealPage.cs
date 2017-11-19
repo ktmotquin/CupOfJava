@@ -50,13 +50,16 @@ namespace OOAD_Project
             bool done = false;  // True when end of user list has been reached
             if (checkForEmpty())
             {
-                enteredInfo = ID.Text + " " + MealName.Text + " " + Type.Text + " " + Keywords.Text.Replace(' ',delimiter)
-                    + " " + Calories.Text + " " + Allergens.Text.Replace(' ', delimiter) + " " 
-                    + Description.Text.Replace(' ', delimiter) + " " + Ingredients.Text.Replace(' ', delimiter);
+               /* enteredInfo = ID.Text + "/" + MealName.Text + "/" + Type.Text + "/" + Keywords.Text.Replace(' ',delimiter)
+                    + " " + Calories.Text + "/" + Instructions.Text.Replace(' ', delimiter) + "/" 
+                    + Description.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);*/
+                enteredInfo = MealName.Text + "/" + Description.Text.Replace(' ', delimiter) + "/" + Type.Text + "/" 
+ + Instructions.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);
                 System.Console.WriteLine(enteredInfo);
-               
-                var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\Meals.txt", FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
+                var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
                 //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
                     while (!done)
@@ -86,7 +89,7 @@ namespace OOAD_Project
                 {
                      
                         overallText += enteredInfo+ "\n-1";
-                        System.IO.File.WriteAllText(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\Meals.txt", overallText);
+                        System.IO.File.WriteAllText(fileName, overallText);
                         this.Close();
                 }
                 else

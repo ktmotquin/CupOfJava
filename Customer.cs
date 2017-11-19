@@ -6,17 +6,45 @@ using System.Threading.Tasks;
 
 namespace OOAD_Project
 {
-    class Customer
+    public class Customer
     {
-        String email, phoneNum, address;
-        void CreateAccount()
-        {
+        string email, password, phoneNum, address, username, name;
 
+        public Customer(string u, string pass, string n, string e, string p, string a)
+        {
+            name = n;
+            password = pass;
+            username = u;
+            email = e;
+            phoneNum = p;
+            address = a;
         }
 
-        public void RequestMeal()
+        public string getuser()
         {
-
+            return username;
         }
+        public string getname()
+        {
+            return name;
+        }
+        public string getpassword()
+        {
+            return password;
+        }
+        public string getemail()
+        {
+            return email;
+        }
+        public string getphone()
+        {
+            return phoneNum;
+        }
+        public string getaddress()
+        {
+            return address;
+        }
+
+
     }
 }

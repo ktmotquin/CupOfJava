@@ -12,6 +12,7 @@ namespace OOAD_Project
 {
     public partial class WelcomeScreen : Form
     {
+        
         public WelcomeScreen()
         {
             InitializeComponent();

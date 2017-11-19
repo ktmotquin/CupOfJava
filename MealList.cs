@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace OOAD_Project
 {
@@ -12,9 +13,37 @@ namespace OOAD_Project
         Meal[] meals = new Meal[100];
         public MealList()
         {
-            count = 0;
-            for (int i = 0; i < 100; i++)
-                meals[i] = null;
+            string text;
+
+            bool done = false;  // True when end of user list has been reached
+                                //  var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+
+
+                while (!done)
+                {
+                    text = streamReader.ReadLine();         // read next line
+
+                    if (!text.Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (!text.Equals("1"))
+                        {
+                           String[] parts = text.Split('/');      // Breaks the current line into parts
+                           meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4]);
+                           count++;
+                        }
+
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+            }
+            fileStream.Close();
         }
 
         public void addMeal(Meal newMeal)

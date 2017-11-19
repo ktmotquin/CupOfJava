@@ -38,7 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
-            this.Allergens = new System.Windows.Forms.TextBox();
+            this.Instructions = new System.Windows.Forms.TextBox();
             this.Servings = new System.Windows.Forms.TextBox();
             this.Calories = new System.Windows.Forms.TextBox();
             this.Keywords = new System.Windows.Forms.TextBox();
@@ -125,11 +125,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 171);
+            this.label9.Location = new System.Drawing.Point(10, 171);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Allergens: ";
+            this.label9.Text = "Instructions: ";
             // 
             // ID
             // 
@@ -138,14 +138,14 @@
             this.ID.Size = new System.Drawing.Size(100, 20);
             this.ID.TabIndex = 1;
             // 
-            // Allergens
+            // Instructions
             // 
-            this.Allergens.Location = new System.Drawing.Point(83, 168);
-            this.Allergens.Multiline = true;
-            this.Allergens.Name = "Allergens";
-            this.Allergens.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Allergens.Size = new System.Drawing.Size(268, 85);
-            this.Allergens.TabIndex = 7;
+            this.Instructions.Location = new System.Drawing.Point(83, 168);
+            this.Instructions.Multiline = true;
+            this.Instructions.Name = "Instructions";
+            this.Instructions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Instructions.Size = new System.Drawing.Size(268, 85);
+            this.Instructions.TabIndex = 7;
             // 
             // Servings
             // 
@@ -234,7 +234,7 @@
             this.Controls.Add(this.Keywords);
             this.Controls.Add(this.Calories);
             this.Controls.Add(this.Servings);
-            this.Controls.Add(this.Allergens);
+            this.Controls.Add(this.Instructions);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -264,7 +264,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ID;
-        private System.Windows.Forms.TextBox Allergens;
+        private System.Windows.Forms.TextBox Instructions;
         private System.Windows.Forms.TextBox Servings;
         private System.Windows.Forms.TextBox Calories;
         private System.Windows.Forms.TextBox Keywords;

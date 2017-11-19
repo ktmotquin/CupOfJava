@@ -11,15 +11,17 @@ namespace OOAD_Project
         string n;
         string des;
         string type;
-        int numorder;
+        string inst;
+        string ing;
 
         public Meal(string name, string description, 
-            string mealtype, int ordernumber)
+            string mealtype, string instructions, string ingredients)
         {
             n = name.ToLower();
             des = description;
             type = mealtype.ToLower();
-            numorder = 0;
+            inst = instructions;
+            ing = ingredients.ToLower();
         }
         public void changeDescription(string newdescription)
         {
@@ -29,9 +31,9 @@ namespace OOAD_Project
         {
             n = newName;
         }
-        void addOrder()
+        void changeinstructions(string newinstructions)
         {
-            numorder++;
+            inst = newinstructions;
         }
         public string name()
         {
@@ -40,6 +42,18 @@ namespace OOAD_Project
         public string mealtype()
         {
             return type;
+        }
+        public string description()
+        {
+            return des;
+        }
+        public string instructions()
+        {
+            return inst;
+        }
+        public string ingredients()
+        {
+            return ing;
         }
     }
 }

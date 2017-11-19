@@ -13,12 +13,12 @@ namespace OOAD_Project
    public partial class Cart : Form
    {
         const float STANDARD_PRICE = 7.50f;
-        CustomerMenu cust;
+        Customer cust;
         //----------------------------------------------------------------
         // Constructor: Initializes components and assigns a temporary
         // customer object to the customer passed in to the form.
         //----------------------------------------------------------------
-        public Cart(CustomerMenu inCust)
+        public Cart(Customer inCust)
         {
             InitializeComponent();
             cust = inCust;

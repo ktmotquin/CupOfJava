@@ -31,9 +31,9 @@ namespace OOAD_Project
 
         private void ViewStatsButton_Click(object sender, EventArgs e)
         {
-            StatsPage sts = new StatsPage();
+            //StatsPage sts = new StatsPage();
             this.Hide();
-            sts.Show();
+            //sts.Show();
         }
     }
 }

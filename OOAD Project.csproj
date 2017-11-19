@@ -72,6 +72,7 @@
       <DependentUpon>CreateAcc.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerList.cs" />
     <Compile Include="CustomerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +155,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ItemStock.txt" />
-    <Content Include="LoginInfo.txt" />
-    <Content Include="Meals.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

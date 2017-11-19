@@ -23,8 +23,10 @@ namespace OOAD_Project
             string text;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
-          //  var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
-          var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+                                //  var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
+         //   var path = Path.Combine(Directory.GetCurrentDirectory(), "\\CustomerList.text");
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
                 while (!found && !done)
@@ -32,7 +34,7 @@ namespace OOAD_Project
                     text = streamReader.ReadLine();         // read next line
                     if (!text.Equals("-1"))                 // Check if end of file has been reached 
                     {
-                        String[] parts = text.Split();      // Breaks the current line into parts
+                        String[] parts = text.Split('/');      // Breaks the current line into parts
                         if (un.Equals(parts[0]) && pw.Equals(parts[1]))
                         {
                             access = Char.Parse(parts[2]);  // 
