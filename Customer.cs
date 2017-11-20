@@ -10,6 +10,7 @@ namespace OOAD_Project
     {
         const int MAXMEALS = 30;
         string email, password, phoneNum, address, username, name;
+        //PaymentPlan currentPlan;
         Meal[] cart = new Meal[MAXMEALS];
 
         public Customer(string u, string pass, string n, 
@@ -33,6 +34,8 @@ namespace OOAD_Project
         public string getphone() { return phoneNum; }
         public string getaddress() { return address; }
         public Meal[] getCart() { return cart; }
+
+        //public void setPayPlan(PaymentPlan pp) { currentPlan = pp; }
 
         //----------------------------------------------------------------
         // Clears the entire cart upon completion of an order or deletion

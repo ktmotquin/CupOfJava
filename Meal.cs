@@ -26,7 +26,6 @@ namespace OOAD_Project
             inst = instructions;
             ing = ingredients;
             img = imgfilename;
-            
         }
         public void changeDescription(string newdescription)
         {
@@ -40,29 +39,17 @@ namespace OOAD_Project
         {
             inst = newinstructions;
         }
-        public string name()
-        {
-            return n;
-        }
-        public string mealtype()
-        {
-            return type;
-        }
-        public string description()
-        {
-            return des;
-        }
-        public string instructions()
-        {
-            return inst;
-        }
-        public string ingredients()
-        {
-            return ing;
-        }
-        public string getimg()
-        {
-            return img;
-        }
+        public string name() { return n; }
+
+        public string mealtype() { return type; }
+
+        public string description() { return des; }
+
+        public string instructions() { return inst; }
+ 
+        public string ingredients() { return ing; }
+
+        public string getimg() { return img; }
+
     }
 }

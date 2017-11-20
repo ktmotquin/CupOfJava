@@ -88,7 +88,6 @@ namespace OOAD_Project
                 fileStream.Close();
                 if (!found)
                 {
-
                     overallText += enteredInfo + "\n-1";
                     System.IO.File.WriteAllText(fileName, overallText);
                     //ID.Clear();

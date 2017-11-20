@@ -23,8 +23,8 @@ namespace OOAD_Project
             string text;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
-                                //  var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
-         //   var path = Path.Combine(Directory.GetCurrentDirectory(), "\\CustomerList.text");
+                                // var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
+            //var path = Path.Combine(Directory.GetCurrentDirectory(), "\\CustomerList.text");
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))

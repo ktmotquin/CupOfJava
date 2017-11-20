@@ -90,7 +90,7 @@
             this.label3.Size = new System.Drawing.Size(540, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "By clicking \'Create Account\' you are confirming the above information is accurate" +
-    " and you are over the age of 13.";
+    " and you are over the age of 18.";
             // 
             // button1
             // 
