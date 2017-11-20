@@ -35,7 +35,7 @@ namespace OOAD_Project
         {
             foreach(Meal m in CartList.CheckedItems)
             {
-       //         cust.removeItem(m);
+                 cust.removeItem(m);
             }
         }
 
@@ -61,9 +61,9 @@ namespace OOAD_Project
             float subtotal = 0.0f, tax = 0.0f, total = 0.0f;
             int i = 0;
             const float TAX_RATE = 0.05f;
-       //     foreach(Meal m in cust.cart)
+            foreach(Meal m in cust.getCart())
             {
-    //           CartList.Items.Insert(i, m.ToString());
+                CartList.Items.Insert(i, m.name());
                 subtotal += STANDARD_PRICE;
             }
             tax = subtotal * (1 + TAX_RATE);

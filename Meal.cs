@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOAD_Project
 {
-    class Meal
+    public class Meal
     {
         string n;
         string des;
@@ -17,7 +17,8 @@ namespace OOAD_Project
         string img;
 
         public Meal(string name, string description, 
-            string mealtype, string instructions, string ingredients, string imgfilename)
+            string mealtype, string instructions, 
+            string ingredients, string imgfilename)
         {
             n = name.ToUpper();
             des = description;
