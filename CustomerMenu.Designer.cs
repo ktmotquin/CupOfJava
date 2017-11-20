@@ -54,7 +54,7 @@
             // Logout
             // 
             this.Logout.Location = new System.Drawing.Point(1342, 515);
-            this.Logout.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Logout.Margin = new System.Windows.Forms.Padding(7);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(448, 319);
             this.Logout.TabIndex = 0;
@@ -91,6 +91,7 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(529, 35);
             this.searchBox.TabIndex = 3;
+            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBox_KeyPress);
             // 
             // searchList
             // 
@@ -118,7 +119,7 @@
             // 
             this.btnSandwich.AutoSize = true;
             this.btnSandwich.Location = new System.Drawing.Point(44, 123);
-            this.btnSandwich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSandwich.Margin = new System.Windows.Forms.Padding(2);
             this.btnSandwich.Name = "btnSandwich";
             this.btnSandwich.Size = new System.Drawing.Size(149, 33);
             this.btnSandwich.TabIndex = 10;
@@ -129,7 +130,7 @@
             // 
             this.btnSoup.AutoSize = true;
             this.btnSoup.Location = new System.Drawing.Point(44, 161);
-            this.btnSoup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSoup.Margin = new System.Windows.Forms.Padding(2);
             this.btnSoup.Name = "btnSoup";
             this.btnSoup.Size = new System.Drawing.Size(101, 33);
             this.btnSoup.TabIndex = 9;
@@ -140,7 +141,7 @@
             // 
             this.btnBakes.AutoSize = true;
             this.btnBakes.Location = new System.Drawing.Point(47, 196);
-            this.btnBakes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBakes.Margin = new System.Windows.Forms.Padding(2);
             this.btnBakes.Name = "btnBakes";
             this.btnBakes.Size = new System.Drawing.Size(111, 33);
             this.btnBakes.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             this.btnAppetizers.AutoSize = true;
             this.btnAppetizers.Location = new System.Drawing.Point(47, 234);
-            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(2);
             this.btnAppetizers.Name = "btnAppetizers";
             this.btnAppetizers.Size = new System.Drawing.Size(158, 33);
             this.btnAppetizers.TabIndex = 7;
@@ -162,7 +163,7 @@
             // 
             this.btnDessert.AutoSize = true;
             this.btnDessert.Location = new System.Drawing.Point(44, 87);
-            this.btnDessert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDessert.Margin = new System.Windows.Forms.Padding(2);
             this.btnDessert.Name = "btnDessert";
             this.btnDessert.Size = new System.Drawing.Size(127, 33);
             this.btnDessert.TabIndex = 11;
@@ -173,7 +174,7 @@
             // 
             this.btnTortilla.AutoSize = true;
             this.btnTortilla.Location = new System.Drawing.Point(47, 270);
-            this.btnTortilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTortilla.Margin = new System.Windows.Forms.Padding(2);
             this.btnTortilla.Name = "btnTortilla";
             this.btnTortilla.Size = new System.Drawing.Size(194, 33);
             this.btnTortilla.TabIndex = 13;
@@ -184,7 +185,7 @@
             // 
             this.btnSalad.AutoSize = true;
             this.btnSalad.Location = new System.Drawing.Point(44, 49);
-            this.btnSalad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalad.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalad.Name = "btnSalad";
             this.btnSalad.Size = new System.Drawing.Size(106, 33);
             this.btnSalad.TabIndex = 12;
@@ -195,7 +196,7 @@
             // 
             this.btnRice.AutoSize = true;
             this.btnRice.Location = new System.Drawing.Point(47, 308);
-            this.btnRice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRice.Margin = new System.Windows.Forms.Padding(2);
             this.btnRice.Name = "btnRice";
             this.btnRice.Size = new System.Drawing.Size(168, 33);
             this.btnRice.TabIndex = 14;
@@ -206,7 +207,7 @@
             // 
             this.btnPasta.AutoSize = true;
             this.btnPasta.Location = new System.Drawing.Point(42, 11);
-            this.btnPasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPasta.Margin = new System.Windows.Forms.Padding(2);
             this.btnPasta.Name = "btnPasta";
             this.btnPasta.Size = new System.Drawing.Size(104, 33);
             this.btnPasta.TabIndex = 6;
@@ -226,18 +227,17 @@
             this.panel1.Controls.Add(this.btnSoup);
             this.panel1.Controls.Add(this.btnSandwich);
             this.panel1.Location = new System.Drawing.Point(814, 283);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 464);
             this.panel1.TabIndex = 15;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // anytype
             // 
             this.anytype.AutoSize = true;
             this.anytype.Checked = true;
             this.anytype.Location = new System.Drawing.Point(47, 355);
-            this.anytype.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.anytype.Margin = new System.Windows.Forms.Padding(7);
             this.anytype.Name = "anytype";
             this.anytype.Size = new System.Drawing.Size(135, 33);
             this.anytype.TabIndex = 15;
@@ -289,7 +289,7 @@
             this.Controls.Add(this.cartButton);
             this.Controls.Add(this.mealSearch);
             this.Controls.Add(this.Logout);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "CustomerMenu";
             this.Text = "CustomerMenu";
             this.Load += new System.EventHandler(this.CustomerMenu_Load);

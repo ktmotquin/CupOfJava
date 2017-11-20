@@ -149,11 +149,12 @@ namespace OOAD_Project
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (e.KeyChar == '$')
+            {
+                e.Handled = true;
+            }
         }
-
-
     }
 }

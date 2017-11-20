@@ -54,7 +54,7 @@ namespace OOAD_Project
                      + " " + Calories.Text + "/" + Instructions.Text.Replace(' ', delimiter) + "/" 
                      + Description.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);*/
                 enteredInfo = MealName.Text + "$" + Description.Text.Replace("\r\n", replaceWith) + "$" + comboBox1.Text + "$"
-                                + Instructions.Text.Replace("\r\n", replaceWith) + "$" + 
+                                + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
                                 Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
                 System.Console.WriteLine(enteredInfo);
                 string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
@@ -93,7 +93,7 @@ namespace OOAD_Project
                     //ID.Clear();
                     MealName.Clear();
                     //Type.Clear();
-                   // Keywords.Clear();
+                    // Keywords.Clear();
                     imgfile.Clear();
                     Instructions.Clear();
                     Description.Clear();
@@ -110,6 +110,14 @@ namespace OOAD_Project
         {
             MessageBox.Show("Please add BMP file to the folder where the .exe file exists\n" +
     "Add name of BMP file to text box\n" + "Careful, do not add .bmp to filename");
+        }
+
+        private void ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '$')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

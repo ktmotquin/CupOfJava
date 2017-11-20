@@ -81,6 +81,12 @@ namespace OOAD_Project
             }
         }
 
-
+        private void unameText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '$')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

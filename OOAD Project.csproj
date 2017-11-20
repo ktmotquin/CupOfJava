@@ -79,7 +79,6 @@
     <Compile Include="CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentPlan.cs" />
     <Compile Include="ViewStatsPage.cs">
       <SubType>Form</SubType>
     </Compile>

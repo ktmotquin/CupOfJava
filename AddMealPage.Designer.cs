@@ -55,158 +55,186 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 15);
+            this.label1.Location = new System.Drawing.Point(124, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.Size = new System.Drawing.Size(48, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 41);
+            this.label2.Location = new System.Drawing.Point(84, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(90, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 119);
+            this.label3.Location = new System.Drawing.Point(63, 265);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(115, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Calories: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 93);
+            this.label4.Location = new System.Drawing.Point(42, 207);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(132, 29);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keywords: ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 355);
+            this.label5.Location = new System.Drawing.Point(28, 792);
+            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(145, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "Ingredients: ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 262);
+            this.label6.Location = new System.Drawing.Point(26, 584);
+            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.Size = new System.Drawing.Size(147, 29);
             this.label6.TabIndex = 6;
             this.label6.Text = "Description: ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 145);
+            this.label7.Location = new System.Drawing.Point(44, 323);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.Size = new System.Drawing.Size(133, 29);
             this.label7.TabIndex = 7;
             this.label7.Text = "Image File:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(40, 67);
+            this.label8.Location = new System.Drawing.Point(93, 149);
+            this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.Size = new System.Drawing.Size(80, 29);
             this.label8.TabIndex = 8;
             this.label8.Text = "Type: ";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 171);
+            this.label9.Location = new System.Drawing.Point(23, 381);
+            this.label9.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.Size = new System.Drawing.Size(146, 29);
             this.label9.TabIndex = 9;
             this.label9.Text = "Instructions: ";
             // 
             // ID
             // 
-            this.ID.Location = new System.Drawing.Point(83, 12);
+            this.ID.Location = new System.Drawing.Point(194, 27);
+            this.ID.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(100, 20);
+            this.ID.Size = new System.Drawing.Size(228, 35);
             this.ID.TabIndex = 1;
+            this.ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Instructions
             // 
-            this.Instructions.Location = new System.Drawing.Point(83, 168);
+            this.Instructions.Location = new System.Drawing.Point(194, 375);
+            this.Instructions.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Instructions.Multiline = true;
             this.Instructions.Name = "Instructions";
             this.Instructions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Instructions.Size = new System.Drawing.Size(268, 85);
+            this.Instructions.Size = new System.Drawing.Size(620, 185);
             this.Instructions.TabIndex = 7;
+            this.Instructions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // imgfile
             // 
-            this.imgfile.Location = new System.Drawing.Point(83, 142);
+            this.imgfile.Location = new System.Drawing.Point(194, 317);
+            this.imgfile.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.imgfile.Name = "imgfile";
-            this.imgfile.Size = new System.Drawing.Size(100, 20);
+            this.imgfile.Size = new System.Drawing.Size(228, 35);
             this.imgfile.TabIndex = 6;
+            this.imgfile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Calories
             // 
-            this.Calories.Location = new System.Drawing.Point(83, 116);
+            this.Calories.Location = new System.Drawing.Point(194, 259);
+            this.Calories.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Calories.Name = "Calories";
-            this.Calories.Size = new System.Drawing.Size(100, 20);
+            this.Calories.Size = new System.Drawing.Size(228, 35);
             this.Calories.TabIndex = 5;
+            this.Calories.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Keywords
             // 
-            this.Keywords.Location = new System.Drawing.Point(83, 93);
+            this.Keywords.Location = new System.Drawing.Point(194, 207);
+            this.Keywords.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Keywords.Name = "Keywords";
-            this.Keywords.Size = new System.Drawing.Size(100, 20);
+            this.Keywords.Size = new System.Drawing.Size(228, 35);
             this.Keywords.TabIndex = 4;
+            this.Keywords.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Type
             // 
-            this.Type.Location = new System.Drawing.Point(83, 64);
+            this.Type.Location = new System.Drawing.Point(194, 143);
+            this.Type.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(100, 20);
+            this.Type.Size = new System.Drawing.Size(228, 35);
             this.Type.TabIndex = 3;
+            this.Type.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // MealName
             // 
-            this.MealName.Location = new System.Drawing.Point(83, 38);
+            this.MealName.Location = new System.Drawing.Point(194, 85);
+            this.MealName.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.MealName.Name = "MealName";
-            this.MealName.Size = new System.Drawing.Size(100, 20);
+            this.MealName.Size = new System.Drawing.Size(228, 35);
             this.MealName.TabIndex = 2;
+            this.MealName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Description
             // 
-            this.Description.Location = new System.Drawing.Point(83, 259);
+            this.Description.Location = new System.Drawing.Point(194, 578);
+            this.Description.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Description.Multiline = true;
             this.Description.Name = "Description";
             this.Description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Description.Size = new System.Drawing.Size(268, 85);
+            this.Description.Size = new System.Drawing.Size(620, 185);
             this.Description.TabIndex = 8;
+            this.Description.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Ingredients
             // 
-            this.Ingredients.Location = new System.Drawing.Point(83, 352);
+            this.Ingredients.Location = new System.Drawing.Point(194, 785);
+            this.Ingredients.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Ingredients.Multiline = true;
             this.Ingredients.Name = "Ingredients";
             this.Ingredients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Ingredients.Size = new System.Drawing.Size(268, 85);
+            this.Ingredients.Size = new System.Drawing.Size(620, 185);
             this.Ingredients.TabIndex = 9;
+            this.Ingredients.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // AddMeal
             // 
-            this.AddMeal.Location = new System.Drawing.Point(129, 443);
+            this.AddMeal.Location = new System.Drawing.Point(301, 988);
+            this.AddMeal.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.AddMeal.Name = "AddMeal";
-            this.AddMeal.Size = new System.Drawing.Size(75, 23);
+            this.AddMeal.Size = new System.Drawing.Size(175, 51);
             this.AddMeal.TabIndex = 21;
             this.AddMeal.Text = "Add Meal";
             this.AddMeal.UseVisualStyleBackColor = true;
@@ -214,9 +242,10 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(210, 443);
+            this.Cancel.Location = new System.Drawing.Point(490, 988);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.Size = new System.Drawing.Size(175, 51);
             this.Cancel.TabIndex = 22;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -224,9 +253,10 @@
             // 
             // btnImage
             // 
-            this.btnImage.Location = new System.Drawing.Point(189, 140);
+            this.btnImage.Location = new System.Drawing.Point(441, 312);
+            this.btnImage.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.Size = new System.Drawing.Size(175, 51);
             this.btnImage.TabIndex = 23;
             this.btnImage.Text = "Image Help";
             this.btnImage.UseVisualStyleBackColor = true;
@@ -245,16 +275,17 @@
             "Appetizers",
             "Tortilla Based",
             "Rice Based"});
-            this.comboBox1.Location = new System.Drawing.Point(189, 63);
+            this.comboBox1.Location = new System.Drawing.Point(441, 141);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(277, 37);
             this.comboBox1.TabIndex = 24;
             // 
             // AddMealPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 471);
+            this.ClientSize = new System.Drawing.Size(847, 1051);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnImage);
             this.Controls.Add(this.Cancel);
@@ -277,6 +308,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "AddMealPage";
             this.Text = "AddMealPage";
             this.ResumeLayout(false);
