@@ -39,16 +39,15 @@ namespace OOAD_Project
         {
             inst = newinstructions;
         }
+        
+        //----------------------------------------------------------------
+        // Getter methods for all private members in Meal class
+        //----------------------------------------------------------------
         public string name() { return n; }
-
         public string mealtype() { return type; }
-
         public string description() { return des; }
-
         public string instructions() { return inst; }
- 
         public string ingredients() { return ing; }
-
         public string getimg() { return img; }
 
     }
