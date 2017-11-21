@@ -160,5 +160,11 @@ namespace OOAD_Project
                 e.Handled = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RequestMealPage rmp = new RequestMealPage();
+            rmp.Show();
+        }
     }
 }
