@@ -49,6 +49,10 @@ namespace OOAD_Project
             next = numMeals = 0;
         }
 
+        //----------------------------------------------------------------
+        // Adds a meal to the next available index of the cart array,
+        // and increments the number of meals currently in cart[].
+        //----------------------------------------------------------------
         public void addToCart(Meal m)
         {
             cart[next++] = m;

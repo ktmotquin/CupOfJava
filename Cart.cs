@@ -34,9 +34,7 @@ namespace OOAD_Project
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             foreach(Meal m in CartList.CheckedItems)
-            {
-                 cust.removeItem(m);
-            }
+                cust.removeItem(m);
         }
 
         //----------------------------------------------------------------
