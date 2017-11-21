@@ -63,7 +63,7 @@ namespace OOAD_Project
                     {
                         string text1 = unameText.Text + "/" + passText.Text + "/C/" + 
                             txtbxName.Text + "/" + txtbxEmail.Text + "/" + txtbxPhone.Text + "/"
-                            + txtbxAddress.Text + "\n-1";
+                            + txtbxAddress.Text + txtbxCreditNum+ "/" + txtbxSecurity + "/" + txtbxExpire + "\n-1";
                         toBeWrit += text1;
                         System.IO.File.WriteAllText(fileName, toBeWrit);
                         this.Close();
@@ -88,5 +88,7 @@ namespace OOAD_Project
                 e.Handled = true;
             }
         }
+
+
     }
 }
