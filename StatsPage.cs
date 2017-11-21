@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,35 @@ namespace OOAD_Project
         {
             InitializeComponent();
 
-            columns.Add("Name");
+            string text;
+            bool done = false;
+            String[] foodItems = new String[200];
+            int counter = 0; 
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+              
+                while (!done)
+                {
+                    text = streamReader.ReadLine();
+                    if (!text.Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (!text.Equals("1"))
+                        {
+                            String[] parts = text.Split('/');      // Breaks the current line into parts
+                            foodItems[counter] = parts[0];
+                            counter++; 
+                        }
+
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+            }
+                columns.Add("Name");
             rows.Add(new String[]
             {
                 "beans",
