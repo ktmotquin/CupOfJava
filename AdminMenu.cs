@@ -35,5 +35,13 @@ namespace OOAD_Project
             this.Hide();
             sts.Show();
         }
-    }
+
+      private void button1_Click(object sender, EventArgs e)
+      {
+         string custIsAdmin = "administrator";
+         CustomerMenu custMenuView = new CustomerMenu(custIsAdmin);
+         this.Hide();
+         custMenuView.Show();
+      }
+   }
 }
