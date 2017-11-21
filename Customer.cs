@@ -10,6 +10,7 @@ namespace OOAD_Project
     {
         const int MAXMEALS = 30;
         string email, password, phoneNum, address, username, name;
+        int next = 0, numMeals = 0;
         //PaymentPlan currentPlan;
         Meal[] cart = new Meal[MAXMEALS];
 
@@ -45,6 +46,13 @@ namespace OOAD_Project
         {
             for (int i = 0; i < cart.Length; i++)
                 cart[i] = null;
+            next = numMeals = 0;
+        }
+
+        public void addToCart(Meal m)
+        {
+            cart[next++] = m;
+            ++numMeals;
         }
 
         //----------------------------------------------------------------
@@ -55,12 +63,8 @@ namespace OOAD_Project
         {
             int index = findCartItem(m);
             if (index != -1)
-            {
                 for (int i = index + 1; i < cart.Length; i++)
-                {
                     cart[i - 1] = cart[i];
-                }
-            }
         }
 
         //----------------------------------------------------------------
