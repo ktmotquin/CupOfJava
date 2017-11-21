@@ -21,6 +21,7 @@ namespace OOAD_Project
             string text;
             bool done = false;
             String[] foodItems = new String[200];
+            String[] numItems = new String[200];
             int counter = 0; 
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
@@ -34,8 +35,9 @@ namespace OOAD_Project
                     {
                         if (!text.Equals("1"))
                         {
-                            String[] parts = text.Split('\n');      // Breaks the current line into parts
+                            String[] parts = text.Split('~');      // Breaks the current line into parts
                             foodItems[counter] = parts[0];
+                            numItems[counter] = parts[1];
                             counter++; 
                         }
 
@@ -49,9 +51,7 @@ namespace OOAD_Project
                 columns.Add("Name");
             rows.Add(new String[]
             {
-                "beans",
-                "corn",
-                "cookie"
+
             });
 
             // Another example column.
