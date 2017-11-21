@@ -133,7 +133,11 @@ namespace OOAD_Project
 
             if(searchList.SelectedIndex > -1)
             {
-            Customer cust = list.returnCustomer(lblname.Text);
+                if(lblname.Text != "administrator")
+                {
+                    Customer cust = list.returnCustomer(lblname.Text);
+                }
+            
             string meal = searchList.SelectedItem.ToString();
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), 
