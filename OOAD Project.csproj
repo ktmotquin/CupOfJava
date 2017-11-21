@@ -85,12 +85,6 @@
     <Compile Include="StatsPage.Designer.cs">
       <DependentUpon>StatsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewStatsPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewStatsPage.Designer.cs">
-      <DependentUpon>ViewStatsPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,9 +140,6 @@
     </Compile>
     <EmbeddedResource Include="StatsPage.resx">
       <DependentUpon>StatsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewStatsPage.resx">
-      <DependentUpon>ViewStatsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
