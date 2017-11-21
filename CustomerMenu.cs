@@ -35,7 +35,11 @@ namespace OOAD_Project
 
         private void CustomerMenu_Load(object sender, EventArgs e)
         {
-            Customer cust = list.returnCustomer(lblname.Text);
+            if(lblname.Text != "administrator")
+            {
+                Customer cust = list.returnCustomer(lblname.Text);
+            }
+                
         }
 
         private void mealSearch_Click(object sender, EventArgs e)
