@@ -34,7 +34,7 @@ namespace OOAD_Project
                     {
                         if (!text.Equals("1"))
                         {
-                            String[] parts = text.Split('/');      // Breaks the current line into parts
+                            String[] parts = text.Split('\n');      // Breaks the current line into parts
                             foodItems[counter] = parts[0];
                             counter++; 
                         }
