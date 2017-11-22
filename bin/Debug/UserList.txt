@@ -1,4 +1,3 @@
 1
-admin/password/A
-motquink/123456/C/Keeghan Motquin/motquink@uwplatt.edu/920-264-5327/1366 Orlando Dr. Green Bay WI 54313System.Windows.Forms.TextBox, Text: XXXX-XXXX-XXXX-XXXX/System.Windows.Forms.TextBox, Text: 123/System.Windows.Forms.TextBox, Text: 01/20
+admin$password$A
 -1

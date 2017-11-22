@@ -26,7 +26,6 @@ namespace OOAD_Project
                 label10.Hide();
                 label11.Hide();
                 label12.Hide();
-                //Size.Height = this.Size.Height / 2;
             }
         }
 
@@ -47,7 +46,7 @@ namespace OOAD_Project
                     {
                         text = streamReader.ReadLine();         // read next line
                         
-                        string[] stuff = text.Split('/');
+                        string[] stuff = text.Split('$');
                         if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
                         {
                             if(!stuff[0].Equals("1"))
@@ -55,7 +54,7 @@ namespace OOAD_Project
                                 toBeWrit += text + '\n';
                             }
 
-                            String[] parts = text.Split('/');      // Breaks the current line into parts
+                            String[] parts = text.Split('$');      // Breaks the current line into parts
                             if (unameText.Text.Equals(stuff[0]))
                             {
                                 found = true;
@@ -74,16 +73,16 @@ namespace OOAD_Project
                     if(passText.Text.Equals(confirmPassText.Text))
                     {
                         string text1;
-                        if (txtbxAddress.Enabled == false)
+                        if (txtbxAddress.Enabled == true)
                         {
-                            text1 = unameText.Text + "/" + passText.Text + "/C/" + 
-                            txtbxName.Text + "/" + txtbxEmail.Text + "/" + txtbxPhone.Text + "/"
-                            + txtbxAddress.Text + "/" + txtbxCreditNum+ "/" + txtbxSecurity + "/" + txtbxExpire + "\n-1";
+                            text1 = unameText.Text + "$" + passText.Text + "/C/" + 
+                            txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "$"
+                            + txtbxAddress.Text + "$" + txtbxCreditNum.Text + "$" + txtbxSecurity.Text + "$" + txtbxExpire.Text + "\n-1";
                         }
                         else
                         {
-                            text1 = unameText.Text + "/" + passText.Text + "/A/" +
-                             txtbxName.Text + "/" + txtbxEmail.Text + "/" + txtbxPhone.Text + "/" + "\n-1";
+                            text1 = unameText.Text + "$" + passText.Text + "/A/" +
+                             txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "\n-1";
                         }
                         toBeWrit += text1;
                         System.IO.File.WriteAllText(fileName, toBeWrit);

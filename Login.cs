@@ -34,7 +34,7 @@ namespace OOAD_Project
                     text = streamReader.ReadLine();         // read next line
                     if (!text.Equals("-1"))                 // Check if end of file has been reached 
                     {
-                        String[] parts = text.Split('/');      // Breaks the current line into parts
+                        String[] parts = text.Split('$');      // Breaks the current line into parts
                         if (un.Equals(parts[0]) && pw.Equals(parts[1]))
                         {
                             access = Char.Parse(parts[2]);  // 
