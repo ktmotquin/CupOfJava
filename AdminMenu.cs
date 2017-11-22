@@ -50,5 +50,12 @@ namespace OOAD_Project
             this.Hide();
             acc.Show();
         }
+
+        private void modifyStockBtn_Click(object sender, EventArgs e)
+        {
+            AddStock addStock = new AddStock();
+            this.Hide();
+            addStock.Show();
+        }
     }
 }
