@@ -43,63 +43,70 @@
          // Subtotal
          // 
          this.Subtotal.AutoSize = true;
-         this.Subtotal.Location = new System.Drawing.Point(392, 310);
+         this.Subtotal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.Subtotal.Location = new System.Drawing.Point(368, 273);
          this.Subtotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.Subtotal.Name = "Subtotal";
-         this.Subtotal.Size = new System.Drawing.Size(64, 17);
+         this.Subtotal.Size = new System.Drawing.Size(103, 29);
          this.Subtotal.TabIndex = 0;
          this.Subtotal.Text = "Subtotal:";
          // 
          // taxlabel
          // 
          this.taxlabel.AutoSize = true;
-         this.taxlabel.Location = new System.Drawing.Point(412, 342);
+         this.taxlabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.taxlabel.Location = new System.Drawing.Point(420, 317);
          this.taxlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.taxlabel.Name = "taxlabel";
-         this.taxlabel.Size = new System.Drawing.Size(35, 17);
+         this.taxlabel.Size = new System.Drawing.Size(51, 29);
          this.taxlabel.TabIndex = 1;
          this.taxlabel.Text = "Tax:";
          // 
          // totalLabel
          // 
          this.totalLabel.AutoSize = true;
-         this.totalLabel.Location = new System.Drawing.Point(412, 374);
+         this.totalLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.totalLabel.Location = new System.Drawing.Point(403, 361);
          this.totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.totalLabel.Name = "totalLabel";
-         this.totalLabel.Size = new System.Drawing.Size(44, 17);
+         this.totalLabel.Size = new System.Drawing.Size(68, 29);
          this.totalLabel.TabIndex = 2;
          this.totalLabel.Text = "Total:";
          // 
          // SubtotalBox
          // 
-         this.SubtotalBox.Location = new System.Drawing.Point(465, 306);
-         this.SubtotalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.SubtotalBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.SubtotalBox.Location = new System.Drawing.Point(479, 266);
+         this.SubtotalBox.Margin = new System.Windows.Forms.Padding(4);
          this.SubtotalBox.Name = "SubtotalBox";
-         this.SubtotalBox.Size = new System.Drawing.Size(132, 22);
+         this.SubtotalBox.Size = new System.Drawing.Size(132, 36);
          this.SubtotalBox.TabIndex = 3;
          // 
          // TaxBox
          // 
-         this.TaxBox.Location = new System.Drawing.Point(465, 338);
-         this.TaxBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.TaxBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.TaxBox.Location = new System.Drawing.Point(479, 310);
+         this.TaxBox.Margin = new System.Windows.Forms.Padding(4);
          this.TaxBox.Name = "TaxBox";
-         this.TaxBox.Size = new System.Drawing.Size(132, 22);
+         this.TaxBox.Size = new System.Drawing.Size(132, 36);
          this.TaxBox.TabIndex = 4;
          // 
          // TotalBox
          // 
-         this.TotalBox.Location = new System.Drawing.Point(465, 370);
-         this.TotalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.TotalBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.TotalBox.Location = new System.Drawing.Point(479, 354);
+         this.TotalBox.Margin = new System.Windows.Forms.Padding(4);
          this.TotalBox.Name = "TotalBox";
-         this.TotalBox.Size = new System.Drawing.Size(132, 22);
+         this.TotalBox.Size = new System.Drawing.Size(132, 36);
          this.TotalBox.TabIndex = 5;
          // 
          // CheckoutButton
          // 
-         this.CheckoutButton.Location = new System.Drawing.Point(499, 426);
-         this.CheckoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.CheckoutButton.Location = new System.Drawing.Point(441, 402);
+         this.CheckoutButton.Margin = new System.Windows.Forms.Padding(4);
          this.CheckoutButton.Name = "CheckoutButton";
-         this.CheckoutButton.Size = new System.Drawing.Size(100, 28);
+         this.CheckoutButton.Size = new System.Drawing.Size(170, 54);
          this.CheckoutButton.TabIndex = 6;
          this.CheckoutButton.Text = "Checkout";
          this.CheckoutButton.UseVisualStyleBackColor = true;
@@ -108,28 +115,30 @@
          // label1
          // 
          this.label1.AutoSize = true;
-         this.label1.Location = new System.Drawing.Point(16, 48);
+         this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label1.Location = new System.Drawing.Point(8, 9);
          this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label1.Name = "label1";
-         this.label1.Size = new System.Drawing.Size(130, 17);
+         this.label1.Size = new System.Drawing.Size(202, 29);
          this.label1.TabIndex = 8;
          this.label1.Text = "Your Current Items:";
          // 
          // CartList
          // 
          this.CartList.FormattingEnabled = true;
-         this.CartList.Location = new System.Drawing.Point(20, 76);
-         this.CartList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.CartList.Location = new System.Drawing.Point(13, 42);
+         this.CartList.Margin = new System.Windows.Forms.Padding(4);
          this.CartList.Name = "CartList";
-         this.CartList.Size = new System.Drawing.Size(347, 310);
+         this.CartList.Size = new System.Drawing.Size(347, 344);
          this.CartList.TabIndex = 9;
          // 
          // RemoveButton
          // 
-         this.RemoveButton.Location = new System.Drawing.Point(20, 426);
-         this.RemoveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.RemoveButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.RemoveButton.Location = new System.Drawing.Point(13, 402);
+         this.RemoveButton.Margin = new System.Windows.Forms.Padding(4);
          this.RemoveButton.Name = "RemoveButton";
-         this.RemoveButton.Size = new System.Drawing.Size(180, 28);
+         this.RemoveButton.Size = new System.Drawing.Size(252, 54);
          this.RemoveButton.TabIndex = 10;
          this.RemoveButton.Text = "Remove Selected Items";
          this.RemoveButton.UseVisualStyleBackColor = true;
@@ -150,7 +159,7 @@
          this.Controls.Add(this.totalLabel);
          this.Controls.Add(this.taxlabel);
          this.Controls.Add(this.Subtotal);
-         this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "Cart";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Cart";

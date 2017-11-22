@@ -40,7 +40,7 @@
          // addTextBox
          // 
          this.addTextBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.addTextBox.Location = new System.Drawing.Point(13, 42);
+         this.addTextBox.Location = new System.Drawing.Point(18, 42);
          this.addTextBox.Margin = new System.Windows.Forms.Padding(4);
          this.addTextBox.Name = "addTextBox";
          this.addTextBox.Size = new System.Drawing.Size(247, 36);
@@ -49,10 +49,10 @@
          // addBtn
          // 
          this.addBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.addBtn.Location = new System.Drawing.Point(268, 42);
+         this.addBtn.Location = new System.Drawing.Point(273, 42);
          this.addBtn.Margin = new System.Windows.Forms.Padding(4);
          this.addBtn.Name = "addBtn";
-         this.addBtn.Size = new System.Drawing.Size(119, 36);
+         this.addBtn.Size = new System.Drawing.Size(116, 36);
          this.addBtn.TabIndex = 1;
          this.addBtn.Text = "Add";
          this.addBtn.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
          // dataGridView1
          // 
          this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridView1.Location = new System.Drawing.Point(16, 115);
+         this.dataGridView1.Location = new System.Drawing.Point(18, 115);
          this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
          this.dataGridView1.Name = "dataGridView1";
          this.dataGridView1.Size = new System.Drawing.Size(371, 220);
@@ -103,7 +103,7 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(452, 406);
+         this.ClientSize = new System.Drawing.Size(403, 406);
          this.Controls.Add(this.adminMenuBtn);
          this.Controls.Add(this.UpdateLabel);
          this.Controls.Add(this.dataGridView1);

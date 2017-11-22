@@ -40,7 +40,7 @@
          // 
          this.logoutAdminButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.logoutAdminButton.Location = new System.Drawing.Point(13, 242);
-         this.logoutAdminButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.logoutAdminButton.Margin = new System.Windows.Forms.Padding(4);
          this.logoutAdminButton.Name = "logoutAdminButton";
          this.logoutAdminButton.Size = new System.Drawing.Size(249, 38);
          this.logoutAdminButton.TabIndex = 0;
@@ -52,7 +52,7 @@
          // 
          this.addMealAdminButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.addMealAdminButton.Location = new System.Drawing.Point(13, 58);
-         this.addMealAdminButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.addMealAdminButton.Margin = new System.Windows.Forms.Padding(4);
          this.addMealAdminButton.Name = "addMealAdminButton";
          this.addMealAdminButton.Size = new System.Drawing.Size(249, 38);
          this.addMealAdminButton.TabIndex = 1;
@@ -64,7 +64,7 @@
          // 
          this.viewStatsAdminButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.viewStatsAdminButton.Location = new System.Drawing.Point(13, 104);
-         this.viewStatsAdminButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.viewStatsAdminButton.Margin = new System.Windows.Forms.Padding(4);
          this.viewStatsAdminButton.Name = "viewStatsAdminButton";
          this.viewStatsAdminButton.Size = new System.Drawing.Size(249, 38);
          this.viewStatsAdminButton.TabIndex = 2;
@@ -88,7 +88,7 @@
          // 
          this.btnAddAdminAcc.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.btnAddAdminAcc.Location = new System.Drawing.Point(13, 196);
-         this.btnAddAdminAcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.btnAddAdminAcc.Margin = new System.Windows.Forms.Padding(4);
          this.btnAddAdminAcc.Name = "btnAddAdminAcc";
          this.btnAddAdminAcc.Size = new System.Drawing.Size(249, 38);
          this.btnAddAdminAcc.TabIndex = 4;
@@ -100,7 +100,7 @@
          // 
          this.modifyStockBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.modifyStockBtn.Location = new System.Drawing.Point(13, 150);
-         this.modifyStockBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.modifyStockBtn.Margin = new System.Windows.Forms.Padding(4);
          this.modifyStockBtn.Name = "modifyStockBtn";
          this.modifyStockBtn.Size = new System.Drawing.Size(249, 38);
          this.modifyStockBtn.TabIndex = 5;
@@ -112,14 +112,14 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(279, 298);
+         this.ClientSize = new System.Drawing.Size(279, 289);
          this.Controls.Add(this.modifyStockBtn);
          this.Controls.Add(this.btnAddAdminAcc);
          this.Controls.Add(this.goToCustViewAdminButton);
          this.Controls.Add(this.viewStatsAdminButton);
          this.Controls.Add(this.addMealAdminButton);
          this.Controls.Add(this.logoutAdminButton);
-         this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "AdminMenu";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "AdminMenu";
