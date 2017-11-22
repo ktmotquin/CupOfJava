@@ -89,5 +89,12 @@ namespace OOAD_Project
             }
             return datatable;
         }
-        }
+
+      private void toAdminMenuBtn_Click(object sender, EventArgs e)
+      {
+         this.Close();
+         AdminMenu adminMenu = new AdminMenu();
+         adminMenu.Show();
+      }
+   }
 }

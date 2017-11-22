@@ -20,7 +20,9 @@ namespace OOAD_Project
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
+           AdminMenu adminMenu = new AdminMenu();
+           adminMenu.Show();
         }
 
         private bool checkForEmpty()

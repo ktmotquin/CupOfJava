@@ -16,5 +16,12 @@ namespace OOAD_Project
         {
             InitializeComponent();
         }
-    }
+
+      private void button1_Click(object sender, EventArgs e)
+      {
+         this.Close();
+         AdminMenu adm = new AdminMenu();
+         adm.Show();
+      }
+   }
 }

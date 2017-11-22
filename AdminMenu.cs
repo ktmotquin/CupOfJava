@@ -42,6 +42,7 @@ namespace OOAD_Project
          CustomerMenu custMenuView = new CustomerMenu(custIsAdmin);
          this.Hide();
          custMenuView.Show();
+         
       }
 
         private void btnAddAdminAcc_Click(object sender, EventArgs e)
