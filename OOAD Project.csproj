@@ -79,6 +79,7 @@
     <Compile Include="CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayPlan.cs" />
     <Compile Include="StatsPage.cs">
       <SubType>Form</SubType>
     </Compile>
