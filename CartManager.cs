@@ -8,5 +8,18 @@ namespace OOAD_Project
 {
     class CartManager
     {
+        Customer cust;
+        PayPlan pp;
+
+        public CartManager()
+        {
+
+        }
+
+        public void Checkout()
+        {
+
+        }
+
     }
 }
