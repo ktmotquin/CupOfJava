@@ -14,6 +14,7 @@ namespace OOAD_Project
    {
         const float STANDARD_PRICE = 7.50f;
         Customer cust;
+        CartManager order;
         //----------------------------------------------------------------
         // Constructor: Initializes components and assigns a temporary
         // customer object to the customer passed in to the form.
@@ -43,11 +44,7 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            foreach(Meal m in CartList.Items)
-            {
-
-            }
-            cust.emptyCart();
+            order = new CartManager();
         }
 
         //----------------------------------------------------------------
