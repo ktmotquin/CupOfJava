@@ -43,5 +43,12 @@ namespace OOAD_Project
          this.Hide();
          custMenuView.Show();
       }
-   }
+
+        private void btnAddAdminAcc_Click(object sender, EventArgs e)
+        {
+            CreateAcc acc = new CreateAcc('A');
+            this.Hide();
+            acc.Show();
+        }
+    }
 }

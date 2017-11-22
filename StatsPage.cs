@@ -49,19 +49,11 @@ namespace OOAD_Project
                 }
             }
                 columns.Add("Name");
-            rows.Add(new String[]
-            {
-
-            });
+            rows.Add(foodItems);
 
             // Another example column.
             columns.Add("Quantity");
-            rows.Add(new String[]
-            {
-                "3",
-                "2",
-                "8"
-            });
+            rows.Add(numItems);
             // Render the DataGridView.
             dataGridView1.DataSource = GetResultsTable();
         }

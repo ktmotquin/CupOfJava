@@ -13,9 +13,21 @@ namespace OOAD_Project
 {
     public partial class CreateAcc : Form
     {
-        public CreateAcc()
+        public CreateAcc(char account)
         {
             InitializeComponent();
+            if(account == 'A')
+            {
+                txtbxAddress.Hide();
+                txtbxCreditNum.Hide();
+                txtbxSecurity.Hide();
+                txtbxExpire.Hide();
+                label2.Hide();
+                label10.Hide();
+                label11.Hide();
+                label12.Hide();
+                //Size.Height = this.Size.Height / 2;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,9 +73,18 @@ namespace OOAD_Project
                 {
                     if(passText.Text.Equals(confirmPassText.Text))
                     {
-                        string text1 = unameText.Text + "/" + passText.Text + "/C/" + 
+                        string text1;
+                        if (txtbxAddress.Enabled == false)
+                        {
+                            text1 = unameText.Text + "/" + passText.Text + "/C/" + 
                             txtbxName.Text + "/" + txtbxEmail.Text + "/" + txtbxPhone.Text + "/"
-                            + txtbxAddress.Text + txtbxCreditNum+ "/" + txtbxSecurity + "/" + txtbxExpire + "\n-1";
+                            + txtbxAddress.Text + "/" + txtbxCreditNum+ "/" + txtbxSecurity + "/" + txtbxExpire + "\n-1";
+                        }
+                        else
+                        {
+                            text1 = unameText.Text + "/" + passText.Text + "/A/" +
+                             txtbxName.Text + "/" + txtbxEmail.Text + "/" + txtbxPhone.Text + "/" + "\n-1";
+                        }
                         toBeWrit += text1;
                         System.IO.File.WriteAllText(fileName, toBeWrit);
                         this.Close();
