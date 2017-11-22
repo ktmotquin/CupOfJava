@@ -1,4 +1,4 @@
-﻿1
+﻿$
 corn~3
 beans~4
 cookies~6
