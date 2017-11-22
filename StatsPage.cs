@@ -31,9 +31,9 @@ namespace OOAD_Project
                 while (!done)
                 {
                     text = streamReader.ReadLine();
-                    if (!text.Equals("-1"))                 // Check if end of file has been reached 
+                    if (!text.Equals("-$"))                 // Check if end of file has been reached 
                     {
-                        if (!text.Equals("1"))
+                        if (!text.Equals("$"))
                         {
                             String[] parts = text.Split('~');      // Breaks the current line into parts
                             foodItems[counter] = parts[0];
