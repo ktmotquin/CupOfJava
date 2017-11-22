@@ -146,6 +146,9 @@
     <EmbeddedResource Include="Meal_Screen.resx">
       <DependentUpon>Meal_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderSummaryPage.resx">
+      <DependentUpon>OrderSummaryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
