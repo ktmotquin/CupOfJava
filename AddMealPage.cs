@@ -121,6 +121,11 @@ namespace OOAD_Project
                 e.Handled = true;
             }
         }
-    }
+
+      private void AddMealPage_Load(object sender, EventArgs e)
+      {
+
+      }
+   }
 }
 

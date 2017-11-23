@@ -247,6 +247,7 @@
          this.Name = "AddMealPage";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "AddMealPage";
+         this.Load += new System.EventHandler(this.AddMealPage_Load);
          this.ResumeLayout(false);
          this.PerformLayout();
 

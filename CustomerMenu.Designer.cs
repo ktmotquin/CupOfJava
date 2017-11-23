@@ -56,7 +56,7 @@
          // 
          this.Logout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.Logout.Location = new System.Drawing.Point(767, 284);
-         this.Logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Logout.Margin = new System.Windows.Forms.Padding(4);
          this.Logout.Name = "Logout";
          this.Logout.Size = new System.Drawing.Size(256, 176);
          this.Logout.TabIndex = 0;
@@ -243,7 +243,7 @@
          this.anytype.AutoSize = true;
          this.anytype.Checked = true;
          this.anytype.Location = new System.Drawing.Point(27, 196);
-         this.anytype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.anytype.Margin = new System.Windows.Forms.Padding(4);
          this.anytype.Name = "anytype";
          this.anytype.Size = new System.Drawing.Size(84, 21);
          this.anytype.TabIndex = 15;
@@ -255,7 +255,7 @@
          // 
          this.lbluser.AutoSize = true;
          this.lbluser.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lbluser.Location = new System.Drawing.Point(39, 9);
+         this.lbluser.Location = new System.Drawing.Point(2, 7);
          this.lbluser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lbluser.Name = "lbluser";
          this.lbluser.Size = new System.Drawing.Size(119, 29);
@@ -286,7 +286,7 @@
          // 
          this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.button1.Location = new System.Drawing.Point(767, 16);
-         this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.button1.Margin = new System.Windows.Forms.Padding(4);
          this.button1.Name = "button1";
          this.button1.Size = new System.Drawing.Size(256, 49);
          this.button1.TabIndex = 19;
@@ -310,7 +310,7 @@
          this.Controls.Add(this.cartButton);
          this.Controls.Add(this.mealSearch);
          this.Controls.Add(this.Logout);
-         this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "CustomerMenu";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "CustomerMenu";
