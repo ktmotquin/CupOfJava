@@ -33,8 +33,8 @@
          this.label2 = new System.Windows.Forms.Label();
          this.label3 = new System.Windows.Forms.Label();
          this.Password = new System.Windows.Forms.TextBox();
-         this.button1 = new System.Windows.Forms.Button();
-         this.cancel = new System.Windows.Forms.Button();
+         this.loginButton = new System.Windows.Forms.Button();
+         this.cancelButton = new System.Windows.Forms.Button();
          this.SuspendLayout();
          // 
          // label1
@@ -90,37 +90,37 @@
          this.Password.TabIndex = 4;
          this.Password.UseSystemPasswordChar = true;
          // 
-         // button1
+         // loginButton
          // 
-         this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button1.Location = new System.Drawing.Point(13, 136);
-         this.button1.Margin = new System.Windows.Forms.Padding(4);
-         this.button1.Name = "button1";
-         this.button1.Size = new System.Drawing.Size(108, 46);
-         this.button1.TabIndex = 5;
-         this.button1.Text = "Login";
-         this.button1.UseVisualStyleBackColor = true;
-         this.button1.Click += new System.EventHandler(this.button1_Click);
+         this.loginButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.loginButton.Location = new System.Drawing.Point(13, 136);
+         this.loginButton.Margin = new System.Windows.Forms.Padding(4);
+         this.loginButton.Name = "loginButton";
+         this.loginButton.Size = new System.Drawing.Size(108, 46);
+         this.loginButton.TabIndex = 5;
+         this.loginButton.Text = "Login";
+         this.loginButton.UseVisualStyleBackColor = true;
+         this.loginButton.Click += new System.EventHandler(this.button1_Click);
          // 
-         // cancel
+         // cancelButton
          // 
-         this.cancel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.cancel.Location = new System.Drawing.Point(140, 136);
-         this.cancel.Margin = new System.Windows.Forms.Padding(4);
-         this.cancel.Name = "cancel";
-         this.cancel.Size = new System.Drawing.Size(112, 46);
-         this.cancel.TabIndex = 6;
-         this.cancel.Text = "Cancel";
-         this.cancel.UseVisualStyleBackColor = true;
-         this.cancel.Click += new System.EventHandler(this.cancel_Click);
+         this.cancelButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.cancelButton.Location = new System.Drawing.Point(140, 136);
+         this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+         this.cancelButton.Name = "cancelButton";
+         this.cancelButton.Size = new System.Drawing.Size(112, 46);
+         this.cancelButton.TabIndex = 6;
+         this.cancelButton.Text = "Cancel";
+         this.cancelButton.UseVisualStyleBackColor = true;
+         this.cancelButton.Click += new System.EventHandler(this.cancel_Click);
          // 
          // Login_Screen
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(379, 195);
-         this.Controls.Add(this.cancel);
-         this.Controls.Add(this.button1);
+         this.Controls.Add(this.cancelButton);
+         this.Controls.Add(this.loginButton);
          this.Controls.Add(this.Password);
          this.Controls.Add(this.label3);
          this.Controls.Add(this.label2);
@@ -142,8 +142,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
 
