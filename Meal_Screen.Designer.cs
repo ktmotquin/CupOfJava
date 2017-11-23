@@ -41,6 +41,9 @@
          this.mealQtyUpDown = new System.Windows.Forms.NumericUpDown();
          this.addToCartButton = new System.Windows.Forms.Button();
          this.pictureBox1 = new System.Windows.Forms.PictureBox();
+         this.backToSearch = new System.Windows.Forms.Button();
+         this.label1 = new System.Windows.Forms.Label();
+         this.usernameLabel = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)(this.mealQtyUpDown)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.SuspendLayout();
@@ -49,7 +52,7 @@
          // 
          this.mealNameLabel.AutoSize = true;
          this.mealNameLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealNameLabel.Location = new System.Drawing.Point(12, 9);
+         this.mealNameLabel.Location = new System.Drawing.Point(12, 38);
          this.mealNameLabel.Name = "mealNameLabel";
          this.mealNameLabel.Size = new System.Drawing.Size(134, 29);
          this.mealNameLabel.TabIndex = 0;
@@ -59,7 +62,7 @@
          // 
          this.mealNameText.AutoSize = true;
          this.mealNameText.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealNameText.Location = new System.Drawing.Point(152, 9);
+         this.mealNameText.Location = new System.Drawing.Point(152, 38);
          this.mealNameText.Name = "mealNameText";
          this.mealNameText.Size = new System.Drawing.Size(234, 29);
          this.mealNameText.TabIndex = 1;
@@ -69,7 +72,7 @@
          // 
          this.descriptionLabel.AutoSize = true;
          this.descriptionLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.descriptionLabel.Location = new System.Drawing.Point(12, 38);
+         this.descriptionLabel.Location = new System.Drawing.Point(12, 67);
          this.descriptionLabel.Name = "descriptionLabel";
          this.descriptionLabel.Size = new System.Drawing.Size(131, 29);
          this.descriptionLabel.TabIndex = 2;
@@ -79,7 +82,7 @@
          // 
          this.descriptionDisplayBox.BackColor = System.Drawing.SystemColors.Menu;
          this.descriptionDisplayBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.descriptionDisplayBox.Location = new System.Drawing.Point(157, 41);
+         this.descriptionDisplayBox.Location = new System.Drawing.Point(157, 70);
          this.descriptionDisplayBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.descriptionDisplayBox.Name = "descriptionDisplayBox";
          this.descriptionDisplayBox.ReadOnly = true;
@@ -91,7 +94,7 @@
          // 
          this.ingredientsLabel.AutoSize = true;
          this.ingredientsLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.ingredientsLabel.Location = new System.Drawing.Point(12, 201);
+         this.ingredientsLabel.Location = new System.Drawing.Point(12, 230);
          this.ingredientsLabel.Name = "ingredientsLabel";
          this.ingredientsLabel.Size = new System.Drawing.Size(135, 29);
          this.ingredientsLabel.TabIndex = 4;
@@ -101,7 +104,7 @@
          // 
          this.ingredientsDisplayBox.BackColor = System.Drawing.SystemColors.Menu;
          this.ingredientsDisplayBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.ingredientsDisplayBox.Location = new System.Drawing.Point(157, 198);
+         this.ingredientsDisplayBox.Location = new System.Drawing.Point(157, 227);
          this.ingredientsDisplayBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.ingredientsDisplayBox.Name = "ingredientsDisplayBox";
          this.ingredientsDisplayBox.ReadOnly = true;
@@ -113,7 +116,7 @@
          // 
          this.instructionsLabel.AutoSize = true;
          this.instructionsLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.instructionsLabel.Location = new System.Drawing.Point(12, 329);
+         this.instructionsLabel.Location = new System.Drawing.Point(12, 358);
          this.instructionsLabel.Name = "instructionsLabel";
          this.instructionsLabel.Size = new System.Drawing.Size(134, 29);
          this.instructionsLabel.TabIndex = 6;
@@ -123,11 +126,11 @@
          // 
          this.instructionsDisplayBox.BackColor = System.Drawing.SystemColors.Menu;
          this.instructionsDisplayBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.instructionsDisplayBox.Location = new System.Drawing.Point(157, 329);
+         this.instructionsDisplayBox.Location = new System.Drawing.Point(157, 358);
          this.instructionsDisplayBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.instructionsDisplayBox.Name = "instructionsDisplayBox";
          this.instructionsDisplayBox.ReadOnly = true;
-         this.instructionsDisplayBox.Size = new System.Drawing.Size(733, 248);
+         this.instructionsDisplayBox.Size = new System.Drawing.Size(927, 248);
          this.instructionsDisplayBox.TabIndex = 7;
          this.instructionsDisplayBox.Text = "";
          // 
@@ -135,7 +138,7 @@
          // 
          this.mealPhotoPlaceholder.AutoSize = true;
          this.mealPhotoPlaceholder.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealPhotoPlaceholder.Location = new System.Drawing.Point(645, 162);
+         this.mealPhotoPlaceholder.Location = new System.Drawing.Point(645, 191);
          this.mealPhotoPlaceholder.Name = "mealPhotoPlaceholder";
          this.mealPhotoPlaceholder.Size = new System.Drawing.Size(219, 29);
          this.mealPhotoPlaceholder.TabIndex = 8;
@@ -145,7 +148,7 @@
          // 
          this.orderQuantityLabel.AutoSize = true;
          this.orderQuantityLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.orderQuantityLabel.Location = new System.Drawing.Point(152, 585);
+         this.orderQuantityLabel.Location = new System.Drawing.Point(152, 614);
          this.orderQuantityLabel.Name = "orderQuantityLabel";
          this.orderQuantityLabel.Size = new System.Drawing.Size(167, 29);
          this.orderQuantityLabel.TabIndex = 9;
@@ -154,7 +157,7 @@
          // mealQtyUpDown
          // 
          this.mealQtyUpDown.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealQtyUpDown.Location = new System.Drawing.Point(325, 583);
+         this.mealQtyUpDown.Location = new System.Drawing.Point(325, 612);
          this.mealQtyUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.mealQtyUpDown.Name = "mealQtyUpDown";
          this.mealQtyUpDown.Size = new System.Drawing.Size(51, 36);
@@ -164,7 +167,7 @@
          // 
          this.addToCartButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
          this.addToCartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.addToCartButton.Location = new System.Drawing.Point(157, 625);
+         this.addToCartButton.Location = new System.Drawing.Point(157, 654);
          this.addToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.addToCartButton.Name = "addToCartButton";
          this.addToCartButton.Size = new System.Drawing.Size(219, 37);
@@ -175,18 +178,53 @@
          // 
          // pictureBox1
          // 
-         this.pictureBox1.Location = new System.Drawing.Point(628, 41);
-         this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.pictureBox1.Location = new System.Drawing.Point(628, 70);
+         this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
          this.pictureBox1.Name = "pictureBox1";
          this.pictureBox1.Size = new System.Drawing.Size(456, 282);
          this.pictureBox1.TabIndex = 12;
          this.pictureBox1.TabStop = false;
+         // 
+         // backToSearch
+         // 
+         this.backToSearch.BackColor = System.Drawing.SystemColors.ActiveBorder;
+         this.backToSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.backToSearch.Location = new System.Drawing.Point(382, 654);
+         this.backToSearch.Name = "backToSearch";
+         this.backToSearch.Size = new System.Drawing.Size(174, 37);
+         this.backToSearch.TabIndex = 13;
+         this.backToSearch.Text = "Back to Search";
+         this.backToSearch.UseVisualStyleBackColor = false;
+         this.backToSearch.Click += new System.EventHandler(this.backToSearch_Click);
+         // 
+         // label1
+         // 
+         this.label1.AutoSize = true;
+         this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label1.Location = new System.Drawing.Point(24, 9);
+         this.label1.Name = "label1";
+         this.label1.Size = new System.Drawing.Size(119, 29);
+         this.label1.TabIndex = 14;
+         this.label1.Text = "Username:";
+         // 
+         // usernameLabel
+         // 
+         this.usernameLabel.AutoSize = true;
+         this.usernameLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.usernameLabel.Location = new System.Drawing.Point(152, 9);
+         this.usernameLabel.Name = "usernameLabel";
+         this.usernameLabel.Size = new System.Drawing.Size(207, 29);
+         this.usernameLabel.TabIndex = 15;
+         this.usernameLabel.Text = "usernameGoesHere";
          // 
          // Meal_Screen
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1100, 727);
+         this.Controls.Add(this.usernameLabel);
+         this.Controls.Add(this.label1);
+         this.Controls.Add(this.backToSearch);
          this.Controls.Add(this.pictureBox1);
          this.Controls.Add(this.addToCartButton);
          this.Controls.Add(this.mealQtyUpDown);
@@ -227,5 +265,8 @@
       private System.Windows.Forms.NumericUpDown mealQtyUpDown;
       private System.Windows.Forms.Button addToCartButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-    }
+      private System.Windows.Forms.Button backToSearch;
+      private System.Windows.Forms.Label label1;
+      private System.Windows.Forms.Label usernameLabel;
+   }
 }

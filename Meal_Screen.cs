@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace OOAD_Project
 {
-    public partial class Meal_Screen : Form
-    {
-        public Meal_Screen(string name, string description, 
-            string instructions, string ingredients, Image img)
-        {
-            InitializeComponent();
-           descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
-            mealNameText.Text = name;
-            ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
-            instructionsDisplayBox.Text = instructions.Replace("~", "\n");
-            pictureBox1.Image = img;
-
-
-        }
-
+   public partial class Meal_Screen : Form
+   {
+      public Meal_Screen(string name, string description,
+         string instructions, string ingredients, Image img)
+      {
+         InitializeComponent();
+         descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
+         mealNameText.Text = name;
+         ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
+         instructionsDisplayBox.Text = instructions.Replace("~", "\n");
+         pictureBox1.Image = img;
+         //usernameLabel.Text = username;
+      }
       private void Meal_Screen_Load(object sender, EventArgs e)
       {
 
@@ -37,15 +35,14 @@ namespace OOAD_Project
       {
          //Form YesOrNoForm = new Form();
          //YesOrNoForm.ShowDialog();
-         if (MessageBox.Show("Meal has been added to the cart.\n " +
-            "Do you want to view your cart(yes) or return to the search page(no)?"
-            , "Meal Added to Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+         if (MessageBox.Show("Meal has been added to the cart.\n Do you want to view your cart" +
+         "(yes) or return to the search page(no)?", "Meal Added to Cart", MessageBoxButtons.YesNo,
+         MessageBoxIcon.Question) == DialogResult.Yes)
          {
-         //   Customer returnCust = new Customer();
+            //Customer returnCust = new Customer();
             this.Close();
-           // Cart cartForm = new Cart(returnCust);
-           // cartForm.Show();
-           
+            // Cart cartForm = new Cart(returnCust);
+            // cartForm.Show();  
          }
          else
          {
@@ -53,6 +50,12 @@ namespace OOAD_Project
          }
       }
 
-
-    }
+      private void backToSearch_Click(object sender, EventArgs e)
+      {
+         string userName = "current User";
+         this.Close();
+         CustomerMenu backToSearch = new CustomerMenu(userName);
+         backToSearch.Show();
+      }
+   }
 }

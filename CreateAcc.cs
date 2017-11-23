@@ -75,13 +75,13 @@ namespace OOAD_Project
                         string text1;
                         if (txtbxAddress.Enabled == true)
                         {
-                            text1 = unameText.Text + "$" + passText.Text + "/C/" + 
+                            text1 = unameText.Text + "$" + passText.Text + "$C$" + 
                             txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "$"
                             + txtbxAddress.Text + "$" + txtbxCreditNum.Text + "$" + txtbxSecurity.Text + "$" + txtbxExpire.Text + "\n-1";
                         }
                         else
                         {
-                            text1 = unameText.Text + "$" + passText.Text + "/A/" +
+                            text1 = unameText.Text + "$" + passText.Text + "$A$" +
                              txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "\n-1";
                         }
                         toBeWrit += text1;
