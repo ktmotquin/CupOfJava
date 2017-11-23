@@ -67,7 +67,7 @@
          // mealSearch
          // 
          this.mealSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealSearch.Location = new System.Drawing.Point(464, 38);
+         this.mealSearch.Location = new System.Drawing.Point(446, 38);
          this.mealSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.mealSearch.Name = "mealSearch";
          this.mealSearch.Size = new System.Drawing.Size(115, 36);
@@ -91,10 +91,10 @@
          // searchBox
          // 
          this.searchBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.searchBox.Location = new System.Drawing.Point(154, 38);
+         this.searchBox.Location = new System.Drawing.Point(44, 38);
          this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.searchBox.Name = "searchBox";
-         this.searchBox.Size = new System.Drawing.Size(304, 36);
+         this.searchBox.Size = new System.Drawing.Size(396, 36);
          this.searchBox.TabIndex = 3;
          this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBox_KeyPress);
          // 
@@ -278,9 +278,9 @@
          this.label1.Location = new System.Drawing.Point(40, 82);
          this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label1.Name = "label1";
-         this.label1.Size = new System.Drawing.Size(647, 24);
+         this.label1.Size = new System.Drawing.Size(592, 24);
          this.label1.TabIndex = 18;
-         this.label1.Text = "Select Search Meals without anything entered into textbox to view all meals";
+         this.label1.Text = "Select Search without anything entered into textbox to view all meals";
          // 
          // button1
          // 
