@@ -10,7 +10,7 @@ namespace OOAD_Project
     {
         Customer cust;
         PayPlan pp;
-        OrderSummaryPage orderPage;
+ //       OrderSummaryPage orderPage;
 
         public CartManager()
         {

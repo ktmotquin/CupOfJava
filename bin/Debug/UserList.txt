@@ -1,4 +1,5 @@
 1
 admin$password$A
 murphysam$SRTM$C$Samantha Murphy$murphysam@uwplatt.edu$1234567890$1 University Plaza$1111222233334444$111$11/21
+Sarah$password$C$Sarah Higgens$higgenss@uwplatt.edu$12345678910$123 Street$112222$980$8/22
 -1
