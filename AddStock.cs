@@ -74,9 +74,27 @@ namespace OOAD_Project
             }
 
         }
-           
+
+        private void addTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            string toBeWrit = "$\n";
+            string text;
+            bool found = false; // True if an account is associated with the login info
+            bool done = false;  // True when end of user list has been reached
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
+            using (var streamReader1 = new StreamReader(fileStream, Encoding.UTF8))
+            {
+
+            }
+       }
+           
+    }
 
     }
 

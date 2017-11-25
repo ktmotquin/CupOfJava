@@ -3,4 +3,5 @@ corn~3
 beans~4
 cookies~6
 turkey~8
+cheese~2
 -$
