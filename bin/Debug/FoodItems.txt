@@ -4,4 +4,7 @@ beans~4
 cookies~6
 turkey~8
 cheese~2
+carrot~50
+carrot~10
+milk~5
 -$

@@ -72,8 +72,11 @@ namespace OOAD_Project
             {
                 MessageBox.Show("Item is already in database");
             }
-
-        }
+         //Added by Samantha 11/25 to get the user back to the Admin Menu after adding stock
+         AdminMenu adm = new AdminMenu();
+         adm.Show();
+         this.Close();
+      }
 
         private void addTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -92,7 +95,11 @@ namespace OOAD_Project
             {
 
             }
-       }
+         //Added by Samantha 11/25 to get the user back to the Admin Menu after updating stock
+         AdminMenu adm = new AdminMenu();
+         adm.Show();
+         this.Close();
+      }
            
     }
 

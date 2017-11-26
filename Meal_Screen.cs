@@ -50,11 +50,13 @@ namespace OOAD_Project
          }
       }
 
+      /** Clicking "Back to Search" button allows user to essentially
+       * cancel looking at the item, and to return to the CustomerMenu.
+       * */
       private void backToSearch_Click(object sender, EventArgs e)
       {
-         string userName = "current User";
          this.Close();
-         CustomerMenu backToSearch = new CustomerMenu(userName);
+         CustomerMenu backToSearch = new CustomerMenu(name);
          backToSearch.Show();
       }
    }

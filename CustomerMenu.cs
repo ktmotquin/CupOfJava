@@ -10,32 +10,44 @@ using System.Windows.Forms;
 
 namespace OOAD_Project
 {
-    public partial class CustomerMenu : Form
-    {
-        private MealList m = new MealList();
-        private CustomerList list = new CustomerList();
-        public CustomerMenu(string username)
-        {
-            InitializeComponent();
+   public partial class CustomerMenu : Form
+   {
+      private MealList m = new MealList();
+      private CustomerList list = new CustomerList();
+      public CustomerMenu(string username)
+      {
+         InitializeComponent();
+         //lblname.Text = username;
+         //Sam is testing something here - 11/25/17
+         if (username == "admin" || username == "Admin" ||
+         username == "Administrator" || username == "administrator")
+         {
+            lblname.Text = "Administrator";
+            cartButton.Hide();
+            button1.Hide();
+         }
+         else
+         {
             lblname.Text = username;
-            
-        }
+         }
+      }
 
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            this.Close();   // Close this window
-        }
+      private void Logout_Click(object sender, EventArgs e)
+      {
+         this.Close();   // Close this window
+      }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
+      private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+      {
+
+      }
 
 
-        private void CustomerMenu_Load(object sender, EventArgs e)
-        {
-            if(lblname.Text != "administrator")
+      private void CustomerMenu_Load(object sender, EventArgs e)
+      {
+         if (lblname.Text != "administrator" || lblname.Text != "admin"
+            || lblname.Text != "Admin" || lblname.Text != "Administrator")
             {
                 Customer cust = list.returnCustomer(lblname.Text);
             }
