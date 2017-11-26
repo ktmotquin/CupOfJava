@@ -32,22 +32,9 @@ namespace OOAD_Project
        * the user if they want to "Return to Search" or "View Cart". 
        * */
       private void addToCartButton_Click(object sender, EventArgs e)
-      {
-         //Form YesOrNoForm = new Form();
-         //YesOrNoForm.ShowDialog();
-         if (MessageBox.Show("Meal has been added to the cart.\n Do you want to view your cart" +
-         "(yes) or return to the search page(no)?", "Meal Added to Cart", MessageBoxButtons.YesNo,
-         MessageBoxIcon.Question) == DialogResult.Yes)
-         {
-            //Customer returnCust = new Customer();
-            this.Close();
-            // Cart cartForm = new Cart(returnCust);
-            // cartForm.Show();  
-         }
-         else
-         {
-            this.Close();
-         }
+      { 
+         MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
+         this.Close();
       }
 
       /** Clicking "Back to Search" button allows user to essentially
@@ -56,8 +43,8 @@ namespace OOAD_Project
       private void backToSearch_Click(object sender, EventArgs e)
       {
          this.Close();
-         CustomerMenu backToSearch = new CustomerMenu(name);
-         backToSearch.Show();
+         //CustomerMenu backToSearch = new CustomerMenu(name);
+         //backToSearch.Show();
       }
    }
 }
