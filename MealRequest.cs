@@ -11,17 +11,13 @@ using System.Windows.Forms;
 
 namespace OOAD_Project
 {
-    public partial class RequestMealPage : Form
+    public partial class MealRequest : Form
     {
-        public RequestMealPage()
+        public MealRequest()
         {
             InitializeComponent();
         }
 
-        private void Cancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private bool checkForEmpty()
         {
             bool validInfoEntered = true;
@@ -56,7 +52,7 @@ namespace OOAD_Project
                                 + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
                                 Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
                 System.Console.WriteLine(enteredInfo);
-                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\RequestMeal.txt");
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
                 var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
                 //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
 
@@ -108,7 +104,7 @@ namespace OOAD_Project
         private void btnImage_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please add BMP file to the folder where the .exe file exists\n" +
-    "Add name of BMP file to text box\n" + "Careful, do not add .bmp to filename");
+                "Add name of BMP file to text box\n" + "Careful, do not add .bmp to filename");
         }
 
         private void ID_KeyPress(object sender, KeyPressEventArgs e)

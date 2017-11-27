@@ -177,8 +177,8 @@ namespace OOAD_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // RequestMealPage rmp = new RequestMealPage();
-            //rmp.Show();
+             MealRequest mr = new MealRequest();
+             mr.Show();
         }
     }
 }
