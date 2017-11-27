@@ -19,8 +19,7 @@ namespace OOAD_Project
          InitializeComponent();
          //lblname.Text = username;
          //Sam is testing something here - 11/25/17
-         if (username == "admin" || username == "Admin" ||
-         username == "Administrator" || username == "administrator")
+         if (username == "administrator")
          {
             lblname.Text = "Administrator";
             cartButton.Hide();
@@ -46,8 +45,7 @@ namespace OOAD_Project
 
       private void CustomerMenu_Load(object sender, EventArgs e)
       {
-         if (lblname.Text != "administrator" || lblname.Text != "admin"
-            || lblname.Text != "Admin" || lblname.Text != "Administrator")
+         if (lblname.Text != "Administrator")
             {
                 Customer cust = list.returnCustomer(lblname.Text);
             }
@@ -145,7 +143,7 @@ namespace OOAD_Project
 
             if(searchList.SelectedIndex > -1)
             {
-                if(lblname.Text != "administrator")
+                if(lblname.Text != "Administrator")
                 {
                     Customer cust = list.returnCustomer(lblname.Text);
                 }

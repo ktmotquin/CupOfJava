@@ -3,13 +3,14 @@
     public class Customer
     {
         const int MAXMEALS = 30;
-        string email, password, phoneNum, address, username, name;
+        string email, password, phoneNum, address, username, name,
+            creditcard, securitynum, expdate;
         int next = 0, numMeals = 0;
         //PaymentPlan currentPlan;
         Meal[] cart = new Meal[MAXMEALS];
 
         public Customer(string u, string pass, string n, 
-            string e, string p, string a)
+            string e, string p, string a, string c, string s, string ed)
         {
             name = n;
             password = pass;
@@ -17,6 +18,10 @@
             email = e;
             phoneNum = p;
             address = a;
+            creditcard = c;
+            securitynum = s;
+            expdate = ed;
+
         }
 
         //----------------------------------------------------------------

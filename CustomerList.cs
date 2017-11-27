@@ -34,7 +34,8 @@ namespace OOAD_Project
                         String[] parts = text.Split('$');      // Breaks the current line into parts
                            if (parts[2] != "A")
                            {
-                              customers[count] = new Customer(parts[0], parts[1], parts[3], parts[4], parts[5], parts[6]);
+                              customers[count] = new Customer(parts[0], parts[1], parts[3], parts[4], parts[5], parts[6],
+                                  parts[7], parts[8], parts[9]);
                               count++;
                            }
 
