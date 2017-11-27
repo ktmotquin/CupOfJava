@@ -19,9 +19,13 @@ namespace OOAD_Project
             if(account == 'A')
             {
                 txtbxAddress.Hide();
+                txtbxAddress.Enabled = false;
                 txtbxCreditNum.Hide();
+                txtbxCreditNum.Enabled = false;
                 txtbxSecurity.Hide();
+                txtbxSecurity.Enabled = false;
                 txtbxExpire.Hide();
+                txtbxExpire.Enabled = false;
                 label2.Hide();
                 label10.Hide();
                 label11.Hide();
