@@ -14,7 +14,8 @@ namespace OOAD_Project
 
         public CartManager(Customer c, PayPlan p)
         {
-            cust = new OOAD_Project.Customer(c);
+            cust = new Customer(c);
+            pp = new PayPlan(p);
         }
 
         public void emptyCart()

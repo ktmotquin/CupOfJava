@@ -33,5 +33,18 @@ namespace OOAD_Project
             }
         }
 
+        public PayPlan(PayPlan other)
+        {
+            price = other.price;
+            numPeople = other.numPeople;
+            mealCount = other.mealCount;
+            maxMeals = other.maxMeals;
+            plan = other.plan;
+        }
+
+        public void updateMealCount(int num)
+        {
+
+        }
     }
 }

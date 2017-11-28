@@ -48,6 +48,7 @@
         public string getemail(){ return email;}
         public string getphone() { return phoneNum; }
         public string getaddress() { return address; }
+        public PayPlan getPayPlan() { return currentPlan; }
         public Meal[] getCart() { return cart; }
 
         //public void setPayPlan(PaymentPlan pp) { currentPlan = pp; }
@@ -90,14 +91,12 @@
         //----------------------------------------------------------------
         public int findCartItem(Meal m)
         {
-            int index = -1;
             for(int i = 0; i < cart.Length; i++)
             {
                 if (cart[i].name() == m.name())
-                    index = i;
-                break;
+                    return i;
             }
-            return index;
+            return -1;
         }
     }
 }

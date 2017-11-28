@@ -95,7 +95,6 @@ namespace OOAD_Project
                     else
                     {
                         MessageBox.Show("Error: Passwords do not match.");  // Display passwords do not match
-
                     }
                 }
                 else

@@ -34,7 +34,6 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            
             foreach(Meal m in CartList.CheckedItems)
                 cust.removeItem(m);
         }
@@ -45,7 +44,7 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            order = new CartManager(cust);
+            order = new CartManager(cust, cust.getPayPlan());
         }
 
         //----------------------------------------------------------------
