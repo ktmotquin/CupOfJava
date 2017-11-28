@@ -126,7 +126,7 @@ namespace OOAD_Project
                 toBeWrit += "-$\n";
                 System.IO.File.WriteAllText(fileName, toBeWrit);
 
-                MessageBox.Show("Added" + quantityTxtBox2.Text + " items of " + modifyTxtBox.Text + " to database");  // Display passwords do not match
+                MessageBox.Show("Added " + quantityTxtBox2.Text + " items of " + modifyTxtBox.Text + " to database");  // Display passwords do not match
             }
             else
             {
