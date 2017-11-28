@@ -12,7 +12,6 @@ namespace OOAD_Project
 {
    public partial class Cart : Form
    {
-        const float STANDARD_PRICE = 7.50f;
         Customer cust;
         CartManager order;
         //----------------------------------------------------------------
@@ -24,6 +23,8 @@ namespace OOAD_Project
             InitializeComponent();
             cust = inCust;
             countBox.Text = "0";
+            remainingMeals.Text = 
+                cust.getPayPlan().getRemaining().ToString();
         }
 
         //----------------------------------------------------------------
@@ -38,8 +39,8 @@ namespace OOAD_Project
         }
 
         //----------------------------------------------------------------
-        // Sends the meals in CartList to the CartManager for the
-        // order to be processed.
+        // Sends the meals in CartList to the CartManager,  processes the 
+        // order, and resets the countBox and remainingMeals fields.
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
@@ -47,10 +48,17 @@ namespace OOAD_Project
             foreach (Meal m in CartList.CheckedItems)
             {
                 if (!order.add(m))
+                {
                     MessageBox.Show("You've gone over your maximum meals!"
                         + "Please add some more meals to continue.");
+                    this.Close();
                     break;
+                }
             }
+            order.processOrder();
+            countBox.Text = cust.getCart().Length.ToString();
+            remainingMeals.Text = 
+                cust.getPayPlan().getRemaining().ToString();
         }
 
         //----------------------------------------------------------------

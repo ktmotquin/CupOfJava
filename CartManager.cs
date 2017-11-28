@@ -11,7 +11,7 @@ namespace OOAD_Project
         const int MAX_SIZE = 50;
         int index = -1;
         Customer cust;
-        Meal[] selectedItems;
+        Meal[] selectedItems = new Meal[MAX_SIZE];
         PayPlan pp;
         //OrderSummaryPage orderPage;
 
@@ -32,10 +32,22 @@ namespace OOAD_Project
             if (cust.getPayPlan().getCount() < cust.getPayPlan().getMaxMeals())
             {
                 selectedItems[++index] = m;
+                cust.getPayPlan().increaseMealCount(1);
                 cust.removeItem(m);
                 return true;
             }
             return false;
+        }
+
+        public void processOrder()
+        {
+            /*orderPage.display(selectedItems); 
+             * orderPage.displayCount(cust.getPayPlan().getCount();*/
+
+            /* 
+             *  
+             * send the purchased meals to order summary page, 
+             * send the number of remaining meals to the summary page*/
         }
 
     }

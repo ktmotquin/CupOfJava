@@ -51,8 +51,6 @@
         public PayPlan getPayPlan() { return currentPlan; }
         public Meal[] getCart() { return cart; }
 
-        //public void setPayPlan(PaymentPlan pp) { currentPlan = pp; }
-
         //----------------------------------------------------------------
         // Clears the entire cart upon completion of an order or deletion
         // of a user's account.

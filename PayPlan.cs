@@ -10,13 +10,14 @@ namespace OOAD_Project
     {
         float price;
         int mealCount, maxMeals;
+        const int MAX_MEALS = 50;
         const float PRICE_PER_MEAL = 8.50f;
 
-        public PayPlan(int max)
+        public PayPlan()
         {
             mealCount = 0;
-            maxMeals = max;
-            price = PRICE_PER_MEAL * max;
+            maxMeals = MAX_MEALS;
+            price = PRICE_PER_MEAL * MAX_MEALS;
         }
 
         public PayPlan(PayPlan other)
@@ -28,6 +29,7 @@ namespace OOAD_Project
 
         public int getCount() { return mealCount; }
         public int getMaxMeals() { return maxMeals; }
+        public int getRemaining() { return maxMeals - mealCount; }
         public void increaseMealCount(int num) { mealCount += num; }
         public void subtractMeals(int num) { mealCount -= num; }
     }
