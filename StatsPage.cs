@@ -17,6 +17,7 @@ namespace OOAD_Project
         public StatsPage()
         {
             InitializeComponent();
+            pieGraph.Series["Meals"].Label = "sarah";
 
             string text;
             bool done = false;
