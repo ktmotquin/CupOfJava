@@ -7,4 +7,6 @@ cheese~2
 carrot~50
 carrot~10
 milk~5
+eggs~3
+pasta~44
 -$
