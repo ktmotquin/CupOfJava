@@ -10,11 +10,22 @@ namespace OOAD_Project
     {
         Customer cust;
         PayPlan pp;
- //       OrderSummaryPage orderPage;
+        //OrderSummaryPage orderPage;
 
-        public CartManager()
+        public CartManager(Customer c, PayPlan p)
         {
+            cust = new OOAD_Project.Customer(c);
+        }
 
+        public void emptyCart()
+        {
+            foreach (Meal m in cust.getCart())
+                cust.removeItem(m);
+        }
+
+        public float calculatePrices()
+        {
+            return 0.0f;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOAD_Project
 {
-    class PayPlan
+    public class PayPlan
     {
         float price;
         int numPeople, mealCount, maxMeals, plan;
