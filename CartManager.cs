@@ -13,7 +13,7 @@ namespace OOAD_Project
         Customer cust;
         Meal[] selectedItems = new Meal[MAX_SIZE];
         PayPlan pp;
-        //OrderSummaryPage orderPage;
+        OrderSummary orderPage;
 
         public CartManager(Customer c, PayPlan p)
         {
@@ -42,12 +42,7 @@ namespace OOAD_Project
         public void processOrder()
         {
             /*orderPage.display(selectedItems); 
-             * orderPage.displayCount(cust.getPayPlan().getCount();*/
-
-            /* 
-             *  
-             * send the purchased meals to order summary page, 
-             * send the number of remaining meals to the summary page*/
+             * orderPage.displayCount(cust.getPayPlan().getCount()); */
         }
 
     }
