@@ -11,7 +11,7 @@
 
         public Customer(string u, string pass, string n, 
             string e, string p, string a, string c,
-            string s, string ed, PayPlan plan)
+            string s, string ed)//, PayPlan plan)
         {
             name = n;
             password = pass;
@@ -22,7 +22,7 @@
             creditcard = c;
             securitynum = s;
             expdate = ed;
-            currentPlan = plan;
+            //currentPlan = plan;
         }
 
         public Customer(Customer c)

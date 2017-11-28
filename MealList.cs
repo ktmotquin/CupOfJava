@@ -59,7 +59,7 @@ namespace OOAD_Project
 
         public int searchList(string mealname)
         {
-           // mealname = mealname.ToUpp();
+            // mealname = mealname.ToUpp();
             for (int i = 0; i < count; i++)
             {
                 if (mealname == meals[i].name())
@@ -81,9 +81,60 @@ namespace OOAD_Project
         {
             return meals[index];
         }
+
+        public bool removemeal(int index)
+        {
+            string mealname;
+            mealname = meals[index].name(); 
+            string toBeWrit = "";
+            string text;
+            bool found = false;
+            bool done = false;
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
+                                                                                       //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                while (!done)
+                {
+                    text = streamReader.ReadLine();         // read next line
+
+                    string[] stuff = text.Split('$');
+                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (stuff[0].ToLower() != mealname.ToLower())
+                        {
+                            toBeWrit += text + '\n';
+                        }
+
+                        String[] parts = text.Split('$');      // Breaks the current line into parts
+                        if (stuff[0].ToLower() == mealname.ToLower())
+                        {
+                            found = true;
+                        }
+                    }
+                    else
+                    {
+                        done = true;                        // Info not found
+                    }
+                }
+            }
+            fileStream.Close();
+            if (found)
+            {
+                toBeWrit += "-1\n";
+                System.IO.File.WriteAllText(fileName, toBeWrit);
+                return true;
+            }
+            else
+                return false;
+
+
+        }
+
         public bool checktype(int index, string type)
         {
-            if(index == -1)
+            if (index == -1)
                 return false;
             if (meals[index].mealtype() == type)
                 return true;

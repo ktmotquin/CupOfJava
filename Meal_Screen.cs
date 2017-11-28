@@ -21,11 +21,11 @@ namespace OOAD_Project
          ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
          instructionsDisplayBox.Text = instructions.Replace("~", "\n");
          pictureBox1.Image = img;
-         //usernameLabel.Text = username;
+        // usernameLabel.Text = username;
       }
       private void Meal_Screen_Load(object sender, EventArgs e)
       {
-
+          
       }
 
       /** Clicking the "Add to Cart" button brings up a pop-up asking

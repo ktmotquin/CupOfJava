@@ -82,11 +82,11 @@ namespace OOAD_Project
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string toBeWrit = "1\n";
+            string toBeWrit = "";
             string text;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
-            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
                                                                                        //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
@@ -95,20 +95,24 @@ namespace OOAD_Project
                 {
                     text = streamReader.ReadLine();         // read next line
 
-                    string[] stuff = text.Split('$');
-                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    string[] stuff = text.Split('~');
+                    if (!stuff[0].Equals("-$"))                 // Check if end of file has been reached 
                     {
-                        if (!stuff[0].Equals("1"))
-                        {
-                            toBeWrit += text + '\n';
-                        }
 
-                        String[] parts = text.Split('$');      // Breaks the current line into parts
+
+
+
+                        String[] parts = text.Split('~');      // Breaks the current line into parts
                         if (modifyTxtBox.Text.Equals(stuff[0]))
                         {
                             found = true;
-                            done = true;                    // Account info is correct
+                            int item1, item2;
+                            Int32.TryParse(quantityTxtBox2.Text, out item1);
+                            Int32.TryParse(stuff[1], out item2);
+                            int numitems = item1 + item2;
+                            text = stuff[0] + "~" + numitems;
                         }
+                        toBeWrit += text + '\n';
                     }
                     else
                     {
@@ -117,17 +121,16 @@ namespace OOAD_Project
                 }
             }
             fileStream.Close();
-            if (!found)
+            if (found)
             {
-                 string text1;
+                toBeWrit += "-$\n";
+                System.IO.File.WriteAllText(fileName, toBeWrit);
 
-          
-               
-                    MessageBox.Show("In Database");  // Display passwords do not match
+                MessageBox.Show("Added" + quantityTxtBox2.Text + " items of " + modifyTxtBox.Text + " to database");  // Display passwords do not match
             }
             else
             {
-                MessageBox.Show("Error: Username already taken.");  // Display passwords do not match
+                MessageBox.Show("Error: Item not found");  // Display passwords do not match
             }
         }
     }

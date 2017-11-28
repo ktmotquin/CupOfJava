@@ -58,5 +58,22 @@ namespace OOAD_Project
             this.Hide();
             addStock.Show();
         }
+
+        private void AdminMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Remove_Meal remove = new Remove_Meal();
+            this.Hide();
+            remove.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
