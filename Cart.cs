@@ -23,8 +23,7 @@ namespace OOAD_Project
         {
             InitializeComponent();
             cust = inCust;
-            SubtotalBox.Enabled = TaxBox.Enabled 
-                = TotalBox.Enabled = false;
+            countBox.Text = "0";
         }
 
         //----------------------------------------------------------------
@@ -39,12 +38,19 @@ namespace OOAD_Project
         }
 
         //----------------------------------------------------------------
-        // Sends the meals in CartList to the OrderManager for the
+        // Sends the meals in CartList to the CartManager for the
         // order to be processed.
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             order = new CartManager(cust, cust.getPayPlan());
+            foreach (Meal m in CartList.CheckedItems)
+            {
+                if (!order.add(m))
+                    MessageBox.Show("You've gone over your maximum meals!"
+                        + "Please add some more meals to continue.");
+                    break;
+            }
         }
 
         //----------------------------------------------------------------
@@ -54,19 +60,13 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void Cart_Activated(object sender, EventArgs e)
         {
-            float subtotal = 0.0f, tax = 0.0f, total = 0.0f;
-            int i = 0;
-            const float TAX_RATE = 0.05f;
+            int i = 0, itemCount = 0;
             foreach(Meal m in cust.getCart())
             {
                 CartList.Items.Insert(i, m.name());
-                subtotal += STANDARD_PRICE;
+                ++itemCount;
             }
-            tax = subtotal * (1 + TAX_RATE);
-            total = subtotal + tax;
-            SubtotalBox.Text = subtotal.ToString();
-            TaxBox.Text = tax.ToString();
-            TotalBox.Text = total.ToString();
+            countBox.Text = itemCount.ToString();
         }
     }
 }

@@ -8,7 +8,10 @@ namespace OOAD_Project
 {
     class CartManager
     {
+        const int MAX_SIZE = 50;
+        int index = -1;
         Customer cust;
+        Meal[] selectedItems;
         PayPlan pp;
         //OrderSummaryPage orderPage;
 
@@ -24,9 +27,16 @@ namespace OOAD_Project
                 cust.removeItem(m);
         }
 
-        public float calculatePrices()
+        public bool add(Meal m)
         {
-            return 0.0f;
+            if (cust.getPayPlan().getCount() < cust.getPayPlan().getMaxMeals())
+            {
+                selectedItems[++index] = m;
+                cust.removeItem(m);
+                return true;
+            }
+            return false;
         }
+
     }
 }
