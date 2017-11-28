@@ -140,8 +140,7 @@ namespace OOAD_Project
 
         private void mealView_Click(object sender, EventArgs e)
         {
-
-            if(searchList.SelectedIndex > -1)
+           if(searchList.SelectedIndex > -1)
             {
                 if(lblname.Text != "Administrator")
                 {
@@ -152,7 +151,7 @@ namespace OOAD_Project
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), 
                 m.sendmeal(index).description(), m.sendmeal(index).instructions(),
-                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)));            
+                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)), lblname.Text);            
             mealForm.Show();
             }
             else

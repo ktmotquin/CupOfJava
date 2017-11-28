@@ -13,19 +13,27 @@ namespace OOAD_Project
    public partial class Meal_Screen : Form
    {
       public Meal_Screen(string name, string description,
-         string instructions, string ingredients, Image img)
+         string instructions, string ingredients, Image img, string username)
       {
+         //Edited by Sam 11/27 8:13PM
          InitializeComponent();
+         if (username == "Administrator")
+         {
+            addToCartButton.Hide();
+            orderQuantityLabel.Hide();
+            mealQtyUpDown.Hide();
+         }
+         
          descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
          mealNameText.Text = name;
          ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
          instructionsDisplayBox.Text = instructions.Replace("~", "\n");
          pictureBox1.Image = img;
-        // usernameLabel.Text = username;
+         //usernameLabel.Text = username;   
       }
       private void Meal_Screen_Load(object sender, EventArgs e)
       {
-          
+
       }
 
       /** Clicking the "Add to Cart" button brings up a pop-up asking
