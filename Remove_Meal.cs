@@ -37,5 +37,10 @@ namespace OOAD_Project
                 MessageBox.Show("Meal has been deleted.", "Meal has been deleted.", MessageBoxButtons.OK);
             }
         }
-    }
+
+      private void backToAdminMenu_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
+   }
 }
