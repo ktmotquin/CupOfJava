@@ -5,7 +5,7 @@
         const int MAXMEALS = 30;
         string email, password, phoneNum, address, username, name,
             creditcard, securitynum, expdate;
-        int next = 0, numMeals = 0;
+        int next = 0, numMeals = 0, totalMeals = 0;
         PayPlan currentPlan;
         Meal[] cart = new Meal[MAXMEALS];
 
@@ -44,6 +44,7 @@
         // Getter methods for all private members of Customer class
         //----------------------------------------------------------------
         public string getuser() { return username; }
+        public int getTotalMeals() { return totalMeals; }
         public string getname() { return name; }
         public string getpassword() { return password;}
         public string getemail(){ return email;}
@@ -70,7 +71,7 @@
         public void addToCart(Meal m)
         {
             cart[next++] = m;
-            ++numMeals;
+            ++totalMeals;
         }
 
         //----------------------------------------------------------------
@@ -102,8 +103,6 @@
         // 
         //----------------------------------------------------------------
         public int returnNumMeals()
-        {
-            return numMeals;
-        }
+        { return numMeals; }
     }
 }

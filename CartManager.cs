@@ -13,15 +13,15 @@ namespace OOAD_Project
         Customer cust;
         Meal[] selectedItems = new Meal[MAX_SIZE];
         PayPlan pp;
-        //OrderSummary orderPage;
+        OrderSummary orderPage;
 
         public CartManager(Customer c, PayPlan p)
         {
             cust = new Customer(c);
             pp = p;
             //pp = new PayPlan(p);
-            //orderPage = new OrderSummary();
-            //orderPage.Hide();
+            orderPage = new OrderSummary();
+            orderPage.Hide();
         }
 
         public void emptyCart()
@@ -44,9 +44,9 @@ namespace OOAD_Project
 
         public void processOrder()
         {
-            //orderPage.Show();
-            //orderPage.display(selectedItems); 
-            //orderPage.displayCount(cust.getPayPlan().getCount()); 
+            orderPage.Show();
+            orderPage.display(selectedItems); 
+            orderPage.displayCount(cust.getPayPlan().getCount()); 
         }
 
     }
