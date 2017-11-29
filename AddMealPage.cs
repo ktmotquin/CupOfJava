@@ -126,6 +126,11 @@ namespace OOAD_Project
       {
 
       }
+
+      private void backToMainMenu_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
    }
 }
 
