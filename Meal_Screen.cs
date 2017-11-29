@@ -22,6 +22,12 @@ namespace OOAD_Project
             addToCartButton.Hide();
             orderQuantityLabel.Hide();
             mealQtyUpDown.Hide();
+                btnEdit.Enabled= true;
+                btnEdit.Visible = true;
+                descriptionDisplayBox.ReadOnly = false;
+                ingredientsDisplayBox.ReadOnly = false;
+                instructionsDisplayBox.ReadOnly = false;
+                
          }
          
          descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
@@ -55,5 +61,10 @@ namespace OOAD_Project
          //CustomerMenu backToSearch = new CustomerMenu(name);
          //backToSearch.Show();
       }
-   }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            MealList meal = new MealList();
+        }
+    }
 }

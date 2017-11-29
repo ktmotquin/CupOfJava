@@ -14,7 +14,6 @@ namespace OOAD_Project
    {
       private MealList m = new MealList();
       private CustomerList list = new CustomerList();
-      private Customer cust;
       public CustomerMenu(string username)
       {
          InitializeComponent();
@@ -49,7 +48,7 @@ namespace OOAD_Project
       {
          if (lblname.Text != "Administrator")
             {
-                cust = list.returnCustomer(lblname.Text);
+                Customer cust = list.returnCustomer(lblname.Text);
             }
                 
         }
@@ -146,7 +145,7 @@ namespace OOAD_Project
             {
                 if(lblname.Text != "Administrator")
                 {
-                    cust = list.returnCustomer(lblname.Text);
+                    Customer cust = list.returnCustomer(lblname.Text);
                 }
             
             string meal = searchList.SelectedItem.ToString();
@@ -165,14 +164,7 @@ namespace OOAD_Project
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-            int count = cust.getTotalMeals();
-            if (count != 0)
-            {
-                Cart cart = new Cart(cust);
-                cart.Show();
-            }
-            else
-                MessageBox.Show("Your Cart is Empty DUMBASS! Order some food.");
+
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)

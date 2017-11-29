@@ -12,9 +12,29 @@ namespace OOAD_Project
 {
     public partial class Edit_Meals : Form
     {
+        private MealList meals = new MealList();
         public Edit_Meals()
         {
             InitializeComponent();
+        }
+
+        private void Edit_Meals_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < meals.getcount(); i++)
+            {
+                    listBox1.Items.Add(meals.sendmeal(i).name());
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            Meal_Screen adminedit = new Meal_Screen(meals.sendmeal(index).name(),
+                meals.sendmeal(index).description(), meals.sendmeal(index).instructions(),
+                meals.sendmeal(index).ingredients(), meals.ScaleImage(meals.getimg(index)), "Administrator");
+            this.Hide();
+            adminedit.Show();
         }
     }
 }
