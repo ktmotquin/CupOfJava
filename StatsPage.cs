@@ -98,8 +98,6 @@ namespace OOAD_Project
       private void toAdminMenuBtn_Click(object sender, EventArgs e)
       {
          this.Close();
-         AdminMenu adminMenu = new AdminMenu();
-         adminMenu.Show();
       }
    }
 }
