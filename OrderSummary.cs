@@ -12,19 +12,15 @@ namespace OOAD_Project
 {
     public partial class OrderSummary : Form
     {
-        public OrderSummary()
-        {
-            InitializeComponent();
-        }
+        public OrderSummary() { InitializeComponent(); }
 
         public void display(Meal[] m)
         {
-          
+            foreach (Meal meal in m)
+                OrderList.Items.Add(meal.name());
         }
 
         public void displayCount(int num)
-        {
-            remainderBox.Text = num.ToString();
-        }
+        { remainderBox.Text = num.ToString(); }
     }
 }

@@ -22,7 +22,7 @@ namespace OOAD_Project
         {
             InitializeComponent();
             cust = inCust;
-            countBox.Text = "0";
+            countBox.Text = cust.getCart().Length.ToString();
             remainingMeals.Text = 
                 cust.getPayPlan().getRemaining().ToString();
         }
@@ -36,6 +36,7 @@ namespace OOAD_Project
         {
             foreach(Meal m in CartList.CheckedItems)
                 cust.removeItem(m);
+            countBox.Text = cust.getCart().Length.ToString();
         }
 
         //----------------------------------------------------------------
@@ -68,12 +69,9 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void Cart_Activated(object sender, EventArgs e)
         {
-            int i = 0, itemCount = 0;
+            int itemCount = 0;
             foreach(Meal m in cust.getCart())
-            {
-                CartList.Items.Insert(i, m.name());
-                ++itemCount;
-            }
+                CartList.Items.Insert(itemCount++, m.name());
             countBox.Text = itemCount.ToString();
         }
     }

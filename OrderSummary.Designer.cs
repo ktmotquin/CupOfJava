@@ -39,7 +39,7 @@
             this.OrderList.FormattingEnabled = true;
             this.OrderList.Location = new System.Drawing.Point(16, 29);
             this.OrderList.Name = "OrderList";
-            this.OrderList.Size = new System.Drawing.Size(120, 173);
+            this.OrderList.Size = new System.Drawing.Size(256, 173);
             this.OrderList.TabIndex = 0;
             // 
             // label1

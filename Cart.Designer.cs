@@ -43,7 +43,7 @@
             this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckoutButton.Location = new System.Drawing.Point(306, 104);
             this.CheckoutButton.Name = "CheckoutButton";
-            this.CheckoutButton.Size = new System.Drawing.Size(89, 33);
+            this.CheckoutButton.Size = new System.Drawing.Size(139, 33);
             this.CheckoutButton.TabIndex = 6;
             this.CheckoutButton.Text = "Checkout";
             this.CheckoutButton.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             this.RemoveButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.Location = new System.Drawing.Point(306, 163);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(89, 33);
+            this.RemoveButton.Size = new System.Drawing.Size(139, 33);
             this.RemoveButton.TabIndex = 10;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
@@ -109,9 +109,9 @@
             // remainingMeals
             // 
             this.remainingMeals.Enabled = false;
-            this.remainingMeals.Location = new System.Drawing.Point(355, 60);
+            this.remainingMeals.Location = new System.Drawing.Point(306, 60);
             this.remainingMeals.Name = "remainingMeals";
-            this.remainingMeals.Size = new System.Drawing.Size(37, 20);
+            this.remainingMeals.Size = new System.Drawing.Size(139, 20);
             this.remainingMeals.TabIndex = 14;
             // 
             // Cart
