@@ -17,7 +17,11 @@ namespace OOAD_Project
         public StatsPage()
         {
             InitializeComponent();
-            pieGraph.Series["Meals"].Label = "sarah";
+            
+            pieGraph.Series["Meals"].Points.AddY(22);
+            pieGraph.Series["Meals"].Points[0].Label = "curry";
+            pieGraph.Series["Meals"].Points.AddY(50);
+            pieGraph.Series["Meals"].Points[1].Label = "turkey";
 
             string text;
             bool done = false;

@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 40D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toAdminMenuBtn = new System.Windows.Forms.Button();
             this.pieGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -53,7 +50,7 @@
             // 
             this.toAdminMenuBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toAdminMenuBtn.Location = new System.Drawing.Point(500, 10);
-            this.toAdminMenuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.toAdminMenuBtn.Margin = new System.Windows.Forms.Padding(2);
             this.toAdminMenuBtn.Name = "toAdminMenuBtn";
             this.toAdminMenuBtn.Size = new System.Drawing.Size(128, 46);
             this.toAdminMenuBtn.TabIndex = 1;
@@ -63,23 +60,18 @@
             // 
             // pieGraph
             // 
-            chartArea2.Name = "ChartArea1";
-            this.pieGraph.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.pieGraph.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.pieGraph.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.pieGraph.Legends.Add(legend1);
             this.pieGraph.Location = new System.Drawing.Point(288, 80);
             this.pieGraph.Name = "pieGraph";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Meals";
-            dataPoint4.Label = "Meal 1";
-            dataPoint5.Label = "Meal 2";
-            dataPoint6.Label = "Meal 3";
-            series2.Points.Add(dataPoint4);
-            series2.Points.Add(dataPoint5);
-            series2.Points.Add(dataPoint6);
-            this.pieGraph.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Meals";
+            this.pieGraph.Series.Add(series1);
             this.pieGraph.Size = new System.Drawing.Size(322, 343);
             this.pieGraph.TabIndex = 2;
             this.pieGraph.Text = "chart1";
