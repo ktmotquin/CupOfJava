@@ -73,7 +73,9 @@ namespace OOAD_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Edit_Meals mealedit = new Edit_Meals();
+            this.Hide();
+            mealedit.Show();
         }
     }
 }

@@ -76,12 +76,15 @@ namespace OOAD_Project
                 {
                     if(passText.Text.Equals(confirmPassText.Text))
                     {
+                        int index = comboBoxNumMeals.SelectedIndex;
+                        int nummeals = (index + 1) * 5;
                         string text1;
                         if (txtbxAddress.Enabled == true)
                         {
                             text1 = unameText.Text + "$" + passText.Text + "$C$" + 
                             txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "$"
-                            + txtbxAddress.Text + "$" + txtbxCreditNum.Text + "$" + txtbxSecurity.Text + "$" + txtbxExpire.Text + "\n-1";
+                            + txtbxAddress.Text + "$" + txtbxCreditNum.Text + "$" + txtbxSecurity.Text
+                            + "$" + txtbxExpire.Text +"$" + nummeals + "\n-1";
                         }
                         else
                         {

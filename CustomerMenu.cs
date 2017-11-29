@@ -28,6 +28,7 @@ namespace OOAD_Project
          else
          {
             lblname.Text = username;
+            numMealLbl.Text = Convert.ToString(list.returnCustomer(username).returnNumMeals());
          }
       }
 

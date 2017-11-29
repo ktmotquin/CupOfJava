@@ -13,7 +13,7 @@ namespace OOAD_Project
         Customer cust;
         Meal[] selectedItems = new Meal[MAX_SIZE];
         PayPlan pp;
-        OrderSummary orderPage;
+        //OrderSummary orderPage;
 
         public CartManager(Customer c, PayPlan p)
         {

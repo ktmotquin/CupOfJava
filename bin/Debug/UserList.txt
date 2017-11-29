@@ -1,9 +1,9 @@
 1
 admin$password$A$Namea$email$number
-murphysam$SRTM$C$Samantha Murphy$murphysam@uwplatt.edu$1234567890$1 University Plaza$1111222233334444$111$11/21
-Sarah$password$C$Sarah Higgens$higgenss@uwplatt.edu$12345678910$123 Street$112222$980$8/22
-3$2$C$Some dude$some@gmail.com$123-421-2345$Somewhere over the rainbow, some, FL, 12313$4324-3244-2342-4234$743$234
-Keeghan$1234$C$keeghanmotquin$ktmotquin$1234$1234$1234$1234$1234
-motquink$123456$A$Keeghan Motquin$motu$1234
-test$1234$A$Keeghan$leegh$12345
+murphysam$SRTM$C$Samantha Murphy$murphysam@uwplatt.edu$1234567890$1 University Plaza$1111222233334444$111$11/21$10
+Sarah$password$C$Sarah Higgens$higgenss@uwplatt.edu$12345678910$123 Street$112222$980$8/22$10
+3$2$C$Some dude$some@gmail.com$123-421-2345$Somewhere over the rainbow, some, FL, 12313$4324-3244-2342-4234$743$234$10
+motquink$123456$A$Keeghan Motquin$motu$1234$10
+asdfasdgas$1234$C$dgasdgasd$gasdfas$asdf$asdf$asdf$asdf$asdf$10
+MOTQUIN$1234$C$asdf$df$asdf$asdf$asdf$asdf$asdf$70
 -1
