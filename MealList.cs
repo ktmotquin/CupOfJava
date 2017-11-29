@@ -85,7 +85,7 @@ namespace OOAD_Project
         public bool removemeal(int index)
         {
             string mealname;
-            mealname = meals[index].name(); 
+            mealname = meals[index].name();
             string toBeWrit = "";
             string text;
             bool found = false;
@@ -131,7 +131,62 @@ namespace OOAD_Project
 
 
         }
+     /*   public bool editmeal(string mealname, string description, string ingredients, string instructions)
+        {
 
+            string toBeWrit = "";
+            string text;
+            bool found = false;
+            bool done = false;
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
+                                                                                       //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                while (!done)
+                {
+                    text = streamReader.ReadLine();         // read next line
+
+                    string[] stuff = text.Split('$');
+                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (stuff[0].ToLower() != mealname.ToLower())
+                        {
+                            toBeWrit += text + '\n';
+                        }
+
+                        String[] parts = text.Split('$');      // Breaks the current line into parts
+                        if (stuff[0].ToLower() == mealname.ToLower())
+                        {
+                            found = true;
+                            stuff[1] = description;
+                            stuff[3] = instructions;
+                            stuff[4] = ingredients;
+                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[1] + "$" + stuff[2] + "$" +
+                                MealName.Text + "$" + Description.Text.Replace("\r\n", replaceWith) + "$" + comboBox1.Text + "$"
+                                + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
+                                Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
+                        }
+                    }
+                    else
+                    {
+                        done = true;                        // Info not found
+                    }
+                }
+            }
+            fileStream.Close();
+            if (found)
+            {
+                toBeWrit += "-1\n";
+                System.IO.File.WriteAllText(fileName, toBeWrit);
+                return true;
+            }
+            else
+                return false;
+
+
+        }
+        */
         public bool checktype(int index, string type)
         {
             if (index == -1)
