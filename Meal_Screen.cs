@@ -12,22 +12,24 @@ namespace OOAD_Project
 {
    public partial class Meal_Screen : Form
    {
-      public Meal_Screen(string name, string description,
-         string instructions, string ingredients, Image img, string username)
+      /* This constructor allows Meal_Screen to run.  If the currently logged in user is
+       * an administrator, certain buttons will be hidden from their view.  If the
+       * currently logged in user is a customer, all buttons will be visible. 
+       */
+      public Meal_Screen(string name, string description, string instructions,
+         string ingredients, Image img, string username)
       {
-         //Edited by Sam 11/27 8:13PM
          InitializeComponent();
          if (username == "Administrator")
          {
             addToCartButton.Hide();
             orderQuantityLabel.Hide();
             mealQtyUpDown.Hide();
-                btnEdit.Enabled= true;
-                btnEdit.Visible = true;
-                descriptionDisplayBox.ReadOnly = false;
-                ingredientsDisplayBox.ReadOnly = false;
-                instructionsDisplayBox.ReadOnly = false;
-                
+            btnEdit.Enabled= true;
+            btnEdit.Visible = true;
+            descriptionDisplayBox.ReadOnly = false;
+            ingredientsDisplayBox.ReadOnly = false;
+            instructionsDisplayBox.ReadOnly = false;    
          }
          
          descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
@@ -35,7 +37,6 @@ namespace OOAD_Project
          ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
          instructionsDisplayBox.Text = instructions.Replace("~", "\n");
          pictureBox1.Image = img;
-         //usernameLabel.Text = username;   
       }
       private void Meal_Screen_Load(object sender, EventArgs e)
       {
@@ -48,23 +49,28 @@ namespace OOAD_Project
       private void addToCartButton_Click(object sender, EventArgs e)
       {
          int numMeals = (int)mealQtyUpDown.Value;
-         MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
-         this.Close();
+         if (numMeals == 0)
+         {
+            MessageBox.Show("Please enter the quantity of meals you would like to order.");
+         }
+         else
+         {
+            MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
+            this.Close();
+         }
       }
 
-      /** Clicking "Back to Search" button allows user to essentially
-       * cancel looking at the item, and to return to the CustomerMenu.
+      /* Clicking "Back to Search" button allows user to cancel
+       * looking at the item, and to return to the Customer Menu.
        * */
       private void backToSearch_Click(object sender, EventArgs e)
       {
          this.Close();
-         //CustomerMenu backToSearch = new CustomerMenu(name);
-         //backToSearch.Show();
       }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            MealList meal = new MealList();
-        }
-    }
+      private void btnEdit_Click(object sender, EventArgs e)
+      {
+         MealList meal = new MealList();
+      }
+   }
 }
