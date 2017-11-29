@@ -42,5 +42,10 @@ namespace OOAD_Project
       {
          this.Hide();
       }
+
+      private void backToAdminMenu_Click_1(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
    }
 }
