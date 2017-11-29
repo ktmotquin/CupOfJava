@@ -71,7 +71,7 @@ namespace OOAD_Project
         {
             int itemCount = 0;
             foreach(Meal m in cust.getCart())
-                CartList.Items.Insert(itemCount++, m.name());
+                CartList.Items.Add(m.name());
             countBox.Text = itemCount.ToString();
         }
     }
