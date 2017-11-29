@@ -188,5 +188,10 @@ namespace OOAD_Project
              MealRequest mr = new MealRequest();
              mr.Show();
         }
+
+        private void back2Main_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

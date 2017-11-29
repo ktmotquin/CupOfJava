@@ -40,7 +40,8 @@ namespace OOAD_Project
        * the user if they want to "Return to Search" or "View Cart". 
        * */
       private void addToCartButton_Click(object sender, EventArgs e)
-      { 
+      {
+         int numMeals = (int)mealQtyUpDown.Value;
          MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
          this.Close();
       }

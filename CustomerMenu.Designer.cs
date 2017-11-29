@@ -51,6 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.numMealLbl = new System.Windows.Forms.Label();
+            this.back2Main = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // 
             this.mealSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mealSearch.Location = new System.Drawing.Point(334, 31);
-            this.mealSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mealSearch.Margin = new System.Windows.Forms.Padding(2);
             this.mealSearch.Name = "mealSearch";
             this.mealSearch.Size = new System.Drawing.Size(86, 29);
             this.mealSearch.TabIndex = 1;
@@ -81,7 +82,7 @@
             // 
             this.cartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cartButton.Location = new System.Drawing.Point(575, 58);
-            this.cartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cartButton.Margin = new System.Windows.Forms.Padding(2);
             this.cartButton.Name = "cartButton";
             this.cartButton.Size = new System.Drawing.Size(192, 143);
             this.cartButton.TabIndex = 2;
@@ -93,7 +94,7 @@
             // 
             this.searchBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.Location = new System.Drawing.Point(33, 31);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(298, 30);
             this.searchBox.TabIndex = 3;
@@ -103,7 +104,7 @@
             // 
             this.searchList.FormattingEnabled = true;
             this.searchList.Location = new System.Drawing.Point(33, 88);
-            this.searchList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchList.Margin = new System.Windows.Forms.Padding(2);
             this.searchList.Name = "searchList";
             this.searchList.Size = new System.Drawing.Size(298, 394);
             this.searchList.TabIndex = 4;
@@ -113,7 +114,7 @@
             // 
             this.mealView.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mealView.Location = new System.Drawing.Point(575, 401);
-            this.mealView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mealView.Margin = new System.Windows.Forms.Padding(2);
             this.mealView.Name = "mealView";
             this.mealView.Size = new System.Drawing.Size(183, 102);
             this.mealView.TabIndex = 5;
@@ -125,7 +126,7 @@
             // 
             this.btnSandwich.AutoSize = true;
             this.btnSandwich.Location = new System.Drawing.Point(19, 55);
-            this.btnSandwich.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnSandwich.Margin = new System.Windows.Forms.Padding(1);
             this.btnSandwich.Name = "btnSandwich";
             this.btnSandwich.Size = new System.Drawing.Size(72, 17);
             this.btnSandwich.TabIndex = 10;
@@ -136,7 +137,7 @@
             // 
             this.btnSoup.AutoSize = true;
             this.btnSoup.Location = new System.Drawing.Point(19, 72);
-            this.btnSoup.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnSoup.Margin = new System.Windows.Forms.Padding(1);
             this.btnSoup.Name = "btnSoup";
             this.btnSoup.Size = new System.Drawing.Size(50, 17);
             this.btnSoup.TabIndex = 9;
@@ -147,7 +148,7 @@
             // 
             this.btnBakes.AutoSize = true;
             this.btnBakes.Location = new System.Drawing.Point(20, 88);
-            this.btnBakes.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBakes.Margin = new System.Windows.Forms.Padding(1);
             this.btnBakes.Name = "btnBakes";
             this.btnBakes.Size = new System.Drawing.Size(55, 17);
             this.btnBakes.TabIndex = 8;
@@ -158,7 +159,7 @@
             // 
             this.btnAppetizers.AutoSize = true;
             this.btnAppetizers.Location = new System.Drawing.Point(20, 105);
-            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(1);
             this.btnAppetizers.Name = "btnAppetizers";
             this.btnAppetizers.Size = new System.Drawing.Size(74, 17);
             this.btnAppetizers.TabIndex = 7;
@@ -169,7 +170,7 @@
             // 
             this.btnDessert.AutoSize = true;
             this.btnDessert.Location = new System.Drawing.Point(19, 39);
-            this.btnDessert.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDessert.Margin = new System.Windows.Forms.Padding(1);
             this.btnDessert.Name = "btnDessert";
             this.btnDessert.Size = new System.Drawing.Size(61, 17);
             this.btnDessert.TabIndex = 11;
@@ -180,7 +181,7 @@
             // 
             this.btnTortilla.AutoSize = true;
             this.btnTortilla.Location = new System.Drawing.Point(20, 121);
-            this.btnTortilla.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTortilla.Margin = new System.Windows.Forms.Padding(1);
             this.btnTortilla.Name = "btnTortilla";
             this.btnTortilla.Size = new System.Drawing.Size(89, 17);
             this.btnTortilla.TabIndex = 13;
@@ -191,7 +192,7 @@
             // 
             this.btnSalad.AutoSize = true;
             this.btnSalad.Location = new System.Drawing.Point(19, 22);
-            this.btnSalad.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnSalad.Margin = new System.Windows.Forms.Padding(1);
             this.btnSalad.Name = "btnSalad";
             this.btnSalad.Size = new System.Drawing.Size(52, 17);
             this.btnSalad.TabIndex = 12;
@@ -202,7 +203,7 @@
             // 
             this.btnRice.AutoSize = true;
             this.btnRice.Location = new System.Drawing.Point(20, 138);
-            this.btnRice.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnRice.Margin = new System.Windows.Forms.Padding(1);
             this.btnRice.Name = "btnRice";
             this.btnRice.Size = new System.Drawing.Size(80, 17);
             this.btnRice.TabIndex = 14;
@@ -213,7 +214,7 @@
             // 
             this.btnPasta.AutoSize = true;
             this.btnPasta.Location = new System.Drawing.Point(18, 5);
-            this.btnPasta.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnPasta.Margin = new System.Windows.Forms.Padding(1);
             this.btnPasta.Name = "btnPasta";
             this.btnPasta.Size = new System.Drawing.Size(52, 17);
             this.btnPasta.TabIndex = 6;
@@ -233,7 +234,7 @@
             this.panel1.Controls.Add(this.btnSoup);
             this.panel1.Controls.Add(this.btnSandwich);
             this.panel1.Location = new System.Drawing.Point(349, 127);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(111, 208);
             this.panel1.TabIndex = 15;
@@ -308,11 +309,22 @@
             this.numMealLbl.Size = new System.Drawing.Size(0, 13);
             this.numMealLbl.TabIndex = 21;
             // 
+            // back2Main
+            // 
+            this.back2Main.Location = new System.Drawing.Point(384, 385);
+            this.back2Main.Name = "back2Main";
+            this.back2Main.Size = new System.Drawing.Size(112, 23);
+            this.back2Main.TabIndex = 22;
+            this.back2Main.Text = "Back to Main Menu";
+            this.back2Main.UseVisualStyleBackColor = true;
+            this.back2Main.Click += new System.EventHandler(this.back2Main_Click);
+            // 
             // CustomerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 465);
+            this.Controls.Add(this.back2Main);
             this.Controls.Add(this.numMealLbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -362,5 +374,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label numMealLbl;
+        private System.Windows.Forms.Button back2Main;
     }
 }
