@@ -133,7 +133,12 @@ namespace OOAD_Project
                 MessageBox.Show("Error: Item not found");  // Display passwords do not match
             }
         }
-    }
+
+      private void backToAdminMenu_Click(object sender, EventArgs e)
+      {
+         this.Hide();
+      }
+   }
     }
 
 
