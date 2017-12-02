@@ -10,36 +10,32 @@ namespace OOAD_Project
 {
     class RequestMealQueue
     {
-        int count = 0;
-        Meal[] meals = new Meal[100];
-        string[] mealData = new string[100];
-        Image[] images = new Image[100];
+        private Image[] images = new Image[100];
+        private int count = 0;
+        private Meal[] meals = new Meal[100];
+        private string[] mealData = new string[100];
+
         public RequestMealQueue()
         {
+            bool done = false; // True when end of user list has been reached
             string text;
 
-            bool done = false;  // True when end of user list has been reached
-                                //  var fileStream = new FileStream(@"C:\Users\restore\Documents\Visual Studio 2015\Projects\OOAD Project\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read); // Joe's link
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
-
-
                 while (!done)
                 {
-                    text = streamReader.ReadLine();         // read next line
-
-                    if (!text.Equals("-1"))                 // Check if end of file has been reached 
+                    text = streamReader.ReadLine(); // read next line
+                    if (!text.Equals("-1")) // Check if end of file has been reached
                     {
                         if (!text.Equals("1"))
                         {
                             mealData[count] = text;
-                            String[] parts = text.Split('$');      // Breaks the current line into parts
+                            String[] parts = text.Split('$'); // Breaks the current line into parts
                             meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
                             count++;
                         }
-
                     }
                     else
                     {
@@ -67,7 +63,6 @@ namespace OOAD_Project
             meals[index] = meals[--count];
             images[index] = images[count];
             mealData[index] = mealData[count];
-
             string overallText = "1\n";
             for (int i = 0; i < count; i++)
             {
@@ -75,15 +70,12 @@ namespace OOAD_Project
             }
             overallText += "-1\n";
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
-            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
-
-
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             System.IO.File.WriteAllText(fileName, overallText);
         }
 
         public int searchList(string mealname)
         {
-            // mealname = mealname.ToUpp();
             for (int i = 0; i < count; i++)
             {
                 if (mealname == meals[i].name())
@@ -91,16 +83,15 @@ namespace OOAD_Project
             }
             return -1;
         }
+
         public bool searchtype(string type, int index)
         {
-
             if (type == meals[index].mealtype())
-            {
                 return true;
-            }
             else
                 return false;
         }
+
         public Meal sendmeal(int index)
         {
             return meals[index];
@@ -115,14 +106,17 @@ namespace OOAD_Project
             else
                 return false;
         }
+
         public int getcount()
         {
             return count;
         }
+
         public Image getimg(int index)
         {
             return images[index];
         }
+
         public Image ScaleImage(Image image)
         {
             int maxWidth = 342;
@@ -141,8 +135,5 @@ namespace OOAD_Project
 
             return newImage;
         }
-
-        //addMeal()
-        // name.ToLower()
     }
 }
