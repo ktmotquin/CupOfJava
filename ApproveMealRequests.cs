@@ -36,7 +36,7 @@ namespace OOAD_Project
             bool done = false;
             string mealInfo = rmq.listInfo(index);
             string overallText = "1\n";
-            string temp;
+            string temp;        // Used to store temporary info
 
             System.Console.WriteLine(mealInfo);
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
@@ -57,14 +57,14 @@ namespace OOAD_Project
                     }
                     else
                     {
-                        done = true; // Info not found
+                        done = true;    // Info not found
                     }
                 }
             }
-            fileStream.Close();     // Close file stream
-            overallText += mealInfo + "\n-1";
+            fileStream.Close();         // Close file stream
+            overallText += mealInfo + "\n-1";   
             System.IO.File.WriteAllText(fileName, overallText);
-
+            //fdsfsd
             rmq.removeMeal(index);
             if (rmq.getcount() > 0)
             {
