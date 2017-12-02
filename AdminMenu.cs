@@ -36,14 +36,14 @@ namespace OOAD_Project
             sts.Show();
         }
 
-      private void button1_Click(object sender, EventArgs e)
-      {
-         string custIsAdmin = "administrator";
-         CustomerMenu custMenuView = new CustomerMenu(custIsAdmin);
-         this.Hide();
-         custMenuView.Show();
-         
-      }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string custIsAdmin = "administrator";
+            CustomerMenu custMenuView = new CustomerMenu(custIsAdmin);
+            this.Hide();
+            custMenuView.Show();
+
+        }
 
         private void btnAddAdminAcc_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,19 @@ namespace OOAD_Project
 
         private void ApproveMealRequests_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Remove_Meal remove = new Remove_Meal();
+            remove.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Edit_Meals mealedit = new Edit_Meals();
+            mealedit.Show();
 
         }
     }
