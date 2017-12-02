@@ -93,10 +93,10 @@
          // loginButton
          // 
          this.loginButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.loginButton.Location = new System.Drawing.Point(13, 136);
+         this.loginButton.Location = new System.Drawing.Point(140, 136);
          this.loginButton.Margin = new System.Windows.Forms.Padding(4);
          this.loginButton.Name = "loginButton";
-         this.loginButton.Size = new System.Drawing.Size(108, 46);
+         this.loginButton.Size = new System.Drawing.Size(108, 35);
          this.loginButton.TabIndex = 5;
          this.loginButton.Text = "Login";
          this.loginButton.UseVisualStyleBackColor = true;
@@ -105,10 +105,10 @@
          // cancelButton
          // 
          this.cancelButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.cancelButton.Location = new System.Drawing.Point(140, 136);
+         this.cancelButton.Location = new System.Drawing.Point(254, 136);
          this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
          this.cancelButton.Name = "cancelButton";
-         this.cancelButton.Size = new System.Drawing.Size(112, 46);
+         this.cancelButton.Size = new System.Drawing.Size(112, 35);
          this.cancelButton.TabIndex = 6;
          this.cancelButton.Text = "Cancel";
          this.cancelButton.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(379, 195);
+         this.ClientSize = new System.Drawing.Size(379, 181);
          this.Controls.Add(this.cancelButton);
          this.Controls.Add(this.loginButton);
          this.Controls.Add(this.Password);
