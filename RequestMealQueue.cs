@@ -8,6 +8,9 @@ using System.Drawing;
 
 namespace OOAD_Project
 {
+    /// <summary>
+    /// Class which loads and manipulates data of the current requested meal queue.
+    /// </summary>
     class RequestMealQueue
     {
         private Image[] images = new Image[100];
@@ -15,6 +18,10 @@ namespace OOAD_Project
         private Meal[] meals = new Meal[100];
         private string[] mealData = new string[100];
 
+
+        /// <summary>
+        /// Default constructor. Loads all meal info into a list.
+        /// </summary>
         public RequestMealQueue()
         {
             bool done = false; // True when end of user list has been reached
@@ -31,7 +38,7 @@ namespace OOAD_Project
                     {
                         if (!text.Equals("1"))
                         {
-                            mealData[count] = text;
+                            mealData[count] = text;     // Add base meal string
                             String[] parts = text.Split('$'); // Breaks the current line into parts
                             meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
                             count++;
@@ -43,80 +50,82 @@ namespace OOAD_Project
                     }
                 }
             }
-            fileStream.Close();
+            fileStream.Close();     // Close the filestream
 
             for (int i = 0; i < count; i++)
             {
-                string filestring = meals[i].getimg();
+                string filestring = meals[i].getimg();  // Get all the images
                 string test = Directory.GetCurrentDirectory() + @"\" + filestring;
                 images[i] = Image.FromFile(test);
             }
         }
 
+        /// <summary>
+        /// Returns specific meal information.
+        /// </summary>
+        /// <param name="index">Current index number of the request meals list.</param>
+        /// <returns>Meal Information in an organized string.</returns>
         public string listInfo(int index)
         {
             return mealData[index];
         }
 
+
+        /// <summary>
+        /// Removes meal from the queue.
+        /// </summary>
+        /// <param name="index">Current index number of the request meals list.</param>
         public void removeMeal(int index)
         {
-            meals[index] = meals[--count];
-            images[index] = images[count];
-            mealData[index] = mealData[count];
+            meals[index] = meals[--count];          // Decrement count and assign last meal
+            images[index] = images[count];          // Assign last image
+            mealData[index] = mealData[count];      // Assign last meal data
             string overallText = "1\n";
             for (int i = 0; i < count; i++)
             {
-                overallText += mealData[i] + "\n";
+                overallText += mealData[i] + "\n";  // Add next meal to list 
             }
-            overallText += "-1\n";
+            overallText += "-1\n";                  // End of list character
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             System.IO.File.WriteAllText(fileName, overallText);
         }
 
-        public int searchList(string mealname)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                if (mealname == meals[i].name())
-                    return i;
-            }
-            return -1;
-        }
-
-        public bool searchtype(string type, int index)
-        {
-            if (type == meals[index].mealtype())
-                return true;
-            else
-                return false;
-        }
-
+        /// <summary>
+        /// Gets a meal object of the specified meal.
+        /// </summary>
+        /// <param name="index">Current index number of the request meals list.</param>
+        /// <returns>Returns a specified meal.</returns>
         public Meal sendmeal(int index)
         {
             return meals[index];
         }
 
-        public bool checktype(int index, string type)
-        {
-            if (index == -1)
-                return false;
-            if (meals[index].mealtype() == type)
-                return true;
-            else
-                return false;
-        }
 
+        /// <summary>
+        /// Gets the current requested meal count.
+        /// </summary>
+        /// <returns>Returns the current number of requested meals.</returns>
         public int getcount()
         {
             return count;
         }
 
+        /// <summary>
+        /// Returns the image of the specified meal.
+        /// </summary>
+        /// <param name="index">Current index number of the request meals list.</param>
+        /// <returns>Image of the current requested meal.</returns>
         public Image getimg(int index)
         {
             return images[index];
         }
 
+        /// <summary>
+        /// Changes the scale of an image to an appropriate form.
+        /// </summary>
+        /// <param name="image">Original image.</param>
+        /// <returns>Scaled version of the image</returns>
         public Image ScaleImage(Image image)
         {
             int maxWidth = 342;

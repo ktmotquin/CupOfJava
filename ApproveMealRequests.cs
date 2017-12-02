@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace OOAD_Project
 {
+    const int 
     public partial class ApproveMealRequests : Form
     {
         private int index;          //
@@ -18,7 +19,7 @@ namespace OOAD_Project
         private RequestMealQueue rmq = new RequestMealQueue();
 
         /// <summary>
-        /// Constructor
+        /// Default constructor.
         /// </summary>
         public ApproveMealRequests()
         {
@@ -35,8 +36,8 @@ namespace OOAD_Project
         {
             bool done = false;
             string mealInfo = rmq.listInfo(index);
-            string overallText = "1\n";
-            string temp;        // Used to store temporary info
+            string overallText = "1\n";     // Initialize overall text with starting character
+            string temp;                    // Used to store temporary info
 
             System.Console.WriteLine(mealInfo);
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
@@ -48,28 +49,28 @@ namespace OOAD_Project
                 while (!done)
                 {
                     temp = streamReader.ReadLine(); // read next line
-                    if (!temp.Equals("-1")) // Check if end of file has been reached
+                    if (!temp.Equals("-1"))         // Check if end of file has been reached
                     {
                         if (!temp.Equals("1"))
                         {
-                            overallText += temp + '\n';
+                            overallText += temp + '\n'; // Add text to overall text
                         }
                     }
                     else
                     {
-                        done = true;    // Info not found
+                        done = true;            // Info not found
                     }
                 }
             }
-            fileStream.Close();         // Close file stream
-            overallText += mealInfo + "\n-1";   
+            fileStream.Close();                 // Close file stream
+            overallText += mealInfo + "\n-1";   // End of file character
             System.IO.File.WriteAllText(fileName, overallText);
-            //fdsfsd
-            rmq.removeMeal(index);
+
+            rmq.removeMeal(index);              // Remove requested meal
             if (rmq.getcount() > 0)
             {
                 if (++index == rmq.getcount())
-                    index = 0;
+                    index = 0;                                  // Return to the front of the list
                 pictureBox1.Image = rmq.getimg(index);          // Display Image
                 currentMeal = rmq.sendmeal(index);              // Set current meal to next meal
                 MealName.Text = currentMeal.name();             // Display name
@@ -85,11 +86,23 @@ namespace OOAD_Project
             }
         }
 
+
+        /// <summary>
+        /// Deletes the currently displayed meal request.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteRequest_Click(object sender, EventArgs e)
         {
             rmq.removeMeal(index);
         }
 
+        /// <summary>
+        /// Displays the previously requested meal in the list. If pressed when at the 
+        /// beginning of the list, the last meal requested in the list will be displayed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PrevMeal_Click(object sender, EventArgs e)
         {
             if (--index == -1)
@@ -103,6 +116,12 @@ namespace OOAD_Project
             Ingredients.Text = currentMeal.ingredients();   // Display ingredients
         }
 
+        /// <summary>
+        /// Displays the next requested meal in the list. If pressed when at the 
+        /// end of the list, the first meal requested in the list will be displayed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextMeal_Click(object sender, EventArgs e)
         {
             if (++index == rmq.getcount())
@@ -116,6 +135,11 @@ namespace OOAD_Project
             Ingredients.Text = currentMeal.ingredients();   // Display ingredients
         }
 
+        /// <summary>
+        /// Closes the current window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Close_Click(object sender, EventArgs e)
         {
             Close();    // Close the current window
