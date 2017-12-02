@@ -40,7 +40,8 @@ namespace OOAD_Project
             {
                 MessageBox.Show("Incorrect username or password entered.\nPlease try again.");
             }
-         MessageBox.Show("Note: All recipes are from https://www.bettycrocker.com/.");
+         MessageBox.Show("Disclaimer: All photos, descriptions, ingredients, and instructions" +
+            " for recipes are from www.bettycrocker.com.");
         }
 
         private void cancel_Click(object sender, EventArgs e)

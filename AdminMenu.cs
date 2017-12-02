@@ -48,14 +48,12 @@ namespace OOAD_Project
         private void btnAddAdminAcc_Click(object sender, EventArgs e)
         {
             CreateAcc acc = new CreateAcc('A');
-            //this.Hide();
             acc.Show();
         }
 
         private void modifyStockBtn_Click(object sender, EventArgs e)
         {
             AddStock addStock = new AddStock();
-            //this.Hide();
             addStock.Show();
         }
 
@@ -67,14 +65,12 @@ namespace OOAD_Project
         private void button1_Click_1(object sender, EventArgs e)
         {
             Remove_Meal remove = new Remove_Meal();
-            //this.Hide();
             remove.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Edit_Meals mealedit = new Edit_Meals();
-            //this.Hide();
             mealedit.Show();
         }
     }

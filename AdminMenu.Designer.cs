@@ -41,10 +41,10 @@
          // logoutAdminBtn
          // 
          this.logoutAdminBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.logoutAdminBtn.Location = new System.Drawing.Point(14, 334);
-         this.logoutAdminBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.logoutAdminBtn.Location = new System.Drawing.Point(12, 334);
+         this.logoutAdminBtn.Margin = new System.Windows.Forms.Padding(4);
          this.logoutAdminBtn.Name = "logoutAdminBtn";
-         this.logoutAdminBtn.Size = new System.Drawing.Size(249, 38);
+         this.logoutAdminBtn.Size = new System.Drawing.Size(284, 38);
          this.logoutAdminBtn.TabIndex = 0;
          this.logoutAdminBtn.Text = "Logout";
          this.logoutAdminBtn.UseVisualStyleBackColor = true;
@@ -53,10 +53,10 @@
          // addMealAdminBtn
          // 
          this.addMealAdminBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.addMealAdminBtn.Location = new System.Drawing.Point(13, 58);
-         this.addMealAdminBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.addMealAdminBtn.Location = new System.Drawing.Point(12, 58);
+         this.addMealAdminBtn.Margin = new System.Windows.Forms.Padding(4);
          this.addMealAdminBtn.Name = "addMealAdminBtn";
-         this.addMealAdminBtn.Size = new System.Drawing.Size(249, 38);
+         this.addMealAdminBtn.Size = new System.Drawing.Size(284, 38);
          this.addMealAdminBtn.TabIndex = 1;
          this.addMealAdminBtn.Text = "Add Meal";
          this.addMealAdminBtn.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
          // viewStatsAdminBtn
          // 
          this.viewStatsAdminBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.viewStatsAdminBtn.Location = new System.Drawing.Point(14, 196);
-         this.viewStatsAdminBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.viewStatsAdminBtn.Location = new System.Drawing.Point(12, 196);
+         this.viewStatsAdminBtn.Margin = new System.Windows.Forms.Padding(4);
          this.viewStatsAdminBtn.Name = "viewStatsAdminBtn";
-         this.viewStatsAdminBtn.Size = new System.Drawing.Size(249, 38);
+         this.viewStatsAdminBtn.Size = new System.Drawing.Size(284, 38);
          this.viewStatsAdminBtn.TabIndex = 2;
          this.viewStatsAdminBtn.Text = "View Statistics";
          this.viewStatsAdminBtn.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
          this.custViewAdminBtn.Location = new System.Drawing.Point(12, 11);
          this.custViewAdminBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
          this.custViewAdminBtn.Name = "custViewAdminBtn";
-         this.custViewAdminBtn.Size = new System.Drawing.Size(251, 41);
+         this.custViewAdminBtn.Size = new System.Drawing.Size(284, 41);
          this.custViewAdminBtn.TabIndex = 3;
          this.custViewAdminBtn.Text = "View as Customer";
          this.custViewAdminBtn.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
          // addAdminAccBtn
          // 
          this.addAdminAccBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.addAdminAccBtn.Location = new System.Drawing.Point(14, 288);
-         this.addAdminAccBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.addAdminAccBtn.Location = new System.Drawing.Point(12, 288);
+         this.addAdminAccBtn.Margin = new System.Windows.Forms.Padding(4);
          this.addAdminAccBtn.Name = "addAdminAccBtn";
-         this.addAdminAccBtn.Size = new System.Drawing.Size(249, 38);
+         this.addAdminAccBtn.Size = new System.Drawing.Size(284, 38);
          this.addAdminAccBtn.TabIndex = 4;
          this.addAdminAccBtn.Text = "Add Admin Account";
          this.addAdminAccBtn.UseVisualStyleBackColor = true;
@@ -101,10 +101,10 @@
          // modifyStockBtn
          // 
          this.modifyStockBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.modifyStockBtn.Location = new System.Drawing.Point(14, 242);
-         this.modifyStockBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.modifyStockBtn.Location = new System.Drawing.Point(12, 242);
+         this.modifyStockBtn.Margin = new System.Windows.Forms.Padding(4);
          this.modifyStockBtn.Name = "modifyStockBtn";
-         this.modifyStockBtn.Size = new System.Drawing.Size(249, 38);
+         this.modifyStockBtn.Size = new System.Drawing.Size(284, 38);
          this.modifyStockBtn.TabIndex = 5;
          this.modifyStockBtn.Text = "Modify Stock";
          this.modifyStockBtn.UseVisualStyleBackColor = true;
@@ -113,10 +113,10 @@
          // button1
          // 
          this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button1.Location = new System.Drawing.Point(14, 104);
-         this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.button1.Location = new System.Drawing.Point(12, 104);
+         this.button1.Margin = new System.Windows.Forms.Padding(4);
          this.button1.Name = "button1";
-         this.button1.Size = new System.Drawing.Size(249, 38);
+         this.button1.Size = new System.Drawing.Size(284, 38);
          this.button1.TabIndex = 6;
          this.button1.Text = "Remove Meal";
          this.button1.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@
          // button2
          // 
          this.button2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button2.Location = new System.Drawing.Point(11, 150);
-         this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.button2.Location = new System.Drawing.Point(12, 150);
+         this.button2.Margin = new System.Windows.Forms.Padding(4);
          this.button2.Name = "button2";
-         this.button2.Size = new System.Drawing.Size(249, 38);
+         this.button2.Size = new System.Drawing.Size(284, 38);
          this.button2.TabIndex = 7;
          this.button2.Text = "Edit Meal";
          this.button2.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(279, 385);
+         this.ClientSize = new System.Drawing.Size(308, 385);
          this.Controls.Add(this.button2);
          this.Controls.Add(this.button1);
          this.Controls.Add(this.modifyStockBtn);
@@ -147,10 +147,10 @@
          this.Controls.Add(this.viewStatsAdminBtn);
          this.Controls.Add(this.addMealAdminBtn);
          this.Controls.Add(this.logoutAdminBtn);
-         this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "AdminMenu";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         this.Text = "AdminMenu";
+         this.Text = "Administrator Menu";
          this.Load += new System.EventHandler(this.AdminMenu_Load);
          this.ResumeLayout(false);
 
