@@ -47,10 +47,17 @@ namespace OOAD_Project
 
       private void CustomerMenu_Load(object sender, EventArgs e)
       {
-         if (lblname.Text != "Administrator")
+            if (lblname.Text != "Administrator")
             {
                 cust = list.returnCustomer(lblname.Text);
             }
+            else
+            {
+                cust = new Customer("admin", "xxxx", "xxxx",
+            "xxxx", "xxxx", "xxxx", "xxxx",
+            "xxxx", "xxxx", 0);
+            }
+
                 
         }
 
@@ -153,7 +160,7 @@ namespace OOAD_Project
             int index = m.searchList(meal);
             Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), 
                 m.sendmeal(index).description(), m.sendmeal(index).instructions(),
-                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)), lblname.Text);            
+                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)), cust);            
             mealForm.Show();
             }
             else

@@ -17,10 +17,10 @@ namespace OOAD_Project
        * currently logged in user is a customer, all buttons will be visible. 
        */
       public Meal_Screen(string name, string description, string instructions,
-         string ingredients, Image img, string username)
+         string ingredients, Image img, Customer cust)
       {
          InitializeComponent();
-         if (username == "Administrator")
+         if (cust.getuser() == "admin")
          {
             addToCartButton.Hide();
             orderQuantityLabel.Hide();
