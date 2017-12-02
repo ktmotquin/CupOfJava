@@ -162,7 +162,7 @@ namespace OOAD_Project
                             stuff[1] = description;
                             stuff[3] = instructions;
                             stuff[4] = ingredients;
-                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[3] + "$" + stuff[4] + "$" + stuff[5] + "$" + stuff[6] + "$" +
+                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[3] + "$" + stuff[4] + "$" + stuff[5] + '\n';
 
                         }
                     }
