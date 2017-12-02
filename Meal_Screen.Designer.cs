@@ -164,7 +164,7 @@
          // 
          // addToCartButton
          // 
-         this.addToCartButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+         this.addToCartButton.BackColor = System.Drawing.SystemColors.Control;
          this.addToCartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.addToCartButton.Location = new System.Drawing.Point(157, 654);
          this.addToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,7 +186,7 @@
          // 
          // backToSearch
          // 
-         this.backToSearch.BackColor = System.Drawing.SystemColors.ActiveBorder;
+         this.backToSearch.BackColor = System.Drawing.SystemColors.Control;
          this.backToSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.backToSearch.Location = new System.Drawing.Point(382, 654);
          this.backToSearch.Name = "backToSearch";
@@ -198,7 +198,7 @@
          // 
          // btnEdit
          // 
-         this.btnEdit.BackColor = System.Drawing.SystemColors.ActiveBorder;
+         this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
          this.btnEdit.Enabled = false;
          this.btnEdit.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.btnEdit.Location = new System.Drawing.Point(157, 654);

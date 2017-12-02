@@ -93,7 +93,7 @@
          this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "WelcomeScreen";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         this.Text = "Welcome Screen";
+         this.Text = "Welcome";
          this.ResumeLayout(false);
          this.PerformLayout();
 

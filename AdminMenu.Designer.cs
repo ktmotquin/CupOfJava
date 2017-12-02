@@ -138,7 +138,7 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(308, 385);
+         this.ClientSize = new System.Drawing.Size(309, 386);
          this.Controls.Add(this.button2);
          this.Controls.Add(this.button1);
          this.Controls.Add(this.modifyStockBtn);
@@ -150,7 +150,7 @@
          this.Margin = new System.Windows.Forms.Padding(4);
          this.Name = "AdminMenu";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         this.Text = "Administrator Menu";
+         this.Text = "Admin";
          this.Load += new System.EventHandler(this.AdminMenu_Load);
          this.ResumeLayout(false);
 
