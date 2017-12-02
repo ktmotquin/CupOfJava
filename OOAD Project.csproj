@@ -36,7 +36,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -87,31 +86,20 @@
     <Compile Include="CustomerMenu.Designer.cs">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Meals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Meals.Designer.cs">
-      <DependentUpon>Edit_Meals.cs</DependentUpon>
-    </Compile>
     <Compile Include="MealRequest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MealRequest.Designer.cs">
       <DependentUpon>MealRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderSummary.cs">
+    <Compile Include="ApproveMealRequests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderSummary.Designer.cs">
-      <DependentUpon>OrderSummary.cs</DependentUpon>
+    <Compile Include="ApproveMealRequests.Designer.cs">
+      <DependentUpon>ApproveMealRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="PayPlan.cs" />
-    <Compile Include="Remove_Meal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Remove_Meal.Designer.cs">
-      <DependentUpon>Remove_Meal.cs</DependentUpon>
-    </Compile>
+    <Compile Include="RequestMealQueue.cs" />
     <Compile Include="StatsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,19 +147,18 @@
     <EmbeddedResource Include="CustomerMenu.resx">
       <DependentUpon>CustomerMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Meals.resx">
-      <DependentUpon>Edit_Meals.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login_Screen.resx">
       <DependentUpon>Login_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MealRequest.resx">
       <DependentUpon>MealRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApproveMealRequests.resx">
+      <DependentUpon>ApproveMealRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Meal_Screen.resx">
       <DependentUpon>Meal_Screen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderSummary.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -181,9 +168,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Remove_Meal.resx">
-      <DependentUpon>Remove_Meal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StatsPage.resx">
       <DependentUpon>StatsPage.cs</DependentUpon>
     </EmbeddedResource>

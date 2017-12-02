@@ -12,6 +12,7 @@ namespace OOAD_Project
     {
         int count = 0;
         Meal[] meals = new Meal[100];
+        string[] mealData = new string[100];
         Image[] images = new Image[100];
         public RequestMealQueue()
         {
@@ -33,6 +34,7 @@ namespace OOAD_Project
                     {
                         if (!text.Equals("1"))
                         {
+                            mealData[count] = text;
                             String[] parts = text.Split('$');      // Breaks the current line into parts
                             meals[count] = new Meal(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]);
                             count++;
@@ -52,9 +54,31 @@ namespace OOAD_Project
                 string filestring = meals[i].getimg();
                 string test = Directory.GetCurrentDirectory() + @"\" + filestring;
                 images[i] = Image.FromFile(test);
-                // string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\" + filestring);
-
             }
+        }
+
+        public string listInfo(int index)
+        {
+            return mealData[index];
+        }
+
+        public void removeMeal(int index)
+        {
+            meals[index] = meals[--count];
+            images[index] = images[count];
+            mealData[index] = mealData[count];
+
+            string overallText = "1\n";
+            for (int i = 0; i < count; i++)
+            {
+                overallText += mealData[i] + "\n";
+            }
+            overallText += "-1\n";
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
+
+
+            System.IO.File.WriteAllText(fileName, overallText);
         }
 
         public int searchList(string mealname)
@@ -81,6 +105,7 @@ namespace OOAD_Project
         {
             return meals[index];
         }
+
         public bool checktype(int index, string type)
         {
             if (index == -1)
@@ -116,6 +141,7 @@ namespace OOAD_Project
 
             return newImage;
         }
+
         //addMeal()
         // name.ToLower()
     }

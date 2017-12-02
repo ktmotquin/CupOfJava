@@ -52,7 +52,7 @@ namespace OOAD_Project
                                 + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
                                 Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
                 System.Console.WriteLine(enteredInfo);
-                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
                 var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
                 //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
 
@@ -81,10 +81,12 @@ namespace OOAD_Project
                     }
                 }
                 fileStream.Close();
+
+                string fileName2 = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
                 if (!found)
                 {
                     overallText += enteredInfo + "\n-1";
-                    System.IO.File.WriteAllText(fileName, overallText);
+                    System.IO.File.WriteAllText(fileName2, overallText);
                     //ID.Clear();
                     MealName.Clear();
                     //Type.Clear();
