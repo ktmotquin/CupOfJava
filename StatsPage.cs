@@ -14,6 +14,10 @@ namespace OOAD_Project
 {
     public partial class StatsPage : Form
     {
+        //----------------------------------------------------------------
+        // Constructor: Initializes the table for Item Stock and the values 
+        //              in the pie chart. 
+        //----------------------------------------------------------------
         public StatsPage()
         {
             InitializeComponent();
@@ -67,7 +71,9 @@ namespace OOAD_Project
         List<string>columns = new List<string>();
         List<string[]> rows = new List<string[]>();
 
-
+        //----------------------------------------------------------------
+        // Puts all the stock values into a table.
+        //----------------------------------------------------------------
         public DataTable GetResultsTable()
         {
             DataTable datatable = new DataTable();
