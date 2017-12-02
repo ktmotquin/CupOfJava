@@ -131,7 +131,7 @@ namespace OOAD_Project
 
 
         }
-     /*   public bool editmeal(string mealname, string description, string ingredients, string instructions)
+        public bool editmeal(string mealname, string description, string ingredients, string instructions)
         {
 
             string toBeWrit = "";
@@ -162,10 +162,8 @@ namespace OOAD_Project
                             stuff[1] = description;
                             stuff[3] = instructions;
                             stuff[4] = ingredients;
-                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[1] + "$" + stuff[2] + "$" +
-                                MealName.Text + "$" + Description.Text.Replace("\r\n", replaceWith) + "$" + comboBox1.Text + "$"
-                                + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
-                                Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";
+                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + stuff[3] + "$" + stuff[4] + "$" + stuff[5] + "$" + stuff[6] + "$" +
+
                         }
                     }
                     else
@@ -186,7 +184,7 @@ namespace OOAD_Project
 
 
         }
-        */
+        
         public bool checktype(int index, string type)
         {
             if (index == -1)

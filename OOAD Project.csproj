@@ -98,6 +98,12 @@
     <Compile Include="ApproveMealRequests.Designer.cs">
       <DependentUpon>ApproveMealRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderSummary.Designer.cs">
+      <DependentUpon>OrderSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayPlan.cs" />
     <Compile Include="RequestMealQueue.cs" />
     <Compile Include="StatsPage.cs">
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Meal_Screen.resx">
       <DependentUpon>Meal_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSummary.resx">
+      <DependentUpon>OrderSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
