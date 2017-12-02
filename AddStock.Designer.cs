@@ -51,7 +51,6 @@
          this.addTextBox.Name = "addTextBox";
          this.addTextBox.Size = new System.Drawing.Size(197, 36);
          this.addTextBox.TabIndex = 0;
-         this.addTextBox.TextChanged += new System.EventHandler(this.addTextBox_TextChanged);
          // 
          // addBtn
          // 

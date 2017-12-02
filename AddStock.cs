@@ -13,20 +13,27 @@ namespace OOAD_Project
 {
     public partial class AddStock : Form
     {
+        //----------------------------------------------------------------
+        // Constructor: Initializes all the text boxes and buttons on the 
+        //              screen. 
+        //----------------------------------------------------------------
         public AddStock()
         {
             InitializeComponent();
         }
 
+        //----------------------------------------------------------------
+        // Adds a new ingredient to the text file along with the initial amount.
+        //----------------------------------------------------------------
         private void addBtn_Click(object sender, EventArgs e)
         {
             string toBeWrit = "$\n";
             string text;
-            bool found = false; // True if an account is associated with the login info
-            bool done = false;  // True when end of user list has been reached
+            bool found = false; 
+            bool done = false;  
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
-                                                                                       //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+                                                                                      
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
                 while (!done)
@@ -41,29 +48,18 @@ namespace OOAD_Project
                             toBeWrit += text + '\n';
                         }
 
-                        //String[] parts = text.Split('~');      // Breaks the current line into parts
-                        //if (addBtn.Text.Equals(stuff[0]))
-                        //{
-                        //    found = true;
-                        //    done = true;                    // Account info is correct
-                        //}
                     }
                     else
                     {
-                        done = true;                        // Info not found
+                        done = true;                        // Item not found
                     }
                 }
             }
             fileStream.Close();
             if (!found)
             {
-
                 string text1;
-
                 text1 = addTextBox.Text + "~" + quantityTxtBox.Text + "\n-$";
-
-
-
                 toBeWrit += text1;
                 System.IO.File.WriteAllText(fileName, toBeWrit);
                 this.Close();
@@ -72,36 +68,28 @@ namespace OOAD_Project
             {
                 MessageBox.Show("Item is already in database");
             }
-
         }
 
-        private void addTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //----------------------------------------------------------------
+        // This updates the quantity of an item.
+        //----------------------------------------------------------------
         private void updateBtn_Click(object sender, EventArgs e)
         {
             string toBeWrit = "";
             string text;
-            bool found = false; // True if an account is associated with the login info
-            bool done = false;  // True when end of user list has been reached
+            bool found = false; 
+            bool done = false;  
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
-            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
-                                                                                       //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); 
+                                                                                       
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
                 while (!done)
                 {
-                    text = streamReader.ReadLine();         // read next line
-
+                    text = streamReader.ReadLine();         
                     string[] stuff = text.Split('~');
-                    if (!stuff[0].Equals("-$"))                 // Check if end of file has been reached 
+                    if (!stuff[0].Equals("-$"))                 
                     {
-
-
-
-
                         String[] parts = text.Split('~');      // Breaks the current line into parts
                         if (modifyTxtBox.Text.Equals(stuff[0]))
                         {
@@ -126,7 +114,7 @@ namespace OOAD_Project
                 toBeWrit += "-$\n";
                 System.IO.File.WriteAllText(fileName, toBeWrit);
 
-                MessageBox.Show("Added " + quantityTxtBox2.Text + " items of " + modifyTxtBox.Text + " to database");  // Display passwords do not match
+                MessageBox.Show("Added " + quantityTxtBox2.Text + " items of " + modifyTxtBox.Text + " to database");  
             }
             else
             {
