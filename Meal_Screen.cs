@@ -71,7 +71,7 @@ namespace OOAD_Project
       private void btnEdit_Click(object sender, EventArgs e)
       {
          MealList meal = new MealList();
-            meal.editmeal(mealNameText.Text, descriptionDisplayBox.Text, ingredientsDisplayBox.Text, instructionsDisplayBox.Text);
+         meal.editmeal(mealNameText.Text, descriptionDisplayBox.Text, ingredientsDisplayBox.Text, instructionsDisplayBox.Text);
       }
    }
 }
