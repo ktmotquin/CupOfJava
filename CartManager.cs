@@ -13,14 +13,11 @@ namespace OOAD_Project
         int index = -1;
         Customer cust;
         Meal[] selectedItems = new Meal[MAX_SIZE];
-        PayPlan pp;
         OrderSummary orderPage;
 
-        public CartManager(Customer c, PayPlan p)
+        public CartManager(Customer c)
         {
             cust = new Customer(c);
-            pp = p;
-            //pp = new PayPlan(p);
             orderPage = new OrderSummary();
             orderPage.Hide();
         }
@@ -33,10 +30,10 @@ namespace OOAD_Project
 
         public bool add(Meal m)
         {
-            if (cust.getPayPlan().getCount() < cust.getPayPlan().getMaxMeals())
+            if (cust.getCartMeals() < cust.getNumMeals())
             {
                 selectedItems[++index] = m;
-                cust.getPayPlan().increaseMealCount(1);
+                cust.setNumMeals(-1);
                 cust.removeItem(m);
                 return true;
             }

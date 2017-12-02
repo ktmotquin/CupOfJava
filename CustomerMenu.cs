@@ -29,7 +29,7 @@ namespace OOAD_Project
          else
          {
             lblname.Text = username;
-            numMealLbl.Text = Convert.ToString(list.returnCustomer(username).returnNumMeals());
+            numMealLbl.Text = Convert.ToString(list.returnCustomer(username).getNumMeals());
          }
       }
 
@@ -170,7 +170,7 @@ namespace OOAD_Project
 
         private void cartButton_Click(object sender, EventArgs e)
         {
-            if (cust.getTotalMeals() == 0)
+            if (cust.getCartMeals() == 0)
                 MessageBox.Show("Your Cart is Empty! " +
                     "Please Add Items Before Checking Out!");
             else

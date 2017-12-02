@@ -12,13 +12,17 @@ namespace OOAD_Project
 {
    public partial class Meal_Screen : Form
    {
-      /* This constructor allows Meal_Screen to run.  If the currently logged in user is
-       * an administrator, certain buttons will be hidden from their view.  If the
-       * currently logged in user is a customer, all buttons will be visible. 
-       */
-      public Meal_Screen(Meal meal, Image mealImage, Customer cust)
+        /* This constructor allows Meal_Screen to run.  If the currently logged in user is
+         * an administrator, certain buttons will be hidden from their view.  If the
+         * currently logged in user is a customer, all buttons will be visible. 
+         */
+        private Customer cust;
+        private Meal meal;
+      public Meal_Screen(Meal m, Image mealImage, Customer c)
       {
          InitializeComponent();
+            meal = m;
+            cust = c;
          if (cust.getuser() == "admin")
          {
             addToCartButton.Hide();
@@ -32,14 +36,10 @@ namespace OOAD_Project
          }
          
          descriptionDisplayBox.Text = meal.description().Replace("~", "\n"); ;
-         mealNameText.Text = name;
-         ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
-         instructionsDisplayBox.Text = instructions.Replace("~", "\n");
-         pictureBox1.Image = meal.ScaleImage();
-      }
-      private void Meal_Screen_Load(object sender, EventArgs e)
-      {
-
+         mealNameText.Text = meal.name();
+         ingredientsDisplayBox.Text = meal.ingredients().Replace("~", "\n"); ;
+         instructionsDisplayBox.Text = meal.instructions().Replace("~", "\n");
+         pictureBox1.Image = mealImage;
       }
 
       /** Clicking the "Add to Cart" button brings up a pop-up asking
@@ -54,6 +54,8 @@ namespace OOAD_Project
          }
          else
          {
+                for (int i = 0; i < numMeals; i++)
+                    cust.addToCart(meal);
             MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
             this.Close();
          }

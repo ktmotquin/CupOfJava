@@ -242,7 +242,6 @@
             this.Name = "Meal_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Meal";
-            this.Load += new System.EventHandler(this.Meal_Screen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mealQtyUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -5,8 +5,7 @@
         const int MAXMEALS = 30;
         string email, password, phoneNum, address, username, name,
             creditcard, securitynum, expdate;
-        int next = 0, numMeals = 0, totalMeals = 0;
-        PayPlan currentPlan;
+        int next = 0, numMeals = 0, cartMeals = 0;
         Meal[] cart = new Meal[MAXMEALS];
 
         public Customer(string u, string pass, string n, 
@@ -23,7 +22,6 @@
             securitynum = s;
             expdate = ed;
             numMeals = meals;
-            //currentPlan = plan;
         }
 
         public Customer(Customer c)
@@ -37,20 +35,21 @@
             creditcard = c.creditcard;
             securitynum = c.securitynum;
             expdate = c.expdate;
-            currentPlan = c.currentPlan;
         }
+
+        public void setNumMeals(int n) { numMeals += n; }
 
         //----------------------------------------------------------------
         // Getter methods for all private members of Customer class
         //----------------------------------------------------------------
         public string getuser() { return username; }
-        public int getTotalMeals() { return totalMeals; }
+        public int getCartMeals() { return cartMeals; }
+        public int getNumMeals() { return numMeals; }
         public string getname() { return name; }
         public string getpassword() { return password;}
         public string getemail(){ return email;}
         public string getphone() { return phoneNum; }
         public string getaddress() { return address; }
-        public PayPlan getPayPlan() { return currentPlan; }
         public Meal[] getCart() { return cart; }
 
         //----------------------------------------------------------------
@@ -71,7 +70,7 @@
         public void addToCart(Meal m)
         {
             cart[next++] = m;
-            ++totalMeals;
+            ++cartMeals;
         }
 
         //----------------------------------------------------------------
@@ -98,13 +97,6 @@
             }
             return -1;
         }
-        //----------------------------------------------------------------
-        // 
-        // 
-        //----------------------------------------------------------------
-        public int returnNumMeals()
-        { return numMeals; }
-
 
     }
 }

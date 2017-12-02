@@ -33,9 +33,8 @@ namespace OOAD_Project
             Customer admin = new Customer("admin", "xxxx", "xxxx",
             "xxxx", "xxxx", "xxxx", "xxxx",
             "xxxx", "xxxx", 0);
-            Meal_Screen adminedit = new Meal_Screen(meals.sendmeal(index).name(),
-                meals.sendmeal(index).description(), meals.sendmeal(index).instructions(),
-                meals.sendmeal(index).ingredients(), meals.ScaleImage(meals.getimg(index)), admin);
+            Meal_Screen adminedit = new Meal_Screen(meals.sendmeal(index), 
+                meals.ScaleImage(meals.getimg(index)), admin);
             this.Hide();
             adminedit.Show();
         }

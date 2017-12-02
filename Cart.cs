@@ -45,7 +45,7 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            order = new CartManager(cust, cust.getPayPlan());
+            order = new CartManager(cust);
             foreach (Meal m in CartList.CheckedItems)
             {
                 if (!order.add(m))
@@ -58,8 +58,7 @@ namespace OOAD_Project
             }
             order.processOrder();
             countBox.Text = cust.getCart().Length.ToString();
-            remainingMeals.Text = 
-                cust.getPayPlan().getRemaining().ToString();
+            remainingMeals.Text = cust.getNumMeals().ToString();
         }
 
         //----------------------------------------------------------------
