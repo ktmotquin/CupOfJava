@@ -16,8 +16,7 @@ namespace OOAD_Project
        * an administrator, certain buttons will be hidden from their view.  If the
        * currently logged in user is a customer, all buttons will be visible. 
        */
-      public Meal_Screen(string name, string description, string instructions,
-         string ingredients, Image img, Customer cust)
+      public Meal_Screen(Meal meal, Image mealImage, Customer cust)
       {
          InitializeComponent();
          if (cust.getuser() == "admin")
@@ -32,11 +31,11 @@ namespace OOAD_Project
             instructionsDisplayBox.ReadOnly = false;    
          }
          
-         descriptionDisplayBox.Text = description.Replace("~", "\n"); ;
+         descriptionDisplayBox.Text = meal.description().Replace("~", "\n"); ;
          mealNameText.Text = name;
          ingredientsDisplayBox.Text = ingredients.Replace("~", "\n"); ;
          instructionsDisplayBox.Text = instructions.Replace("~", "\n");
-         pictureBox1.Image = img;
+         pictureBox1.Image = meal.ScaleImage();
       }
       private void Meal_Screen_Load(object sender, EventArgs e)
       {

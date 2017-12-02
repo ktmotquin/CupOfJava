@@ -1,4 +1,6 @@
-﻿namespace OOAD_Project
+﻿using System.Drawing;
+
+namespace OOAD_Project
 {
     public class Meal
     {
@@ -32,7 +34,7 @@
         {
             inst = newinstructions;
         }
-        
+
         //----------------------------------------------------------------
         // Getter methods for all private members in Meal class
         //----------------------------------------------------------------

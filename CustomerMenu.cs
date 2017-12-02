@@ -158,9 +158,7 @@ namespace OOAD_Project
             
             string meal = searchList.SelectedItem.ToString();
             int index = m.searchList(meal);
-            Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index).name(), 
-                m.sendmeal(index).description(), m.sendmeal(index).instructions(),
-                m.sendmeal(index).ingredients(), m.ScaleImage(m.getimg(index)), cust);            
+            Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index), m.ScaleImage(m.getimg(index)), cust);            
             mealForm.Show();
             }
             else

@@ -30,9 +30,12 @@ namespace OOAD_Project
         private void button1_Click(object sender, EventArgs e)
         {
             int index = listBox1.SelectedIndex;
+            Customer admin = new Customer("admin", "xxxx", "xxxx",
+            "xxxx", "xxxx", "xxxx", "xxxx",
+            "xxxx", "xxxx", 0);
             Meal_Screen adminedit = new Meal_Screen(meals.sendmeal(index).name(),
                 meals.sendmeal(index).description(), meals.sendmeal(index).instructions(),
-                meals.sendmeal(index).ingredients(), meals.ScaleImage(meals.getimg(index)), "Administrator");
+                meals.sendmeal(index).ingredients(), meals.ScaleImage(meals.getimg(index)), admin);
             this.Hide();
             adminedit.Show();
         }
