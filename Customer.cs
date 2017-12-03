@@ -53,7 +53,6 @@
         public string getcreditcard() { return creditcard; }
         public string getsecuritynum() { return securitynum; }
         public string getexpdate() { return expdate; }
-        public PayPlan getPayPlan() { return currentPlan; }
         public Meal[] getCart() { return cart; }
 
         //----------------------------------------------------------------
