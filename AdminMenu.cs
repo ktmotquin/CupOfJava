@@ -47,7 +47,7 @@ namespace OOAD_Project
 
         private void btnAddAdminAcc_Click(object sender, EventArgs e)
         {
-            CreateAcc acc = new CreateAcc('A');
+            CreateAcc acc = new CreateAcc('A', -1);
             this.Hide();
             acc.Show();
         }

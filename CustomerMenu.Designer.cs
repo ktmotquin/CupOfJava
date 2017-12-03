@@ -350,6 +350,7 @@
             this.btnEditInfo.TabIndex = 23;
             this.btnEditInfo.Text = "Edit Personal Info";
             this.btnEditInfo.UseVisualStyleBackColor = true;
+            this.btnEditInfo.Click += new System.EventHandler(this.btnEditInfo_Click);
             // 
             // CustomerMenu
             // 

@@ -13,9 +13,12 @@ namespace OOAD_Project
 {
     public partial class CreateAcc : Form
     {
-        public CreateAcc(char account)
+        CustomerList list = new CustomerList();
+        public CreateAcc(char account, int index)
         {
             InitializeComponent();
+            btnEdit.Enabled = false;
+            btnEdit.Hide();
             if(account == 'A')
             {
                 txtbxAddress.Hide();
@@ -30,6 +33,21 @@ namespace OOAD_Project
                 label10.Hide();
                 label11.Hide();
                 label12.Hide();
+            }
+            else if (account == 'E' && index != -1)
+            {
+                btnEdit.Show();
+                btnEdit.Enabled = true;
+                Customer temp = list.getCustomer(index);
+                unameText.Text = temp.getuser();
+                passText.Text = temp.getpassword();
+                txtbxName.Text = temp.getname();
+                txtbxEmail.Text = temp.getemail();
+                txtbxPhone.Text = temp.getphone();
+                txtbxAddress.Text = temp.getaddress();
+                txtbxCreditNum.Text = temp.getcreditcard();
+                txtbxSecurity.Text = temp.getsecuritynum();
+                txtbxExpire.Text = temp.getexpdate();
             }
         }
 
@@ -115,6 +133,12 @@ namespace OOAD_Project
             }
         }
 
-
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int index = comboBoxNumMeals.SelectedIndex;
+            int nummeals = (index + 1) * 5;
+            list.editInfo(unameText.Text, passText.Text, txtbxName.Text, txtbxEmail.Text, txtbxPhone.Text,
+                txtbxAddress.Text, txtbxCreditNum.Text, txtbxSecurity.Text, txtbxExpire.Text, nummeals);
+        }
     }
 }

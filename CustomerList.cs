@@ -51,7 +51,64 @@ namespace OOAD_Project
             fileStream.Close();
 
         }
+        //----------------------------------------------------------------
+        // 
+        // 
+        //----------------------------------------------------------------
+        public void editInfo(string username, string password, string name,
+            string email, string phonenumber, string address, string creditcard,
+            string security, string expire, int meals)
+        {
+            string toBeWrit = "";
+            string text;
+            bool found = false;
+            bool done = false;
+            
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); 
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                while (!done)
+                {
+                    text = streamReader.ReadLine();         // read next line
 
+                    string[] stuff = text.Split('$');
+                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (stuff[0].ToLower() != username.ToLower())
+                        {
+                            toBeWrit += text + '\n';
+                        }
+
+                        String[] parts = text.Split('$');      // Breaks the current line into parts
+                        if (stuff[0].ToLower() == username.ToLower())
+                        {
+                            int oldmeals;
+                            oldmeals = Int32.Parse(stuff[10]);
+                            meals += oldmeals;
+                            found = true;
+                            toBeWrit = toBeWrit + username + "$" + password + "$" + stuff[2] + "$" +
+                                name + "$" + email + "$" + phonenumber + "$" + address + "$" + 
+                                creditcard + "$" + security + "$" + expire + "$" + meals + '\n';
+
+
+
+                        }
+                    }
+                    else
+                    {
+                        done = true;                        // Info not found
+                    }
+                }
+            }
+            fileStream.Close();
+            if (found)
+            {
+                toBeWrit += "-1\n";
+                System.IO.File.WriteAllText(fileName, toBeWrit);
+            }
+
+        }
         internal Customer returnCustomer(string username)
         {
             int tempindex = -1;
@@ -62,6 +119,19 @@ namespace OOAD_Project
             }
             return customers[tempindex];
         }
-
+        internal Customer getCustomer(int index)
+        {
+            return customers[index];
+        }
+        public int getCustIndex (string username)
+        {
+            int tempindex = -1;
+            for (int i = 0; i < count; i++)
+            {
+                if (customers[i].getuser() == username)
+                    tempindex = i;
+            }
+            return tempindex;
+        }
     }
 }

@@ -198,5 +198,13 @@ namespace OOAD_Project
         {
             Hide();
         }
+
+        private void btnEditInfo_Click(object sender, EventArgs e)
+        {
+            int index = list.getCustIndex(lblname.Text);
+            CreateAcc accountedit = new CreateAcc('E',index );
+            accountedit.Show();
+
+        }
     }
 }

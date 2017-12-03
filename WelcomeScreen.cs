@@ -37,7 +37,7 @@ namespace OOAD_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CreateAcc accountForm = new CreateAcc('C');
+            CreateAcc accountForm = new CreateAcc('C', -1);
             accountForm.Show();
         }
     }

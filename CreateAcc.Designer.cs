@@ -53,6 +53,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxNumMeals = new System.Windows.Forms.ComboBox();
             this.nummeals = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -308,11 +309,22 @@
             this.nummeals.TabIndex = 38;
             this.nummeals.Text = "Number of Meals";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(754, 223);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(198, 106);
+            this.btnEdit.TabIndex = 39;
+            this.btnEdit.Text = "Save Changes";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 714);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.nummeals);
             this.Controls.Add(this.comboBoxNumMeals);
             this.Controls.Add(this.label12);
@@ -373,5 +385,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxNumMeals;
         private System.Windows.Forms.Label nummeals;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
