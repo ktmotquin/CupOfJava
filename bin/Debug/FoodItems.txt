@@ -1,26 +1,49 @@
 $
-corn~3
-beans~4
-cookies~6
-turkey~8
-cheese~802
-carrot~50
-carrot~10
-milk~5
-eggs~3
-pasta~44
-taco seasoning mix~52
-ground red pepper (cayenne)~23
-boneless skinless chicken breasts~234
-vegetable oil~23
-chicken broth~23
-lime juice~23
-chopped garlic~23
-white rice~28
-black beans~993
-chopped green chiles~92
-water~93
+Asian sesame dressing~50
 avocados~90
+beans~40
+black beans~99
+boneless skinless chicken breasts~23
+boneless skinless chicken thighs~34
+carrots~50
+celery~25
+cheese~802
+chicken broth~23
+chili garlic sauce~65
+chopped garlic~23
+chopped green chiles~92
+cookies~60
+corn~30
+crushed red pepper flakes~84
+dried oregano leaves~51
+dried thyme leaves~51
+eggs~30
+fettuccine~44
+fresh basil leaves~75
 fresh cilantro leaves~45
-salt~564
+fresh gingerroot~50
+green onions~65
+ground red pepper (cayenne)~23
+lime juice~23
+milk~50
+baby bella mushrooms~25
+white button mushrooms~25
+olive oil~25
+onions~25
+organic crushed tomatoes with basil~20
+organic tomato sauce~51
+peas~64
+red bell pepper~51
+salt~56
+sesame seeds~50
+shredded Parmesan cheese~54
+snow peas~32
+soy sauce~68
+spaghetti~22
+taco seasoning mix~52
+teriyaki sauce~65
+turkey~80
+vegetable oil~23
+water~93
+white rice~28
 -$
