@@ -42,9 +42,9 @@ namespace OOAD_Project
 
         public void processOrder()
         {
-            //orderPage.Show();
-            //orderPage.display(selectedItems); 
-            //orderPage.displayCount(cust.getPayPlan().getCount());
+            orderPage.Show();
+            orderPage.display(selectedItems); 
+            orderPage.displayCount(cust.getNumMeals());
             mealsSoldStats(selectedItems);
         }
 

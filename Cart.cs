@@ -23,8 +23,7 @@ namespace OOAD_Project
             InitializeComponent();
             cust = inCust;
             countBox.Text = cust.getCart().Length.ToString();
-            //remainingMeals.Text = 
-                //cust.getPayPlan().getRemaining().ToString();
+            remainingMeals.Text = cust.getNumMeals().ToString();
         }
 
         //----------------------------------------------------------------
@@ -71,8 +70,11 @@ namespace OOAD_Project
             int itemCount = 0;
             foreach (Meal m in cust.getCart())
             {
-                CartList.Items.Add(m.name());
-                ++itemCount;
+                if (!CartList.Items.Contains(m.name()))
+                {
+                    CartList.Items.Add(m.name());
+                    ++itemCount;
+                }
             }
             countBox.Text = itemCount.ToString();
         }
