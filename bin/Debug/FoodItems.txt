@@ -1,10 +1,12 @@
 $
 Asian sesame dressing~50
 avocados~90
+baking soda~44
 beans~40
 black beans~99
 boneless skinless chicken breasts~23
 boneless skinless chicken thighs~34
+butter~55
 carrots~50
 celery~25
 cheese~802
@@ -14,18 +16,22 @@ chopped garlic~23
 chopped green chiles~92
 cookies~60
 corn~30
+cranberries~54
 crushed red pepper flakes~84
 dried oregano leaves~51
 dried thyme leaves~51
 eggs~30
 fettuccine~44
+flour~44
 fresh basil leaves~75
 fresh cilantro leaves~45
 fresh gingerroot~50
 green onions~65
 ground red pepper (cayenne)~23
+heavy whipping cream~51
 lime juice~23
 milk~50
+molasses~78
 baby bella mushrooms~25
 white button mushrooms~25
 olive oil~25
@@ -40,6 +46,7 @@ shredded Parmesan cheese~54
 snow peas~32
 soy sauce~68
 spaghetti~22
+sugar~55
 taco seasoning mix~52
 teriyaki sauce~65
 turkey~80
