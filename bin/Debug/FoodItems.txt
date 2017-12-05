@@ -1,45 +1,54 @@
 $
+allspice~44
 Asian sesame dressing~50
 avocados~90
+bacon~66
 baking soda~44
+basil leaves~75
 beans~40
+Betty Crocker sugar cookie mix~22
 black beans~99
 boneless skinless chicken breasts~23
 boneless skinless chicken thighs~34
 butter~55
 carrots~50
 celery~25
+Cheddar cheese~64
 cheese~802
 chicken broth~23
 chili garlic sauce~65
-chopped garlic~23
-chopped green chiles~92
+cilantro leaves~45
+cinnamon~55
+cloves~55
 cookies~60
 corn~30
 cranberries~54
-crushed red pepper flakes~84
-dried oregano leaves~51
-dried thyme leaves~51
+cream cheese~54
+crushed tomatoes with basil~20
 eggs~30
 fettuccine~44
 flour~44
-fresh basil leaves~75
-fresh cilantro leaves~45
-fresh gingerroot~50
+garlic~23
+gingerroot~50
+ginger~89
+green chiles~92
 green onions~65
-ground red pepper (cayenne)~23
 heavy whipping cream~51
 lime juice~23
+mashed potatoes~61
 milk~50
 molasses~78
 baby bella mushrooms~25
 white button mushrooms~25
 olive oil~25
 onions~25
-organic crushed tomatoes with basil~20
-organic tomato sauce~51
+oregano leaves~51
 peas~64
+pepper~27
+powdered sugar~66
 red bell pepper~51
+red pepper (cayenne)~23
+red pepper flakes~84
 salt~56
 sesame seeds~50
 shredded Parmesan cheese~54
@@ -49,7 +58,10 @@ spaghetti~22
 sugar~55
 taco seasoning mix~52
 teriyaki sauce~65
+thyme leaves~51
+tomato sauce~51
 turkey~80
+vanilla~20
 vegetable oil~23
 water~93
 white rice~28
