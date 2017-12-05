@@ -7,6 +7,7 @@
             creditcard, securitynum, expdate;
         int next = 0, numMeals = 0, cartMeals = 0;
         Meal[] cart = new Meal[MAXMEALS];
+        int[] cartCounter = new int[MAXMEALS];
 
         public Customer(string u, string pass, string n, 
             string e, string p, string a, string c,
@@ -62,7 +63,10 @@
         public void emptyCart()
         {
             for (int i = 0; i < cart.Length; i++)
+            {
                 cart[i] = null;
+                cartCounter[i] = 0;
+            }
             next = numMeals = 0;
         }
 
@@ -72,9 +76,21 @@
         //----------------------------------------------------------------
         public void addToCart(Meal m)
         {
-            cart[next++] = m;
-            ++cartMeals;
+            int index = findCartItem(m);
+            if (index != -1)
+            {
+                cartCounter[index] += 1;
+                ++cartMeals;
+            }
+            else
+            {
+                cart[next] = m;
+                cartCounter[next++] = 1;
+                ++cartMeals;
+            }
+            
         }
+
 
         //----------------------------------------------------------------
         // Removes an item at its index and shifts all other elements
@@ -84,8 +100,11 @@
         {
             int index = findCartItem(m);
             if (index != -1)
-                for (int i = index + 1; i < cart.Length; i++)
+                for (int i = index + 1; i < cartMeals; i++)
+                {
                     cart[i - 1] = cart[i];
+                    cartCounter[i - 1] = cartCounter[i];
+                }
         }
 
         //----------------------------------------------------------------
@@ -93,7 +112,7 @@
         //----------------------------------------------------------------
         public int findCartItem(Meal m)
         {
-            for(int i = 0; i < cart.Length; i++)
+            for(int i = 0; i < cartMeals; i++)
             {
                 if (cart[i].name() == m.name())
                     return i;

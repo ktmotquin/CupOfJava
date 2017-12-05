@@ -111,7 +111,6 @@
     <Compile Include="OrderSummary.Designer.cs">
       <DependentUpon>OrderSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="PayPlan.cs" />
     <Compile Include="Remove_Meal.cs">
       <SubType>Form</SubType>
     </Compile>
