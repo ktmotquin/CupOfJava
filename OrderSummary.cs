@@ -25,5 +25,10 @@ namespace OOAD_Project
 
         public void displayCount(int num)
         { remainderBox.Text = num.ToString(); }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

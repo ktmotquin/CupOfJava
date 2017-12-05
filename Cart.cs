@@ -52,7 +52,7 @@ namespace OOAD_Project
             if (CartList.CheckedItems != null)
             {
                 order = new CartManager(cust);
-                foreach (String mealName in CartList.CheckedItems)
+                foreach (string mealName in CartList.CheckedItems)
                 {
                     for (int i = 0; i < cust.getCartMeals(); i++)
                     {
@@ -62,14 +62,13 @@ namespace OOAD_Project
                             {
                                 MessageBox.Show("You've gone over your maximum meals!"
                                     + " Please add some more meals to continue.");
-                                this.Close();
+                                Close();
                                 break;
                             }
                     }
                 }
                 order.processOrder();
-                countBox.Text = cust.getCart().Length.ToString();
-                remainingMeals.Text = cust.getNumMeals().ToString();
+                Close();
             }
         }
 
