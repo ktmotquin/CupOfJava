@@ -1,25 +1,30 @@
 $
 allspice~44
 Asian sesame dressing~50
+artichoke hearts~16
 avocados~90
+baby spinach leaves~44
 bacon~66
 baking soda~44
 basil leaves~75
 beans~40
-Betty Crocker sugar cookie mix~22
 black beans~99
-boneless skinless chicken breasts~23
-boneless skinless chicken thighs~34
+bread crumbs~35
 butter~55
 carrots~50
 celery~25
 Cheddar cheese~64
 cheese~802
+cheese-filled tortellini~116
+chicken~23
 chicken broth~23
+chicken taco seasoning mix~52
 chili garlic sauce~65
+chili powder~94
 cilantro leaves~45
 cinnamon~55
-cloves~55
+cloves garlic~55
+cooked chicken~183
 cookies~60
 corn~30
 cranberries~54
@@ -27,42 +32,58 @@ cream cheese~54
 crushed tomatoes with basil~20
 eggs~30
 fettuccine~44
+fire roasted tomatoes~256
 flour~44
 garlic~23
 gingerroot~50
 ginger~89
+green bell pepper~223
 green chiles~92
 green onions~65
 heavy whipping cream~51
+jalapeño chile~128
+lean ground beef~70
+lemon juice~243
 lime juice~23
 mashed potatoes~61
 milk~50
 molasses~78
+mozzarella cheese~229
 baby bella mushrooms~25
-white button mushrooms~25
+Old El Paso Thick n Chunky medium salsa~227
 olive oil~25
 onions~25
 oregano leaves~51
+Ore-Ida™ Tater Tots™ frozen potatoes~165
+parmesan cheese~88
+pasta shells~54
 peas~64
 pepper~27
 powdered sugar~66
 red bell pepper~51
+red kidney beans~173
 red pepper (cayenne)~23
 red pepper flakes~84
+ricotta cheese~44
 salt~56
 sesame seeds~50
-shredded Parmesan cheese~54
 snow peas~32
 soy sauce~68
+sour cream~125
 spaghetti~22
 sugar~55
-taco seasoning mix~52
+sugar cookie mix~22
+sweet corn~261
 teriyaki sauce~65
 thyme leaves~51
+tomato basil pasta sauce~247
 tomato sauce~51
 turkey~80
 vanilla~20
+vegetable broth~214
 vegetable oil~23
 water~93
+white button mushrooms~25
 white rice~28
+yellow onions~206
 -$
