@@ -76,7 +76,7 @@ namespace OOAD_Project
                     ++itemCount;
                 }
             }
-            countBox.Text = itemCount.ToString();
+            countBox.Text = cust.getCartMeals().ToString();
         }
     }
 }
