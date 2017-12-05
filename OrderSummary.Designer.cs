@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.remainderBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OrderList
@@ -68,11 +69,21 @@
             this.remainderBox.Size = new System.Drawing.Size(29, 20);
             this.remainderBox.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // OrderSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.remainderBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -90,5 +101,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox remainderBox;
+        private System.Windows.Forms.Button button1;
     }
 }

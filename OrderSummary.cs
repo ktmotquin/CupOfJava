@@ -17,7 +17,10 @@ namespace OOAD_Project
         public void display(Meal[] m)
         {
             foreach (Meal meal in m)
-                OrderList.Items.Add(meal.name());
+            {
+                if (meal != null)
+                    OrderList.Items.Add(meal.name());
+            }
         }
 
         public void displayCount(int num)

@@ -363,7 +363,7 @@
             this.Controls.Add(this.cartButton);
             this.Controls.Add(this.mealSearch);
             this.Controls.Add(this.Logout);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(700, 538);
             this.Name = "CustomerMenu";

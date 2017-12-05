@@ -14,7 +14,7 @@ namespace OOAD_Project
    {
       private MealList m = new MealList();
       private CustomerList list = new CustomerList();
-        private Customer cust;
+      private Customer cust;
       public CustomerMenu(string username)
       {
          InitializeComponent();

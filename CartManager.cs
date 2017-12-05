@@ -17,7 +17,7 @@ namespace OOAD_Project
 
         public CartManager(Customer c)
         {
-            cust = new Customer(c);
+            cust = c;
             orderPage = new OrderSummary();
             orderPage.Hide();
         }

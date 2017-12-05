@@ -22,6 +22,7 @@ namespace OOAD_Project
         {
             InitializeComponent();
             cust = inCust;
+            order = new CartManager(cust);
             countBox.Text = cust.getCart().Length.ToString();
             remainingMeals.Text = cust.getNumMeals().ToString();
         }
@@ -33,8 +34,12 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            foreach(Meal m in CartList.CheckedItems)
-                cust.removeItem(m);
+            foreach(String mealName in CartList.CheckedItems)
+            {
+                for (int i = 0; i < cust.getCartMeals(); i++)
+                    if (cust.getCart()[i].name() == mealName)
+                        cust.removeItem(cust.getCart()[i]);
+            }
             countBox.Text = cust.getCart().Length.ToString();
         }
 
@@ -44,20 +49,28 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            order = new CartManager(cust);
-            foreach (Meal m in CartList.CheckedItems)
+            if (CartList.CheckedItems != null)
             {
-                if (!order.add(m))
+                order = new CartManager(cust);
+                foreach (String mealName in CartList.CheckedItems)
                 {
-                    MessageBox.Show("You've gone over your maximum meals!"
-                        + "Please add some more meals to continue.");
-                    this.Close();
-                    break;
+                    for (int i = 0; i < cust.getCartMeals(); i++)
+                    {
+                        if (cust.getCart()[i].name() == mealName)
+
+                            if (!order.add(cust.getCart()[i]))
+                            {
+                                MessageBox.Show("You've gone over your maximum meals!"
+                                    + " Please add some more meals to continue.");
+                                this.Close();
+                                break;
+                            }
+                    }
                 }
+                order.processOrder();
+                countBox.Text = cust.getCart().Length.ToString();
+                remainingMeals.Text = cust.getNumMeals().ToString();
             }
-            order.processOrder();
-            countBox.Text = cust.getCart().Length.ToString();
-            remainingMeals.Text = cust.getNumMeals().ToString();
         }
 
         //----------------------------------------------------------------
@@ -70,10 +83,13 @@ namespace OOAD_Project
             int itemCount = 0;
             foreach (Meal m in cust.getCart())
             {
-                if (!CartList.Items.Contains(m.name()))
+                if (m != null)
                 {
-                    CartList.Items.Add(m.name());
-                    ++itemCount;
+                    if (CartList.Items != null && !CartList.Items.Contains(m.name()))
+                    {
+                        CartList.Items.Add(m.name());
+                        ++itemCount;
+                    }
                 }
             }
             countBox.Text = cust.getCartMeals().ToString();
