@@ -50,9 +50,6 @@ namespace OOAD_Project
             bool done = false;  // True when end of user list has been reached
             if (checkForEmpty())
             {
-                /* enteredInfo = ID.Text + "/" + MealName.Text + "/" + Type.Text + "/" + Keywords.Text.Replace(' ',delimiter)
-                     + " " + Calories.Text + "/" + Instructions.Text.Replace(' ', delimiter) + "/" 
-                     + Description.Text.Replace(' ', delimiter) + "/" + Ingredients.Text.Replace(' ', delimiter);*/
                 enteredInfo = MealName.Text + "$" + Description.Text.Replace("\r\n", replaceWith) + "$" + comboBox1.Text + "$"
                                 + Instructions.Text.Replace("\r\n", replaceWith) + "$" +
                                 Ingredients.Text.Replace("\r\n", replaceWith) + "$" + imgfile.Text + ".bmp";

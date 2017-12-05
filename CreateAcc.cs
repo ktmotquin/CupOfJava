@@ -40,6 +40,7 @@ namespace OOAD_Project
                 btnEdit.Enabled = true;
                 Customer temp = list.getCustomer(index);
                 unameText.Text = temp.getuser();
+                unameText.Enabled = false;
                 passText.Text = temp.getpassword();
                 txtbxName.Text = temp.getname();
                 txtbxEmail.Text = temp.getemail();
@@ -48,6 +49,8 @@ namespace OOAD_Project
                 txtbxCreditNum.Text = temp.getcreditcard();
                 txtbxSecurity.Text = temp.getsecuritynum();
                 txtbxExpire.Text = temp.getexpdate();
+                button1.Enabled = false;
+                button1.Hide();
             }
         }
 
@@ -139,6 +142,20 @@ namespace OOAD_Project
             int nummeals = (index + 1) * 5;
             list.editInfo(unameText.Text, passText.Text, txtbxName.Text, txtbxEmail.Text, txtbxPhone.Text,
                 txtbxAddress.Text, txtbxCreditNum.Text, txtbxSecurity.Text, txtbxExpire.Text, nummeals);
+            CustomerMenu Customer = new CustomerMenu(unameText.Text);
+            Customer.Show();
+            this.Close();
         }
+
+        private void comboBoxNumMeals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBoxNumMeals.SelectedIndex;
+            int mealcost = (index + 1) * 5;
+            double mealprice = 8.50;
+            double totalcost = mealcost * mealprice;
+
+            lblcostchange.Text = "$ " + totalcost.ToString("0.00"); ;
+        }
+
     }
 }

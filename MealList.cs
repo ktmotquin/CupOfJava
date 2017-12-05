@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace OOAD_Project
 {
@@ -148,61 +149,61 @@ namespace OOAD_Project
 
 
         }
-        public bool editmeal(string mealname, string description, string ingredients, string instructions)
+        public void editmeal(string mealName, string description, string ingredients, string instructions)
         {
+            string replaceWith = "~";
+        string overallText = "1\n";
+            string temp;
+            string tempname;
+     
+        bool done = false;  // True when end of user list has been reached
 
-            string toBeWrit = "";
-            string text;
-            bool found = false;
-            bool done = false;
-            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
-            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
-                                                                                       //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
-            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
-            {
-                while (!done)
+
+
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\Meals.txt");
+        var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link                                                                                                                        
+                //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
-                    text = streamReader.ReadLine();         // read next line
-
-                    string[] stuff = text.Split('$');
-                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    while (!done)
                     {
-                        if (stuff[0].ToLower() != mealname.ToLower())
+                        temp = streamReader.ReadLine();
+
+                        String[] parts = temp.Split('$');   // read next line
+                        if (!temp.Equals("-1"))                 // Check if end of file has been reached 
                         {
-                            toBeWrit += text + '\n';
+                            System.Console.WriteLine("Entered text " + temp);
+                            if (!temp.Equals("1") )
+                            {
+                               
+                            if (parts[0].ToLower().Equals(mealName.ToLower()))
+                            {
+                                tempname = mealName + "$" + description.Replace("\n", replaceWith) + "$" + parts[2] + "$"
+                                    + instructions.Replace("\n", replaceWith) + "$" +
+                                    ingredients.Replace("\n", replaceWith) + "$" + parts[5] + "" + '\n';
+                                overallText = overallText + tempname;
+                            }
+                            else
+                                overallText += temp + '\n';
                         }
 
-                        String[] parts = text.Split('$');      // Breaks the current line into parts
-                        if (stuff[0].ToLower() == mealname.ToLower())
-                        {
-                            found = true;
-                            stuff[1] = description;
-                            stuff[3] = instructions;
-                            stuff[4] = ingredients;
-                            toBeWrit = toBeWrit + stuff[0] + "$" + stuff[1] + "$" + stuff[2] + "$" + 
-                                stuff[3] + "$" + stuff[4] + "$" + stuff[5] + '\n';
-
                         }
-                    }
-                    else
-                    {
-                        done = true;                        // Info not found
+                        else
+                        {
+                            done = true;                        // Info not found
+                        }
                     }
                 }
-            }
-            fileStream.Close();
-            if (found)
-            {
-                toBeWrit += "-1\n";
-                System.IO.File.WriteAllText(fileName, toBeWrit);
-                return true;
-            }
-            else
-                return false;
+                fileStream.Close();
+
+                    overallText += "-1";
+                    System.IO.File.WriteAllText(fileName, overallText);
 
 
+ 
         }
-        
+
         public bool checktype(int index, string type)
         {
             if (index == -1)

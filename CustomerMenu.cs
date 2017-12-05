@@ -204,6 +204,7 @@ namespace OOAD_Project
             int index = list.getCustIndex(lblname.Text);
             CreateAcc accountedit = new CreateAcc('E',index );
             accountedit.Show();
+            this.Close();
 
         }
     }

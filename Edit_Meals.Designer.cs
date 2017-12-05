@@ -35,18 +35,17 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(26, 25);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBox1.Location = new System.Drawing.Point(13, 13);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(559, 879);
+            this.listBox1.Size = new System.Drawing.Size(613, 329);
             this.listBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(630, 34);
+            this.button1.Location = new System.Drawing.Point(173, 347);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 155);
+            this.button1.Size = new System.Drawing.Size(317, 134);
             this.button1.TabIndex = 1;
             this.button1.Text = "Edit Selected Meal";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,12 +53,11 @@
             // 
             // Edit_Meals
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1310, 946);
+            this.ClientSize = new System.Drawing.Size(655, 492);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Edit_Meals";
             this.Text = "Edit_Meals";
             this.Load += new System.EventHandler(this.Edit_Meals_Load);
