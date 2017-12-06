@@ -28,16 +28,25 @@ namespace OOAD_Project
                 cust.removeItem(m);
         }
 
-        public bool add(Meal m)
+        public bool addToOrder(Meal m)
         {
-            if (cust.getCartMeals() < cust.getNumMeals())
+            if (cust.getCartCounter()[findIndex(m)] < cust.getNumMeals())
             {
                 selectedItems[++index] = m;
-                cust.setNumMeals(-1);
+                cust.setNumMeals(-cust.getCartCounter()[findIndex(m)]);
                 cust.removeItem(m);
                 return true;
             }
             return false;
+        }
+
+        private int findIndex(Meal m)
+        {
+            int index;
+            for (index = 0; index < cust.getCartMeals(); index++)
+                if (cust.getCart()[index] == m)
+                    break;
+            return index;
         }
 
         public void processOrder()

@@ -132,7 +132,7 @@
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
-            this.Activated += new System.EventHandler(this.Cart_Activated);
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -55,6 +55,7 @@
         public string getsecuritynum() { return securitynum; }
         public string getexpdate() { return expdate; }
         public Meal[] getCart() { return cart; }
+        public int[] getCartCounter() { return cartCounter; }
 
         //----------------------------------------------------------------
         // Clears the entire cart upon completion of an order or deletion
@@ -100,11 +101,14 @@
         {
             int index = findCartItem(m);
             if (index != -1)
-                for (int i = index + 1; i < cartMeals; i++)
+            { 
+                cartMeals -= cartCounter[index];
+                for (int i = index + 1; i <= cartMeals; i++)
                 {
                     cart[i - 1] = cart[i];
                     cartCounter[i - 1] = cartCounter[i];
                 }
+            }
         }
 
         //----------------------------------------------------------------
@@ -112,10 +116,13 @@
         //----------------------------------------------------------------
         public int findCartItem(Meal m)
         {
-            for(int i = 0; i < cartMeals; i++)
+            if (cart[0] != null)
             {
-                if (cart[i].name() == m.name())
-                    return i;
+                for (int i = 0; i < cartMeals; i++)
+                {
+                    if (cart[i].name() == m.name())
+                        return i;
+                }
             }
             return -1;
         }

@@ -39,17 +39,12 @@ namespace OOAD_Project
          this.Close();   // Close this window
       }
 
-      private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-      {
-
-      }
-
-
-      private void CustomerMenu_Load(object sender, EventArgs e)
+      public void CustomerMenu_Load(object sender, EventArgs e)
       {
             if (lblname.Text != "Administrator")
             {
                 cust = list.returnCustomer(lblname.Text);
+                numMealLbl.Text = Convert.ToString(cust.getNumMeals());
             }
             else
             {
@@ -175,7 +170,7 @@ namespace OOAD_Project
                     "Please Add Items Before Checking Out!");
             else
             {
-                Cart cart = new OOAD_Project.Cart(cust);
+                Cart cart = new OOAD_Project.Cart(cust, this);
                 cart.Show();
             }
         }

@@ -13,15 +13,17 @@ namespace OOAD_Project
    public partial class Cart : Form
    {
         Customer cust;
+        CustomerMenu parent;
         CartManager order;
         //----------------------------------------------------------------
         // Constructor: Initializes components and assigns a temporary
         // customer object to the customer passed in to the form.
         //----------------------------------------------------------------
-        public Cart(Customer inCust)
+        public Cart(Customer inCust, CustomerMenu p)
         {
             InitializeComponent();
             cust = inCust;
+            parent = p;
             order = new CartManager(cust);
             countBox.Text = cust.getCart().Length.ToString();
             remainingMeals.Text = cust.getNumMeals().ToString();
@@ -38,9 +40,13 @@ namespace OOAD_Project
             {
                 for (int i = 0; i < cust.getCartMeals(); i++)
                     if (cust.getCart()[i].name() == mealName)
+                    {
                         cust.removeItem(cust.getCart()[i]);
+                        break;
+                    }
             }
-            countBox.Text = cust.getCart().Length.ToString();
+            //countBox.Text = cust.getCart().Length.ToString();
+            Cart_Load(sender, e);
         }
 
         //----------------------------------------------------------------
@@ -57,8 +63,7 @@ namespace OOAD_Project
                     for (int i = 0; i < cust.getCartMeals(); i++)
                     {
                         if (cust.getCart()[i].name() == mealName)
-
-                            if (!order.add(cust.getCart()[i]))
+                            if (!order.addToOrder(cust.getCart()[i]))
                             {
                                 MessageBox.Show("You've gone over your maximum meals!"
                                     + " Please add some more meals to continue.");
@@ -68,6 +73,7 @@ namespace OOAD_Project
                     }
                 }
                 order.processOrder();
+                parent.CustomerMenu_Load(sender, e);
                 Close();
             }
         }
@@ -77,21 +83,30 @@ namespace OOAD_Project
         // calculated an displayed on the form. Also, the meals currently
         // in the user's cart array will be displayed in CartList.
         //----------------------------------------------------------------
-        private void Cart_Activated(object sender, EventArgs e)
+        private void Cart_Load(object sender, EventArgs e)
         {
             int itemCount = 0;
-            foreach (Meal m in cust.getCart())
+            if (cust.getCartMeals() != 0)
             {
-                if (m != null)
+                foreach (Meal m in cust.getCart())
                 {
-                    if (CartList.Items != null && !CartList.Items.Contains(m.name()))
+                    if (m != null)
                     {
-                        CartList.Items.Add(m.name());
-                        ++itemCount;
+                        if (CartList.Items != null &&
+                            !CartList.Items.Contains(m.name()))
+                        {
+                            CartList.Items.Add(m.name());
+                            ++itemCount;
+                        }
                     }
                 }
+                countBox.Text = cust.getCartMeals().ToString();
             }
-            countBox.Text = cust.getCartMeals().ToString();
+            else
+            {
+                MessageBox.Show("Your Cart is Now Empty.");
+                Close();
+            }
         }
     }
 }
