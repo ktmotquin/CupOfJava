@@ -35,13 +35,14 @@ namespace OOAD_Project
                     Admin.Show();
                     this.Close();
                 }
+                MessageBox.Show("Disclaimer: All photos, descriptions, ingredients, and instructions" +
+            " for recipes are from www.bettycrocker.com.");
             }
             else
             {
                 MessageBox.Show("Incorrect username or password entered.\nPlease try again.");
             }
-         MessageBox.Show("Disclaimer: All photos, descriptions, ingredients, and instructions" +
-            " for recipes are from www.bettycrocker.com.");
+
         }
 
         private void cancel_Click(object sender, EventArgs e)
