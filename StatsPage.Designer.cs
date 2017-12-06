@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatsPage));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toAdminMenuBtn = new System.Windows.Forms.Button();
             this.pieGraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -84,6 +85,7 @@
             this.Controls.Add(this.pieGraph);
             this.Controls.Add(this.toAdminMenuBtn);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StatsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StatsPage";

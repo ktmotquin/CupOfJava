@@ -28,6 +28,7 @@
       /// </summary>
       private void InitializeComponent()
       {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart));
             this.CheckoutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.CartList = new System.Windows.Forms.CheckedListBox();
@@ -127,6 +128,7 @@
             this.Controls.Add(this.CartList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckoutButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealRequest));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnImage = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MealRequest";
             this.Text = "MealRequest";
             this.ResumeLayout(false);

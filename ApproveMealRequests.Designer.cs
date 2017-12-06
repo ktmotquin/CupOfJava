@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveMealRequests));
             this.Close = new System.Windows.Forms.Button();
             this.AddMeal = new System.Windows.Forms.Button();
             this.Ingredients = new System.Windows.Forms.TextBox();
@@ -239,6 +240,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ApproveMealRequests";
             this.Text = "MealRequests";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

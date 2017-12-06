@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerMenu));
             this.Logout = new System.Windows.Forms.Button();
             this.mealSearch = new System.Windows.Forms.Button();
             this.cartButton = new System.Windows.Forms.Button();
@@ -364,6 +365,7 @@
             this.Controls.Add(this.mealSearch);
             this.Controls.Add(this.Logout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(700, 538);
             this.Name = "CustomerMenu";
