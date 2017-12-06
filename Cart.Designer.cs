@@ -41,10 +41,10 @@
             // 
             // CheckoutButton
             // 
-            this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckoutButton.Location = new System.Drawing.Point(10, 47);
             this.CheckoutButton.Name = "CheckoutButton";
-            this.CheckoutButton.Size = new System.Drawing.Size(82, 33);
+            this.CheckoutButton.Size = new System.Drawing.Size(145, 33);
             this.CheckoutButton.TabIndex = 6;
             this.CheckoutButton.Text = "Checkout";
             this.CheckoutButton.UseVisualStyleBackColor = true;
@@ -62,6 +62,7 @@
             // 
             // CartList
             // 
+            this.CartList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CartList.FormattingEnabled = true;
             this.CartList.Location = new System.Drawing.Point(10, 94);
             this.CartList.Name = "CartList";
@@ -70,7 +71,7 @@
             // 
             // RemoveButton
             // 
-            this.RemoveButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.Location = new System.Drawing.Point(161, 47);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(138, 33);
@@ -82,9 +83,10 @@
             // countBox
             // 
             this.countBox.Enabled = false;
+            this.countBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countBox.Location = new System.Drawing.Point(89, 10);
             this.countBox.Name = "countBox";
-            this.countBox.Size = new System.Drawing.Size(39, 20);
+            this.countBox.Size = new System.Drawing.Size(39, 23);
             this.countBox.TabIndex = 11;
             // 
             // label2
@@ -110,9 +112,10 @@
             // remainingMeals
             // 
             this.remainingMeals.Enabled = false;
+            this.remainingMeals.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remainingMeals.Location = new System.Drawing.Point(338, 10);
             this.remainingMeals.Name = "remainingMeals";
-            this.remainingMeals.Size = new System.Drawing.Size(41, 20);
+            this.remainingMeals.Size = new System.Drawing.Size(41, 23);
             this.remainingMeals.TabIndex = 14;
             // 
             // Cart

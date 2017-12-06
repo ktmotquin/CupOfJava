@@ -109,7 +109,7 @@
             // 
             // ApproveMealRequests
             // 
-            this.ApproveMealRequests.Font = new System.Drawing.Font("Calibri", 12F);
+            this.ApproveMealRequests.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApproveMealRequests.Location = new System.Drawing.Point(12, 86);
             this.ApproveMealRequests.Name = "ApproveMealRequests";
             this.ApproveMealRequests.Size = new System.Drawing.Size(188, 31);
@@ -120,7 +120,7 @@
             // 
             // btnEditMeal
             // 
-            this.btnEditMeal.Font = new System.Drawing.Font("Calibri", 12F);
+            this.btnEditMeal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditMeal.Location = new System.Drawing.Point(14, 161);
             this.btnEditMeal.Name = "btnEditMeal";
             this.btnEditMeal.Size = new System.Drawing.Size(188, 31);
@@ -131,7 +131,7 @@
             // 
             // btnRemoveMeals
             // 
-            this.btnRemoveMeals.Font = new System.Drawing.Font("Calibri", 12F);
+            this.btnRemoveMeals.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveMeals.Location = new System.Drawing.Point(14, 123);
             this.btnRemoveMeals.Name = "btnRemoveMeals";
             this.btnRemoveMeals.Size = new System.Drawing.Size(188, 31);

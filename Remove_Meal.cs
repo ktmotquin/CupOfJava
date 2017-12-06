@@ -26,6 +26,8 @@ namespace OOAD_Project
             for(int i = 0; i < count; i++ )
             {
             listBox1.Items.Add(meal.sendmeal(i).name());
+
+             
             }
 
         }

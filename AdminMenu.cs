@@ -46,6 +46,7 @@ namespace OOAD_Project
         {
             CreateAcc acc = new CreateAcc('A', -1);
             acc.Show();
+           acc.Size = new System.Drawing.Size(acc.Width, acc.Height - 200);
         }
 
         private void modifyStockBtn_Click(object sender, EventArgs e)

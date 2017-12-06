@@ -13,6 +13,7 @@ namespace OOAD_Project
 {
     public partial class CreateAcc : Form
     {
+        public char acconttype;
         CustomerList list = new CustomerList();
         
         /// <summary>
@@ -23,9 +24,10 @@ namespace OOAD_Project
         public CreateAcc(char account, int index)
         {
             InitializeComponent();
+            acconttype = account;
             btnEdit.Enabled = false;
             btnEdit.Hide();
-            if(account == 'A')
+            if (account == 'A')
             {
                 txtbxAddress.Hide();
                 txtbxAddress.Enabled = false;
@@ -39,9 +41,17 @@ namespace OOAD_Project
                 label10.Hide();
                 label11.Hide();
                 label12.Hide();
+                comboBoxNumMeals.Hide();
+                nummeals.Hide();
+                lblcost.Hide();
+                lblcostchange.Hide();
+                button1.Text = "Create Administrator Account";
+                label3.Hide();
+                button1.Location = new Point(button1.Location.X, txtbxPhone.Location.Y + 30);
             }
             else if (account == 'E' && index != -1)
             {
+                label3.Hide();
                 btnEdit.Show();
                 btnEdit.Enabled = true;
                 Customer temp = list.getCustomer(index);
@@ -63,7 +73,7 @@ namespace OOAD_Project
         ///
         private void button1_Click(object sender, EventArgs e)
         {
-            if (passText.SelectedText.Equals(confirmPassText.SelectedText))
+            if (passText.SelectedText.Equals(confirmPassText.SelectedText) && checkforblanks())
             {
                 string toBeWrit = "1\n";
                 string text;
@@ -71,17 +81,17 @@ namespace OOAD_Project
                 bool done = false;  // True when end of user list has been reached
                 string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
                 var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
-                                                                                                                                                                             //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
+                                                                                           //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
                     while (!done)
                     {
                         text = streamReader.ReadLine();         // read next line
-                        
+
                         string[] stuff = text.Split('$');
                         if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
                         {
-                            if(!stuff[0].Equals("1"))
+                            if (!stuff[0].Equals("1"))
                             {
                                 toBeWrit += text + '\n';
                             }
@@ -102,17 +112,17 @@ namespace OOAD_Project
                 fileStream.Close();
                 if (!found)
                 {
-                    if(passText.Text.Equals(confirmPassText.Text))
+                    if (passText.Text.Equals(confirmPassText.Text))
                     {
                         int index = comboBoxNumMeals.SelectedIndex;
                         int nummeals = (index + 1) * 5;
                         string text1;
                         if (txtbxAddress.Enabled == true)
                         {
-                            text1 = unameText.Text + "$" + passText.Text + "$C$" + 
+                            text1 = unameText.Text + "$" + passText.Text + "$C$" +
                             txtbxName.Text + "$" + txtbxEmail.Text + "$" + txtbxPhone.Text + "$"
                             + txtbxAddress.Text + "$" + txtbxCreditNum.Text + "$" + txtbxSecurity.Text
-                            + "$" + txtbxExpire.Text +"$" + nummeals + "\n-1";
+                            + "$" + txtbxExpire.Text + "$" + nummeals + "\n-1";
                         }
                         else
                         {
@@ -133,13 +143,40 @@ namespace OOAD_Project
                     MessageBox.Show("Error: Username already taken.");  // Display passwords do not match
                 }
             }
+            else
+            {
+                MessageBox.Show("Error: Missing Information.");
+            }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        private bool checkforblanks()
+        {
+            if (acconttype == 'C')
+            {
+                if (passText.Text == "" || unameText.Text == "" || txtbxName.Text == "" ||
+                 txtbxEmail.Text == "" || txtbxPhone.Text == "" || txtbxAddress.Text == "" ||
+                 txtbxCreditNum.Text == "" || txtbxSecurity.Text == "" || txtbxExpire.Text == "")
+                    return false;
+            }
+            else if (acconttype == 'A')
+            {
+                if (passText.Text == "" || unameText.Text == "" || txtbxName.Text == "" ||
+                 txtbxEmail.Text == "" || txtbxPhone.Text == "")
+                    return false;
+            }
+            else if (acconttype == 'E')
+            {
+                if (passText.Text == "" || unameText.Text == "" || txtbxName.Text == "" ||
+                 txtbxEmail.Text == "" || txtbxPhone.Text == "" || txtbxAddress.Text == "" ||
+                 txtbxCreditNum.Text == "" || txtbxSecurity.Text == "" || txtbxExpire.Text == "")
+                    return false;
+            }
+            else
+            {
+                return true;
+            }
+            return true;
+        }
         private void unameText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '$')
@@ -173,6 +210,7 @@ namespace OOAD_Project
 
             lblcostchange.Text = "$ " + totalcost.ToString("0.00"); ;
         }
+
 
     }
 }
