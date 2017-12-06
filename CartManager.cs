@@ -63,7 +63,8 @@ namespace OOAD_Project
             string text;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
-            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\StatsPieGraph.txt");
+            string numsFileName = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\OrderStats.txt");
+            string pieFileName = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\StatsPieGraph.txt");
             //var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
             int counter = 0; 
 

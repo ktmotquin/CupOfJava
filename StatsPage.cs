@@ -21,7 +21,9 @@ namespace OOAD_Project
         public StatsPage()
         {
             InitializeComponent();
-            
+            //everytime a meal is sold, put into a new text file if it hasn't been purchased before or update existing text file
+            //make quantity (AddY(22)) a variable
+            //add top 5 meals to pieGraph, with correspoding number of orders
             pieGraph.Series["Meals"].Points.AddY(22);
             pieGraph.Series["Meals"].Points[0].Label = "curry";
             pieGraph.Series["Meals"].Points.AddY(50);
