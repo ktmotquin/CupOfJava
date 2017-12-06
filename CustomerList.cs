@@ -11,6 +11,10 @@ namespace OOAD_Project
     {
         int count = 0;
         Customer[] customers = new Customer[100];
+
+        /// <summary>
+        /// 
+        /// </summary>
         public CustomerList()
         {
             string text;
@@ -21,8 +25,6 @@ namespace OOAD_Project
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
-
-               
                 while (!done)
                 {
                     text = streamReader.ReadLine();         // read next line
@@ -38,9 +40,7 @@ namespace OOAD_Project
                                   parts[7], parts[8], parts[9], Int32.Parse(parts[10]));
                               count++;
                            }
-
                         }
-
                     }
                     else
                     {
@@ -51,10 +51,20 @@ namespace OOAD_Project
             fileStream.Close();
 
         }
-        //----------------------------------------------------------------
-        // 
-        // 
-        //----------------------------------------------------------------
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="name"></param>
+        /// <param name="email"></param>
+        /// <param name="phonenumber"></param>
+        /// <param name="address"></param>
+        /// <param name="creditcard"></param>
+        /// <param name="security"></param>
+        /// <param name="expire"></param>
+        /// <param name="meals"></param>
         public void editInfo(string username, string password, string name,
             string email, string phonenumber, string address, string creditcard,
             string security, string expire, int meals)
@@ -90,9 +100,6 @@ namespace OOAD_Project
                             toBeWrit = toBeWrit + username + "$" + password + "$" + stuff[2] + "$" +
                                 name + "$" + email + "$" + phonenumber + "$" + address + "$" + 
                                 creditcard + "$" + security + "$" + expire + "$" + meals + '\n';
-
-
-
                         }
                     }
                     else
@@ -109,6 +116,12 @@ namespace OOAD_Project
             }
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         internal Customer returnCustomer(string username)
         {
             int tempindex = -1;
@@ -119,10 +132,22 @@ namespace OOAD_Project
             }
             return customers[tempindex];
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         internal Customer getCustomer(int index)
         {
             return customers[index];
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         public int getCustIndex (string username)
         {
             int tempindex = -1;

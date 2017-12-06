@@ -14,6 +14,12 @@ namespace OOAD_Project
     public partial class CreateAcc : Form
     {
         CustomerList list = new CustomerList();
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="account"></param>
+        /// <param name="index"></param>
         public CreateAcc(char account, int index)
         {
             InitializeComponent();
@@ -54,6 +60,7 @@ namespace OOAD_Project
             }
         }
 
+        ///
         private void button1_Click(object sender, EventArgs e)
         {
             if (passText.SelectedText.Equals(confirmPassText.SelectedText))
@@ -128,6 +135,11 @@ namespace OOAD_Project
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void unameText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '$')
@@ -136,6 +148,11 @@ namespace OOAD_Project
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int index = comboBoxNumMeals.SelectedIndex;

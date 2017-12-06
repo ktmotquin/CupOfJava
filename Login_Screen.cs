@@ -13,11 +13,19 @@ namespace OOAD_Project
     public partial class Login_Screen : Form
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
         public Login_Screen()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Login log = new Login(Username.Text, Password.Text);
@@ -45,11 +53,21 @@ namespace OOAD_Project
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Username_TextChanged(object sender, EventArgs e)
         {
 

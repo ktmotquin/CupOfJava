@@ -12,21 +12,30 @@ namespace OOAD_Project
 {
     public partial class WelcomeScreen : Form
     {
-        
+        /// <summary>
+        /// 
+        /// </summary>
         public WelcomeScreen()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {            
             Login_Screen loginForm = new Login_Screen();            
             loginForm.Show();
-            
-            //new Login_Screen();
-            //Application.Run(new Login_Screen());
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();        // Hide this window
@@ -35,6 +44,11 @@ namespace OOAD_Project
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             CreateAcc accountForm = new CreateAcc('C', -1);
