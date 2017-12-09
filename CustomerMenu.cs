@@ -24,6 +24,7 @@ namespace OOAD_Project
          {
             lblname.Text = "Administrator";
             lblname.Font = new Font("Cailibri", 12, FontStyle.Regular);
+            lblname.Location = new Point(100, 10);
             cartButton.Hide();
             button1.Hide();
          }
@@ -31,8 +32,9 @@ namespace OOAD_Project
          {
             lblname.Text = username;
             lblname.Font = new Font("Cailibri", 12, FontStyle.Regular);
+            lblname.Location = new Point(100, 10);
             numMealLbl.Text = Convert.ToString(list.returnCustomer(username).getNumMeals());
-            numMealLbl.Location = new Point(390, 10);
+            numMealLbl.Location = new Point(420, 10);
             numMealLbl.Font = new Font("Cailibri", 12, FontStyle.Regular);
          }
       }
