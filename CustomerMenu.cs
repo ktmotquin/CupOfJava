@@ -23,13 +23,17 @@ namespace OOAD_Project
          if (username == "administrator")
          {
             lblname.Text = "Administrator";
+            lblname.Font = new Font("Cailibri", 12, FontStyle.Regular);
             cartButton.Hide();
             button1.Hide();
          }
          else
          {
             lblname.Text = username;
+            lblname.Font = new Font("Cailibri", 12, FontStyle.Regular);
             numMealLbl.Text = Convert.ToString(list.returnCustomer(username).getNumMeals());
+            numMealLbl.Location = new Point(390, 10);
+            numMealLbl.Font = new Font("Cailibri", 12, FontStyle.Regular);
          }
       }
 
