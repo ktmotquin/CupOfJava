@@ -118,7 +118,7 @@
         {
             if (cart[0] != null)
             {
-                for (int i = 0; i < cartMeals; i++)
+                for (int i = 0; i < cart.Length; i++)
                 {
                     if(cart[i] != null)
                         if (cart[i].name() == m.name())

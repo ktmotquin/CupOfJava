@@ -52,6 +52,11 @@ namespace OOAD_Project
          {
             MessageBox.Show("Please enter the quantity of meals you would like to order.");
          }
+         else if(numMeals + cust.getCartMeals() > cust.getNumMeals())
+         {
+            MessageBox.Show("You don't have enough meals!");
+            mealQtyUpDown.Value = 0;
+         }
          else
          {
             for (int i = 0; i < numMeals; i++)
