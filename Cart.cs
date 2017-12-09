@@ -45,7 +45,7 @@ namespace OOAD_Project
                         break;
                     }
             }
-            //countBox.Text = cust.getCart().Length.ToString();
+            CartList.Items.Clear();
             Cart_Load(sender, e);
         }
 
