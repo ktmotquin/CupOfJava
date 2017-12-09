@@ -24,21 +24,18 @@ namespace OOAD_Project
             //everytime a meal is sold, put into a new text file if it hasn't been purchased before or update existing text file
             //make quantity (AddY(22)) a variable
             //add top 5 meals to pieGraph, with correspoding number of orders
-            pieGraph.Series["Meals"].Points.AddY(22);
-            pieGraph.Series["Meals"].Points[0].Label = "curry";
-            pieGraph.Series["Meals"].Points.AddY(50);
-            pieGraph.Series["Meals"].Points[1].Label = "turkey";
 
+            createpiechart();
             string text;
             bool done = false;
             String[] foodItems = new String[200];
             String[] numItems = new String[200];
-            int counter = 0; 
+            int counter = 0;
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
-              
+
                 while (!done)
                 {
                     text = streamReader.ReadLine();
@@ -49,7 +46,7 @@ namespace OOAD_Project
                             String[] parts = text.Split('~');      // Breaks the current line into parts
                             foodItems[counter] = parts[0];
                             numItems[counter] = parts[1];
-                            counter++; 
+                            counter++;
                         }
 
                     }
@@ -59,7 +56,7 @@ namespace OOAD_Project
                     }
                 }
             }
-                columns.Add("Name");
+            columns.Add("Name");
             rows.Add(foodItems);
 
             // Another example column.
@@ -70,7 +67,7 @@ namespace OOAD_Project
         }
 
 
-        List<string>columns = new List<string>();
+        List<string> columns = new List<string>();
         List<string[]> rows = new List<string[]>();
 
         //----------------------------------------------------------------
@@ -103,9 +100,49 @@ namespace OOAD_Project
             return datatable;
         }
 
-      private void toAdminMenuBtn_Click(object sender, EventArgs e)
-      {
-         this.Close();
-      }
-   }
+        private void toAdminMenuBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        public void createpiechart()
+        {
+            string text;
+            bool done = false;
+            String[] meal = new String[200];
+            String[] numOrder = new String[200];
+            int counter = 0;
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\OrderStats.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+
+                while (!done)
+                {
+                    text = streamReader.ReadLine();
+                    if (!text.Equals("-$"))                 // Check if end of file has been reached 
+                    {
+                        if (!text.Equals("$"))
+                        {
+                            String[] parts = text.Split('~');      // Breaks the current line into parts
+                            meal[counter] = parts[0];
+                            numOrder[counter] = parts[1];
+                            counter++;
+                        }
+
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+            }
+            for (int i = 0; i < counter; i++)
+            {
+                pieGraph.Series["Meals"].Points.AddY(numOrder[i]);
+                pieGraph.Series["Meals"].Points[i].Label = meal[i];
+                pieGraph.Series[0]["PieLabelStyle"] = "Disabled";
+            }
+
+        }
+    }
 }

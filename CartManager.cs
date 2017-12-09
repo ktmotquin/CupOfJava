@@ -29,7 +29,7 @@ namespace OOAD_Project
             foreach (Meal m in cust.getCart())
                 cust.removeItem(m);
         }
-        
+
         /// <summary>
         /// Adds a meal object to the selected items array if the customer has not exceeded their maximum number of meals,
         /// and removes the number of units from the user's maximum number of meals.
@@ -59,8 +59,8 @@ namespace OOAD_Project
         {
             int index;
             for (index = 0; index < cust.getCartMeals(); index++)
-               if (cust.getCart()[index] == m)
-                  return index;
+                if (cust.getCart()[index] == m)
+                    return index;
             return -1;
         }
 
@@ -71,63 +71,69 @@ namespace OOAD_Project
         public void processOrder()
         {
             orderPage.Show();
-            orderPage.display(selectedItems); 
+            orderPage.display(selectedItems);
             orderPage.displayCount(cust.getNumMeals());
-            //mealsSoldStats(selectedItems);
+            mealsSoldStats(selectedItems);
         }
 
-        public void mealsSoldStats(Meal [] m)
+        public void mealsSoldStats(Meal[] m)
         {
-            string toBeWrit = "1\n";
+
+            string toBeWrit = "$\n";
             string text;
             bool found = false; // True if an account is associated with the login info
             bool done = false;  // True when end of user list has been reached
             string numsFileName = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\OrderStats.txt");
             string pieFileName = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\StatsPieGraph.txt");
-
-            var fileStream = new FileStream(numsFileName, FileMode.Open, FileAccess.Read);
-            String[] foodName = new String[200];
-            String[] unitSold = new String[200];
-            int counter = 0;
-
+            var fileStream = new FileStream(numsFileName, FileMode.Open, FileAccess.Read); // Joe's link
+                                                                                           //var fileStream = new FileStream(@"C:\Users\ktmot\Documents\CupOfJava\trunk\LoginInfo.txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
-
                 while (!done)
                 {
-                    text = streamReader.ReadLine();
+                    text = streamReader.ReadLine();         // read next line
+
+
                     if (!text.Equals("-$"))                 // Check if end of file has been reached 
                     {
-                        
                         if (!text.Equals("$"))
                         {
-                            String[] parts = text.Split('~');      // Breaks the current line into parts
-                            foodName[counter] = parts[0];
-                            unitSold[counter] = parts[1];
-                            counter++;
+                            string[] stuff = text.Split('~');
+                            for (int i = 0; i <= index; i++)
+                            {
+                                if (stuff[0] == m[i].name())
+                                {
+                                    int oldnum = Int32.Parse(stuff[1]) + quantities[i];
+                                    toBeWrit = toBeWrit + m[i].name() + '~' + oldnum + '\n';
+                                    Meal temp = m[index];
+                                    m[i] = temp;
+                                    m[index] = null;
+                                    index--;
+                                    found = true;
+                                }
+                            }
+                            if(!found)
+                            {
+                                toBeWrit += text + '\n';
+                            }
                         }
 
                     }
-                    else
-                    {
-                        done = true;
-                    }
+                        else
+                        {
+                            for (int i = 0; i <= index ; i++)
+                            {
+                                toBeWrit = toBeWrit + m[i].name() + '~' + quantities[i] + '\n';
+                            }
+                            done = true;                        // Info not found
+                        }
+
                 }
+                toBeWrit += "-$";
+                fileStream.Close();
+                System.IO.File.WriteAllText(numsFileName, toBeWrit);
             }
 
-            //var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link 
-
-            for (int i = 0; i > m.Length; i++)
-            {
-                if (!found)
-                {
-                    String line = m[i] + "~";
-                    toBeWrit += m[i];
-                }
-                else
-                    counter++;
-
-            }
         }
 
     }
