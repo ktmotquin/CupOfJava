@@ -104,7 +104,7 @@ namespace OOAD_Project
                     }
                     else
                     {
-                        done = true;                        // Info not found
+                        done = true; // Info not found
                     }
                 }
             }
