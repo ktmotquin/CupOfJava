@@ -71,7 +71,6 @@ namespace OOAD_Project
             var newImage = new Bitmap(newWidth, newHeight);
             using (var graphics = Graphics.FromImage(newImage))
                 graphics.DrawImage(image, 0, 0, newWidth, newHeight);
-
             return newImage;
         }
 
