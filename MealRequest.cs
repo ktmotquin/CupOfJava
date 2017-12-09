@@ -140,5 +140,10 @@ namespace OOAD_Project
                 e.Handled = true;
             }
         }
-    }
+
+      private void Cancel_Click(object sender, EventArgs e)
+      {
+         this.Close();
+      }
+   }
 }
