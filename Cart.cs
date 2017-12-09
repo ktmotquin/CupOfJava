@@ -55,27 +55,37 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
-            if (CartList.CheckedItems != null)
+         if (CartList.CheckedItems.Count != 0)
+         {
+            order = new CartManager(cust);
+            Meal[] custCart = new Meal[cust.getCart().Length];
+            for (int i = 0; i < cust.getCart().Length; i++)
+               custCart[i] = cust.getCart()[i];
+            foreach (string mealName in CartList.CheckedItems)
             {
-                order = new CartManager(cust);
-                foreach (string mealName in CartList.CheckedItems)
-                {
-                    for (int i = 0; i < cust.getCartMeals(); i++)
-                    {
-                        if (cust.getCart()[i].name() == mealName)
-                            if (!order.addToOrder(cust.getCart()[i]))
-                            {
-                                MessageBox.Show("You've gone over your maximum meals!"
-                                    + " Please add some more meals to continue.");
-                                Close();
-                                break;
-                            }
-                    }
-                }
-                order.processOrder();
-                parent.CustomerMenu_Load(sender, e);
-                Close();
+               for (int i = 0; i < cust.getCartMeals(); i++)
+               {
+                  if (custCart[i] != null)
+                  {
+                     if (custCart[i].name() == mealName)
+                     {
+                        if (!order.addToOrder(cust.getCart()[i]))
+                        {
+                           MessageBox.Show("You've gone over your maximum meals!"
+                               + " Please add some more meals to continue.");
+                           Close();
+                           break;
+                        }
+                     }
+                  }
+               }
             }
+            order.processOrder();
+            parent.CustomerMenu_Load(sender, e);
+            Close();
+         }
+         else
+            MessageBox.Show("Please Select Items to Checkout/Remove");
         }
 
         //----------------------------------------------------------------
@@ -100,7 +110,7 @@ namespace OOAD_Project
                         }
                     }
                 }
-                countBox.Text = cust.getCartMeals().ToString();
+                countBox.Text = cust.getCartMeals().ToString() + " meal(s)";
             }
             else
             {

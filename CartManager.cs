@@ -73,7 +73,7 @@ namespace OOAD_Project
             orderPage.Show();
             orderPage.display(selectedItems); 
             orderPage.displayCount(cust.getNumMeals());
-            mealsSoldStats(selectedItems);
+            //mealsSoldStats(selectedItems);
         }
 
         public void mealsSoldStats(Meal [] m)
