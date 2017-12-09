@@ -115,11 +115,11 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(176, 418);
+            this.button1.Font = new System.Drawing.Font("Calibri", 13.8F);
+            this.button1.Location = new System.Drawing.Point(164, 420);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 30);
+            this.button1.Size = new System.Drawing.Size(263, 30);
             this.button1.TabIndex = 12;
             this.button1.Text = "Create Account and Buy Meals";
             this.button1.UseVisualStyleBackColor = true;
@@ -347,8 +347,8 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(232, 367);
+            this.btnEdit.Font = new System.Drawing.Font("Calibri", 13.8F);
+            this.btnEdit.Location = new System.Drawing.Point(231, 367);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 63);

@@ -41,7 +41,7 @@
             // 
             // CheckoutButton
             // 
-            this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckoutButton.Font = new System.Drawing.Font("Calibri", 13.8F);
             this.CheckoutButton.Location = new System.Drawing.Point(10, 47);
             this.CheckoutButton.Name = "CheckoutButton";
             this.CheckoutButton.Size = new System.Drawing.Size(145, 33);
@@ -66,12 +66,12 @@
             this.CartList.FormattingEnabled = true;
             this.CartList.Location = new System.Drawing.Point(10, 94);
             this.CartList.Name = "CartList";
-            this.CartList.Size = new System.Drawing.Size(289, 214);
+            this.CartList.Size = new System.Drawing.Size(289, 202);
             this.CartList.TabIndex = 9;
             // 
             // RemoveButton
             // 
-            this.RemoveButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.Font = new System.Drawing.Font("Calibri", 13.8F);
             this.RemoveButton.Location = new System.Drawing.Point(161, 47);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(138, 33);
