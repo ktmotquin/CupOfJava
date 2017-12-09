@@ -23,8 +23,15 @@ namespace OOAD_Project
         /// </summary>
         public ApproveMealRequests()
         {
-            InitializeComponent();
-            index = 0;
+            if(rmq.getcount() > 0)
+            {
+                InitializeComponent();
+                index = 0;
+            }
+            else
+            {
+                MessageBox.Show("No new meal requests availible");
+            }
         }
 
         /// <summary>
