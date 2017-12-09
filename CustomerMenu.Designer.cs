@@ -60,8 +60,8 @@
          // Logout
          // 
          this.Logout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.Logout.Location = new System.Drawing.Point(672, 332);
-         this.Logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Logout.Location = new System.Drawing.Point(844, 335);
+         this.Logout.Margin = new System.Windows.Forms.Padding(4);
          this.Logout.Name = "Logout";
          this.Logout.Size = new System.Drawing.Size(221, 49);
          this.Logout.TabIndex = 0;
@@ -84,7 +84,7 @@
          // cartButton
          // 
          this.cartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.cartButton.Location = new System.Drawing.Point(672, 164);
+         this.cartButton.Location = new System.Drawing.Point(844, 167);
          this.cartButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
          this.cartButton.Name = "cartButton";
          this.cartButton.Size = new System.Drawing.Size(221, 49);
@@ -110,14 +110,14 @@
          this.searchList.Location = new System.Drawing.Point(44, 108);
          this.searchList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
          this.searchList.Name = "searchList";
-         this.searchList.Size = new System.Drawing.Size(396, 484);
+         this.searchList.Size = new System.Drawing.Size(588, 484);
          this.searchList.TabIndex = 4;
          this.searchList.DoubleClick += new System.EventHandler(this.mealView_Click);
          // 
          // mealView
          // 
          this.mealView.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.mealView.Location = new System.Drawing.Point(672, 219);
+         this.mealView.Location = new System.Drawing.Point(844, 222);
          this.mealView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
          this.mealView.Name = "mealView";
          this.mealView.Size = new System.Drawing.Size(221, 49);
@@ -246,7 +246,7 @@
          this.panel1.Controls.Add(this.btnBakes);
          this.panel1.Controls.Add(this.btnSoup);
          this.panel1.Controls.Add(this.btnSandwich);
-         this.panel1.Location = new System.Drawing.Point(465, 108);
+         this.panel1.Location = new System.Drawing.Point(636, 111);
          this.panel1.Margin = new System.Windows.Forms.Padding(1);
          this.panel1.Name = "panel1";
          this.panel1.Size = new System.Drawing.Size(203, 369);
@@ -258,7 +258,7 @@
          this.anytype.Checked = true;
          this.anytype.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.anytype.Location = new System.Drawing.Point(24, 324);
-         this.anytype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.anytype.Margin = new System.Windows.Forms.Padding(4);
          this.anytype.Name = "anytype";
          this.anytype.Size = new System.Drawing.Size(123, 33);
          this.anytype.TabIndex = 15;
@@ -290,7 +290,7 @@
          // 
          this.label1.AutoSize = true;
          this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label1.Location = new System.Drawing.Point(40, 84);
+         this.label1.Location = new System.Drawing.Point(40, 80);
          this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.label1.Name = "label1";
          this.label1.Size = new System.Drawing.Size(592, 24);
@@ -300,8 +300,8 @@
          // button1
          // 
          this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button1.Location = new System.Drawing.Point(672, 108);
-         this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.button1.Location = new System.Drawing.Point(844, 111);
+         this.button1.Margin = new System.Windows.Forms.Padding(4);
          this.button1.Name = "button1";
          this.button1.Size = new System.Drawing.Size(221, 49);
          this.button1.TabIndex = 19;
@@ -330,8 +330,8 @@
          // back2Main
          // 
          this.back2Main.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.back2Main.Location = new System.Drawing.Point(672, 276);
-         this.back2Main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.back2Main.Location = new System.Drawing.Point(844, 279);
+         this.back2Main.Margin = new System.Windows.Forms.Padding(4);
          this.back2Main.Name = "back2Main";
          this.back2Main.Size = new System.Drawing.Size(221, 49);
          this.back2Main.TabIndex = 22;
@@ -342,8 +342,8 @@
          // btnEditInfo
          // 
          this.btnEditInfo.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.btnEditInfo.Location = new System.Drawing.Point(672, 52);
-         this.btnEditInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.btnEditInfo.Location = new System.Drawing.Point(844, 55);
+         this.btnEditInfo.Margin = new System.Windows.Forms.Padding(4);
          this.btnEditInfo.Name = "btnEditInfo";
          this.btnEditInfo.Size = new System.Drawing.Size(221, 49);
          this.btnEditInfo.TabIndex = 23;
@@ -355,7 +355,7 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(912, 614);
+         this.ClientSize = new System.Drawing.Size(1078, 649);
          this.Controls.Add(this.btnEditInfo);
          this.Controls.Add(this.back2Main);
          this.Controls.Add(this.numMealLbl);
@@ -373,9 +373,9 @@
          this.Controls.Add(this.Logout);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-         this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+         this.Margin = new System.Windows.Forms.Padding(4);
          this.MaximizeBox = false;
-         this.MinimumSize = new System.Drawing.Size(926, 650);
+         this.MinimumSize = new System.Drawing.Size(1000, 650);
          this.Name = "CustomerMenu";
          this.RightToLeft = System.Windows.Forms.RightToLeft.No;
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
