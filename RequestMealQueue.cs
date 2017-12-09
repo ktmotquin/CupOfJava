@@ -70,7 +70,6 @@ namespace OOAD_Project
             return mealData[index];
         }
 
-
         /// <summary>
         /// Removes meal from the queue.
         /// </summary>
