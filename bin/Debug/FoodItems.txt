@@ -3,7 +3,7 @@ allspice~44
 Annie's Naturals organic sweet & spicy BBQ sauce~44
 applewood smoked bacon~44
 artichoke hearts~16
-Asian sesame dressing~50
+Annie's Asian sesame dressing~50
 avocados~90
 baby bella mushrooms~25
 baby spinach leaves~44
@@ -12,8 +12,10 @@ baking soda~44
 basil leaves~75
 bay leaves~44
 beans~40
-Betty Crocker™ fudge brownie mix~78
-Betty Crocker™ roasted garlic mashed potato mix~88
+Betty Crocker fudge brownie mix~78
+Betty Crocker roasted garlic mashed potato mix~88
+Betty Crocker sugar cookie mix~22
+Betty Crocker creamy butter mashed potatoes~24
 black beans~99
 bone-in beef short ribs~77
 bread crumbs~35
@@ -73,7 +75,6 @@ lemon juice~24
 lime juice~23
 Lime wedges~66
 margarine~15
-mashed potatoes~61
 medium salsa~22
 Mexican cheese blend~44
 mild enchilada sauce~44
@@ -117,8 +118,8 @@ snow peas~32
 soy sauce~68
 sour cream~12
 spaghetti~22
+spinach leaves~99
 sugar~55
-sugar cookie mix~22
 sweet corn~261
 sweet onions~77
 Swiss cheese~44
