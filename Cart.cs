@@ -58,21 +58,18 @@ namespace OOAD_Project
          if (CartList.CheckedItems.Count != 0)
          {
             order = new CartManager(cust);
-            Meal[] custCart = new Meal[cust.getCart().Length];
-            for (int i = 0; i < cust.getCart().Length; i++)
-               custCart[i] = cust.getCart()[i];
             foreach (string mealName in CartList.CheckedItems)
             {
                for (int i = 0; i < cust.getCartMeals(); i++)
                {
-                  if (custCart[i] != null)
+                  if (cust.getCart()[i] != null)
                   {
-                     if (custCart[i].name() == mealName)
+                     if (cust.getCart()[i].name() == mealName)
                      {
                         if (!order.addToOrder(cust.getCart()[i]))
                         {
                            MessageBox.Show("You've gone over your maximum meals!"
-                               + " Please add some more meals to continue.");
+                                 + " Please add some more meals to continue.");
                            Close();
                            break;
                         }
