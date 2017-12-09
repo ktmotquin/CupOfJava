@@ -65,7 +65,8 @@ namespace OOAD_Project
         }
 
         /// <summary>
-        /// Creates an order summary
+        /// Creates an order summary page and populates it with the "purchased" meal objects,
+        /// and calls mealsSoldStats to update the system's statistics.
         /// </summary>
         public void processOrder()
         {

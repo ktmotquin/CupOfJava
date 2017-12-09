@@ -120,8 +120,9 @@
             {
                 for (int i = 0; i < cartMeals; i++)
                 {
-                    if (cart[i].name() == m.name())
-                        return i;
+                    if(cart[i] != null)
+                        if (cart[i].name() == m.name())
+                            return i;
                 }
             }
             return -1;
