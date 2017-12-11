@@ -158,5 +158,51 @@ namespace OOAD_Project
             }
             return tempindex;
         }
+        public void updateMeals(string username,  int meals)
+        {
+            string toBeWrit = "";
+            string text;
+            bool found = false;
+            bool done = false;
+
+            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\UserList.txt");
+            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+                while (!done)
+                {
+                    text = streamReader.ReadLine();         // read next line
+
+                    string[] stuff = text.Split('$');
+                    if (!stuff[0].Equals("-1"))                 // Check if end of file has been reached 
+                    {
+                        if (stuff[0].ToLower() != username.ToLower())
+                        {
+                            toBeWrit += text + '\n';
+                        }
+
+                        String[] parts = text.Split('$');      // Breaks the current line into parts
+                        if (stuff[0].ToLower() == username.ToLower())
+                        {
+                            found = true;
+                            toBeWrit = toBeWrit + username + "$" + stuff[1] + "$" + stuff[2] + "$" +
+                                stuff[3] + "$" + stuff[4] + "$" + stuff[5] + "$" + stuff[6] + "$" +
+                                stuff[7] + "$" + stuff[8] + "$" + stuff[9] + "$" + meals + '\n';
+                        }
+                    }
+                    else
+                    {
+                        done = true; // Info not found
+                    }
+                }
+            }
+            fileStream.Close();
+            if (found)
+            {
+                toBeWrit += "-1\n";
+                System.IO.File.WriteAllText(fileName, toBeWrit);
+            }
+
+        }
     }
 }

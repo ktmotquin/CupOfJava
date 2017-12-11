@@ -25,6 +25,8 @@ namespace OOAD_Project
             lblname.Text = "Administrator";
             lblname.Font = new Font("Cailibri", 12, FontStyle.Regular);
             lblname.Location = new Point(100, 10);
+                btnEditInfo.Hide();
+                Logout.Hide();
             cartButton.Hide();
             button1.Hide();
          }
@@ -207,6 +209,11 @@ namespace OOAD_Project
             accountedit.Show();
             this.Close();
 
+        }
+
+        private void CustomerMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            list.updateMeals(lblname.Text, Int32.Parse(numMealLbl.Text));
         }
     }
 }

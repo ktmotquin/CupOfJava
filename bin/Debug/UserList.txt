@@ -2,7 +2,7 @@
 admin$password$A$Namea$email$number
 murphysam$SRTM$C$Samantha Murphy$murphysam@uwplatt.edu$testing$1 University Plaza$1111222233334444$111$11/21$135
 Sarah$password$C$Sarah Higgens$higgenss@uwplatt.edu$12345678910$123 Street$112222$980$8/22$10
-3$2$C$test name$test email$test phone$test address$test card munber$test security code$test expiration date$355
+3$2$C$test name$test email$test phone$test address$test card munber$test security code$test expiration date$349
 motquink$123456$A$Keeghan Motquin$motu$1234$10
 asdfasdgas$1234$C$dgasdgasd$gasdfas$asdf$asdf$asdf$asdf$asdf$10
 MOTQUIN$1234$C$asdf$df$asdf$asdf$asdf$asdf$asdf$70
