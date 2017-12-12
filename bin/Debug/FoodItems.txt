@@ -139,4 +139,6 @@ white button mushrooms~25
 white rice~28
 yellow onions~20
 zucchini~65
+peanut butter~10
+jelly~10
 -$
