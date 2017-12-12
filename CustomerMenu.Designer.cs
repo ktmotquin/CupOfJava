@@ -52,7 +52,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.numMealLbl = new System.Windows.Forms.Label();
-            this.back2Main = new System.Windows.Forms.Button();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +59,7 @@
             // Logout
             // 
             this.Logout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(633, 272);
+            this.Logout.Location = new System.Drawing.Point(633, 226);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(166, 40);
             this.Logout.TabIndex = 0;
@@ -322,17 +321,6 @@
             this.numMealLbl.Size = new System.Drawing.Size(0, 13);
             this.numMealLbl.TabIndex = 21;
             // 
-            // back2Main
-            // 
-            this.back2Main.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back2Main.Location = new System.Drawing.Point(633, 227);
-            this.back2Main.Name = "back2Main";
-            this.back2Main.Size = new System.Drawing.Size(166, 40);
-            this.back2Main.TabIndex = 22;
-            this.back2Main.Text = "Main Menu";
-            this.back2Main.UseVisualStyleBackColor = true;
-            this.back2Main.Click += new System.EventHandler(this.back2Main_Click);
-            // 
             // btnEditInfo
             // 
             this.btnEditInfo.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,7 +338,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 501);
             this.Controls.Add(this.btnEditInfo);
-            this.Controls.Add(this.back2Main);
             this.Controls.Add(this.numMealLbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -407,7 +394,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label numMealLbl;
-        private System.Windows.Forms.Button back2Main;
         private System.Windows.Forms.Button btnEditInfo;
     }
 }
