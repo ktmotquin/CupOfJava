@@ -27,19 +27,21 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void addBtn_Click(object sender, EventArgs e)
         {
-            string toBeWrit = "$\n";
-            string text;
-            bool found = false; 
-            bool done = false;  
-            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
-            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
-
             if (String.IsNullOrEmpty(addTextBox.Text) || String.IsNullOrEmpty(quantityTxtBox.Text))
             {
                 MessageBox.Show("Please enter an item and a quantity.");
             }
             else
             {
+                string toBeWrit = "$\n";
+                string text;
+                bool found = false;
+                bool done = false;
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
+                var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read); // Joe's link
+
+
+
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
                     while (!done)
@@ -68,12 +70,14 @@ namespace OOAD_Project
                     text1 = addTextBox.Text + "~" + quantityTxtBox.Text + "\n-$";
                     toBeWrit += text1;
                     System.IO.File.WriteAllText(fileName, toBeWrit);
-                    this.Close();
+
                 }
                 else
                 {
                     MessageBox.Show("Item is already in database");
                 }
+                quantityTxtBox.Clear();
+                addTextBox.Clear();
             }
         }
 
@@ -82,19 +86,21 @@ namespace OOAD_Project
         //----------------------------------------------------------------
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string toBeWrit = "";
-            string text;
-            bool found = false;
-            bool done = false;
-            string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
-            var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-
             if (String.IsNullOrEmpty(modifyTxtBox.Text) || String.IsNullOrEmpty(quantityTxtBox2.Text))
             {
                 MessageBox.Show("Please enter an item and a quantity.");
             }
             else
             {
+                string toBeWrit = "";
+                string text;
+                bool found = false;
+                bool done = false;
+                string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\FoodItems.txt");
+                var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+
+
+
                 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
                 {
                     while (!done)
@@ -133,20 +139,24 @@ namespace OOAD_Project
                 {
                     MessageBox.Show("Error: Item not found");  // Display passwords do not match
                 }
+
+                quantityTxtBox2.Clear();
+                modifyTxtBox.Clear();
             }
+
         }
 
-      private void backToAdminMenu_Click(object sender, EventArgs e)
-      {
-         this.Hide();
-      }
-   }
+        private void backToAdminMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
+}
 
 
-           
-  
 
-    
+
+
+
 
 

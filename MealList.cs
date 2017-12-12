@@ -83,7 +83,7 @@ namespace OOAD_Project
         {
             for (int i = 0; i < count; i++)
             {
-                if (mealname == meals[i].name())
+                if (mealname.ToLower() == meals[i].name().ToLower())
                     return i;
             }
             return -1;

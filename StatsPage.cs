@@ -136,7 +136,12 @@ namespace OOAD_Project
                     }
                 }
             }
-            for (int i = 0; i < counter; i++)
+            int piegraph = 5;
+            if(counter < 5)
+            {
+                piegraph = counter;
+            }
+            for (int i = 0; i < piegraph; i++)
             {
                 pieGraph.Series["Meals"].Points.AddY(numOrder[i]);
                 pieGraph.Series["Meals"].Points[i].Label = meal[i];

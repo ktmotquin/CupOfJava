@@ -78,6 +78,10 @@ namespace OOAD_Project
       {
          MealList meal = new MealList();
          meal.editmeal(mealNameText.Text, descriptionDisplayBox.Text, ingredientsDisplayBox.Text, instructionsDisplayBox.Text);
-      }
+            MessageBox.Show("Changes saved.", "Edit Meal", MessageBoxButtons.OK);
+            Edit_Meals edit = new Edit_Meals();
+            this.Close();
+            edit.Show();
+        }
    }
 }

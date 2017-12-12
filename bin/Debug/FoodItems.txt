@@ -22,7 +22,7 @@ bread crumbs~35
 broccoli~56
 butter~55
 canned pumpkin~65
-carrots~50
+carrots~100173
 cavatappi pasta~1
 celery~25
 Cheddar cheese~64
@@ -40,7 +40,7 @@ cloves garlic~55
 cooked chicken~183
 cookies~60
 Cool Whip frozen whipped topping~55
-corn~30
+corn~2507
 cornstarch~44
 couscous~55
 cranberries~54

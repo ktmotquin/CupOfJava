@@ -213,7 +213,11 @@ namespace OOAD_Project
 
         private void CustomerMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if(lblname.Text != "Administrator")
+            {
             list.updateMeals(lblname.Text, Int32.Parse(numMealLbl.Text));
+            }
+
         }
     }
 }
