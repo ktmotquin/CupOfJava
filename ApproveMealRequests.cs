@@ -30,6 +30,7 @@ namespace OOAD_Project
             }
             else
             {
+                this.Close();
                 MessageBox.Show("No new meal requests availible");
             }
         }
