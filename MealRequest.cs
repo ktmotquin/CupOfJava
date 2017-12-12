@@ -94,7 +94,7 @@ namespace OOAD_Project
                 string fileName2 = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\MealRequests.txt");
                 if (!found)
                 {
-                    overallText += enteredInfo + "\n-1";
+                    enteredInfo += enteredInfo + "\n-1";
                     System.IO.File.WriteAllText(fileName2, overallText);
                     /*
                     //ID.Clear();
