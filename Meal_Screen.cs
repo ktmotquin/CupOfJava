@@ -59,8 +59,9 @@ namespace OOAD_Project
          }
          else
          {
-            for (int i = 0; i < numMeals; i++)
-                cust.addToCart(meal);
+            cust.addToCart(meal, numMeals);
+            /*for (int i = 0; i < numMeals; i++)
+                cust.addToCart(meal);*/
             MessageBox.Show("Meal has been added to cart.", "Meal has been added to your cart.", MessageBoxButtons.OK);
             this.Close();
          }

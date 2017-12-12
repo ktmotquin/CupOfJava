@@ -76,6 +76,10 @@ namespace OOAD_Project
             mealsSoldStats(selectedItems);
         }
 
+        /// <summary>
+        /// Updates the number of units sold of all meals in a meal array
+        /// </summary>
+        /// <param name="m">Array of meals to update stats for</param>
         public void mealsSoldStats(Meal[] m)
         {
 

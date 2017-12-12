@@ -42,19 +42,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 6);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(506, 1239);
+            this.dataGridView1.Size = new System.Drawing.Size(253, 644);
             this.dataGridView1.TabIndex = 0;
             // 
             // toAdminMenuBtn
             // 
             this.toAdminMenuBtn.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toAdminMenuBtn.Location = new System.Drawing.Point(1521, 29);
-            this.toAdminMenuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toAdminMenuBtn.Location = new System.Drawing.Point(760, 15);
+            this.toAdminMenuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toAdminMenuBtn.Name = "toAdminMenuBtn";
-            this.toAdminMenuBtn.Size = new System.Drawing.Size(256, 88);
+            this.toAdminMenuBtn.Size = new System.Drawing.Size(128, 46);
             this.toAdminMenuBtn.TabIndex = 1;
             this.toAdminMenuBtn.Text = "Admin Menu";
             this.toAdminMenuBtn.UseVisualStyleBackColor = true;
@@ -66,8 +65,7 @@
             this.pieGraph.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.pieGraph.Legends.Add(legend1);
-            this.pieGraph.Location = new System.Drawing.Point(576, 154);
-            this.pieGraph.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pieGraph.Location = new System.Drawing.Point(288, 80);
             this.pieGraph.Name = "pieGraph";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -75,20 +73,22 @@
             series1.Legend = "Legend1";
             series1.Name = "Meals";
             this.pieGraph.Series.Add(series1);
-            this.pieGraph.Size = new System.Drawing.Size(1217, 1091);
+            this.pieGraph.Size = new System.Drawing.Size(608, 567);
             this.pieGraph.TabIndex = 2;
             this.pieGraph.Text = "chart1";
             // 
             // StatsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1841, 1275);
+            this.ClientSize = new System.Drawing.Size(891, 604);
             this.Controls.Add(this.pieGraph);
             this.Controls.Add(this.toAdminMenuBtn);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(907, 643);
+            this.MinimumSize = new System.Drawing.Size(907, 643);
             this.Name = "StatsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StatsPage";

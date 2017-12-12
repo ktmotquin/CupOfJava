@@ -60,10 +60,9 @@
             // Logout
             // 
             this.Logout.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(1266, 523);
-            this.Logout.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Logout.Location = new System.Drawing.Point(633, 272);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(332, 77);
+            this.Logout.Size = new System.Drawing.Size(166, 40);
             this.Logout.TabIndex = 0;
             this.Logout.Text = "Logout";
             this.Logout.UseVisualStyleBackColor = true;
@@ -72,10 +71,10 @@
             // mealSearch
             // 
             this.mealSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mealSearch.Location = new System.Drawing.Point(668, 59);
-            this.mealSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mealSearch.Location = new System.Drawing.Point(334, 31);
+            this.mealSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mealSearch.Name = "mealSearch";
-            this.mealSearch.Size = new System.Drawing.Size(172, 56);
+            this.mealSearch.Size = new System.Drawing.Size(86, 29);
             this.mealSearch.TabIndex = 1;
             this.mealSearch.Text = "Search Meals";
             this.mealSearch.UseVisualStyleBackColor = true;
@@ -84,10 +83,10 @@
             // cartButton
             // 
             this.cartButton.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartButton.Location = new System.Drawing.Point(1266, 261);
-            this.cartButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cartButton.Location = new System.Drawing.Point(633, 136);
+            this.cartButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cartButton.Name = "cartButton";
-            this.cartButton.Size = new System.Drawing.Size(332, 77);
+            this.cartButton.Size = new System.Drawing.Size(166, 40);
             this.cartButton.TabIndex = 2;
             this.cartButton.Text = "View Cart";
             this.cartButton.UseVisualStyleBackColor = true;
@@ -96,31 +95,30 @@
             // searchBox
             // 
             this.searchBox.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(66, 59);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.searchBox.Location = new System.Drawing.Point(33, 31);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(592, 52);
+            this.searchBox.Size = new System.Drawing.Size(298, 30);
             this.searchBox.TabIndex = 3;
             this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBox_KeyPress);
             // 
             // searchList
             // 
             this.searchList.FormattingEnabled = true;
-            this.searchList.ItemHeight = 25;
-            this.searchList.Location = new System.Drawing.Point(66, 169);
-            this.searchList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.searchList.Location = new System.Drawing.Point(33, 88);
+            this.searchList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.searchList.Name = "searchList";
-            this.searchList.Size = new System.Drawing.Size(880, 754);
+            this.searchList.Size = new System.Drawing.Size(442, 394);
             this.searchList.TabIndex = 4;
             this.searchList.DoubleClick += new System.EventHandler(this.mealView_Click);
             // 
             // mealView
             // 
             this.mealView.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mealView.Location = new System.Drawing.Point(1266, 347);
-            this.mealView.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mealView.Location = new System.Drawing.Point(633, 180);
+            this.mealView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mealView.Name = "mealView";
-            this.mealView.Size = new System.Drawing.Size(332, 77);
+            this.mealView.Size = new System.Drawing.Size(166, 40);
             this.mealView.TabIndex = 5;
             this.mealView.Text = "View Meal";
             this.mealView.UseVisualStyleBackColor = true;
@@ -130,10 +128,10 @@
             // 
             this.btnSandwich.AutoSize = true;
             this.btnSandwich.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSandwich.Location = new System.Drawing.Point(36, 173);
-            this.btnSandwich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSandwich.Location = new System.Drawing.Point(18, 90);
+            this.btnSandwich.Margin = new System.Windows.Forms.Padding(1);
             this.btnSandwich.Name = "btnSandwich";
-            this.btnSandwich.Size = new System.Drawing.Size(193, 49);
+            this.btnSandwich.Size = new System.Drawing.Size(102, 27);
             this.btnSandwich.TabIndex = 10;
             this.btnSandwich.Text = "Sandwich";
             this.btnSandwich.UseVisualStyleBackColor = true;
@@ -142,10 +140,10 @@
             // 
             this.btnSoup.AutoSize = true;
             this.btnSoup.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSoup.Location = new System.Drawing.Point(36, 228);
-            this.btnSoup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSoup.Location = new System.Drawing.Point(18, 119);
+            this.btnSoup.Margin = new System.Windows.Forms.Padding(1);
             this.btnSoup.Name = "btnSoup";
-            this.btnSoup.Size = new System.Drawing.Size(126, 49);
+            this.btnSoup.Size = new System.Drawing.Size(67, 27);
             this.btnSoup.TabIndex = 9;
             this.btnSoup.Text = "Soup";
             this.btnSoup.UseVisualStyleBackColor = true;
@@ -154,10 +152,10 @@
             // 
             this.btnBakes.AutoSize = true;
             this.btnBakes.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBakes.Location = new System.Drawing.Point(36, 283);
-            this.btnBakes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBakes.Location = new System.Drawing.Point(18, 147);
+            this.btnBakes.Margin = new System.Windows.Forms.Padding(1);
             this.btnBakes.Name = "btnBakes";
-            this.btnBakes.Size = new System.Drawing.Size(137, 49);
+            this.btnBakes.Size = new System.Drawing.Size(72, 27);
             this.btnBakes.TabIndex = 8;
             this.btnBakes.Text = "Bakes";
             this.btnBakes.UseVisualStyleBackColor = true;
@@ -166,10 +164,10 @@
             // 
             this.btnAppetizers.AutoSize = true;
             this.btnAppetizers.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppetizers.Location = new System.Drawing.Point(36, 339);
-            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAppetizers.Location = new System.Drawing.Point(18, 176);
+            this.btnAppetizers.Margin = new System.Windows.Forms.Padding(1);
             this.btnAppetizers.Name = "btnAppetizers";
-            this.btnAppetizers.Size = new System.Drawing.Size(207, 49);
+            this.btnAppetizers.Size = new System.Drawing.Size(111, 27);
             this.btnAppetizers.TabIndex = 7;
             this.btnAppetizers.Text = "Appetizers";
             this.btnAppetizers.UseVisualStyleBackColor = true;
@@ -178,10 +176,10 @@
             // 
             this.btnDessert.AutoSize = true;
             this.btnDessert.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDessert.Location = new System.Drawing.Point(36, 119);
-            this.btnDessert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDessert.Location = new System.Drawing.Point(18, 62);
+            this.btnDessert.Margin = new System.Windows.Forms.Padding(1);
             this.btnDessert.Name = "btnDessert";
-            this.btnDessert.Size = new System.Drawing.Size(163, 49);
+            this.btnDessert.Size = new System.Drawing.Size(87, 27);
             this.btnDessert.TabIndex = 11;
             this.btnDessert.Text = "Dessert";
             this.btnDessert.UseVisualStyleBackColor = true;
@@ -190,10 +188,10 @@
             // 
             this.btnTortilla.AutoSize = true;
             this.btnTortilla.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTortilla.Location = new System.Drawing.Point(36, 392);
-            this.btnTortilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTortilla.Location = new System.Drawing.Point(18, 204);
+            this.btnTortilla.Margin = new System.Windows.Forms.Padding(1);
             this.btnTortilla.Name = "btnTortilla";
-            this.btnTortilla.Size = new System.Drawing.Size(251, 49);
+            this.btnTortilla.Size = new System.Drawing.Size(130, 27);
             this.btnTortilla.TabIndex = 13;
             this.btnTortilla.Text = "Tortilla Based";
             this.btnTortilla.UseVisualStyleBackColor = true;
@@ -202,10 +200,10 @@
             // 
             this.btnSalad.AutoSize = true;
             this.btnSalad.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalad.Location = new System.Drawing.Point(36, 64);
-            this.btnSalad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalad.Location = new System.Drawing.Point(18, 33);
+            this.btnSalad.Margin = new System.Windows.Forms.Padding(1);
             this.btnSalad.Name = "btnSalad";
-            this.btnSalad.Size = new System.Drawing.Size(131, 49);
+            this.btnSalad.Size = new System.Drawing.Size(69, 27);
             this.btnSalad.TabIndex = 12;
             this.btnSalad.Text = "Salad";
             this.btnSalad.UseVisualStyleBackColor = true;
@@ -214,10 +212,10 @@
             // 
             this.btnRice.AutoSize = true;
             this.btnRice.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRice.Location = new System.Drawing.Point(36, 447);
-            this.btnRice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRice.Location = new System.Drawing.Point(18, 232);
+            this.btnRice.Margin = new System.Windows.Forms.Padding(1);
             this.btnRice.Name = "btnRice";
-            this.btnRice.Size = new System.Drawing.Size(210, 49);
+            this.btnRice.Size = new System.Drawing.Size(109, 27);
             this.btnRice.TabIndex = 14;
             this.btnRice.Text = "Rice Based";
             this.btnRice.UseVisualStyleBackColor = true;
@@ -226,10 +224,10 @@
             // 
             this.btnPasta.AutoSize = true;
             this.btnPasta.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPasta.Location = new System.Drawing.Point(36, 9);
-            this.btnPasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPasta.Location = new System.Drawing.Point(18, 5);
+            this.btnPasta.Margin = new System.Windows.Forms.Padding(1);
             this.btnPasta.Name = "btnPasta";
-            this.btnPasta.Size = new System.Drawing.Size(131, 49);
+            this.btnPasta.Size = new System.Drawing.Size(70, 27);
             this.btnPasta.TabIndex = 6;
             this.btnPasta.Text = "Pasta";
             this.btnPasta.UseVisualStyleBackColor = true;
@@ -246,10 +244,10 @@
             this.panel1.Controls.Add(this.btnBakes);
             this.panel1.Controls.Add(this.btnSoup);
             this.panel1.Controls.Add(this.btnSandwich);
-            this.panel1.Location = new System.Drawing.Point(954, 173);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(477, 90);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 577);
+            this.panel1.Size = new System.Drawing.Size(152, 300);
             this.panel1.TabIndex = 15;
             // 
             // anytype
@@ -257,10 +255,9 @@
             this.anytype.AutoSize = true;
             this.anytype.Checked = true;
             this.anytype.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anytype.Location = new System.Drawing.Point(36, 506);
-            this.anytype.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.anytype.Location = new System.Drawing.Point(18, 263);
             this.anytype.Name = "anytype";
-            this.anytype.Size = new System.Drawing.Size(182, 49);
+            this.anytype.Size = new System.Drawing.Size(97, 27);
             this.anytype.TabIndex = 15;
             this.anytype.TabStop = true;
             this.anytype.Text = "Anything";
@@ -270,40 +267,36 @@
             // 
             this.lbluser.AutoSize = true;
             this.lbluser.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluser.Location = new System.Drawing.Point(4, 11);
-            this.lbluser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbluser.Location = new System.Drawing.Point(2, 6);
             this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(184, 45);
+            this.lbluser.Size = new System.Drawing.Size(94, 23);
             this.lbluser.TabIndex = 16;
             this.lbluser.Text = "Username:";
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(194, 25);
-            this.lblname.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblname.Location = new System.Drawing.Point(97, 13);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(0, 25);
+            this.lblname.Size = new System.Drawing.Size(0, 13);
             this.lblname.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 125);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(30, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(918, 39);
+            this.label1.Size = new System.Drawing.Size(457, 19);
             this.label1.TabIndex = 18;
             this.label1.Text = "Select Search without anything entered into textbox to view all meals";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1266, 173);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(633, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(332, 77);
+            this.button1.Size = new System.Drawing.Size(166, 40);
             this.button1.TabIndex = 19;
             this.button1.Text = "Request new Meal";
             this.button1.UseVisualStyleBackColor = true;
@@ -313,29 +306,28 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(502, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(251, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 45);
+            this.label2.Size = new System.Drawing.Size(177, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Number of Meals left:";
             // 
             // numMealLbl
             // 
             this.numMealLbl.AutoSize = true;
-            this.numMealLbl.Location = new System.Drawing.Point(684, 23);
-            this.numMealLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.numMealLbl.Location = new System.Drawing.Point(342, 12);
+            this.numMealLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.numMealLbl.Name = "numMealLbl";
-            this.numMealLbl.Size = new System.Drawing.Size(0, 25);
+            this.numMealLbl.Size = new System.Drawing.Size(0, 13);
             this.numMealLbl.TabIndex = 21;
             // 
             // back2Main
             // 
             this.back2Main.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back2Main.Location = new System.Drawing.Point(1266, 436);
-            this.back2Main.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.back2Main.Location = new System.Drawing.Point(633, 227);
             this.back2Main.Name = "back2Main";
-            this.back2Main.Size = new System.Drawing.Size(332, 77);
+            this.back2Main.Size = new System.Drawing.Size(166, 40);
             this.back2Main.TabIndex = 22;
             this.back2Main.Text = "Main Menu";
             this.back2Main.UseVisualStyleBackColor = true;
@@ -344,10 +336,9 @@
             // btnEditInfo
             // 
             this.btnEditInfo.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditInfo.Location = new System.Drawing.Point(1266, 86);
-            this.btnEditInfo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEditInfo.Location = new System.Drawing.Point(633, 45);
             this.btnEditInfo.Name = "btnEditInfo";
-            this.btnEditInfo.Size = new System.Drawing.Size(332, 77);
+            this.btnEditInfo.Size = new System.Drawing.Size(166, 40);
             this.btnEditInfo.TabIndex = 23;
             this.btnEditInfo.Text = "Edit Personal Info";
             this.btnEditInfo.UseVisualStyleBackColor = true;
@@ -355,9 +346,9 @@
             // 
             // CustomerMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1617, 1014);
+            this.ClientSize = new System.Drawing.Size(804, 501);
             this.Controls.Add(this.btnEditInfo);
             this.Controls.Add(this.back2Main);
             this.Controls.Add(this.numMealLbl);
@@ -375,9 +366,9 @@
             this.Controls.Add(this.Logout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1485, 973);
+            this.MaximumSize = new System.Drawing.Size(824, 544);
+            this.MinimumSize = new System.Drawing.Size(824, 544);
             this.Name = "CustomerMenu";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

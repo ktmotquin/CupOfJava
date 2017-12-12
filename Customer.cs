@@ -75,19 +75,19 @@
         // Adds a meal to the next available index of the cart array,
         // and increments the number of meals currently in cart[].
         //----------------------------------------------------------------
-        public void addToCart(Meal m)
+        public void addToCart(Meal m, int i)
         {
             int index = findCartItem(m);
             if (index != -1)
             {
-                cartCounter[index] += 1;
-                ++cartMeals;
+                cartCounter[index] += i;
+                cartMeals += i;
             }
             else
             {
                 cart[next] = m;
-                cartCounter[next++] = 1;
-                ++cartMeals;
+                cartCounter[next++] = i;
+                cartMeals += i;
             }
             
         }
@@ -103,11 +103,12 @@
             if (index != -1)
             { 
                 cartMeals -= cartCounter[index];
-                for (int i = index + 1; i <= cartMeals; i++)
+                for (int i = index + 1; i < cart.Length; i++)
                 {
                     cart[i - 1] = cart[i];
                     cartCounter[i - 1] = cartCounter[i];
                 }
+                --next;
             }
         }
 

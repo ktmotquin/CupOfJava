@@ -155,6 +155,9 @@
             this.Controls.Add(this.addMealAdminBtn);
             this.Controls.Add(this.logoutAdminBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(231, 396);
+            this.MinimumSize = new System.Drawing.Size(231, 396);
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMenu";
