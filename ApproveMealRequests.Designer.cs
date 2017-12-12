@@ -52,7 +52,7 @@
             // Close
             // 
             this.Close.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(552, 742);
+            this.Close.Location = new System.Drawing.Point(461, 609);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(75, 31);
             this.Close.TabIndex = 41;
@@ -63,7 +63,7 @@
             // AddMeal
             // 
             this.AddMeal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMeal.Location = new System.Drawing.Point(112, 742);
+            this.AddMeal.Location = new System.Drawing.Point(461, 461);
             this.AddMeal.Name = "AddMeal";
             this.AddMeal.Size = new System.Drawing.Size(91, 31);
             this.AddMeal.TabIndex = 36;
@@ -170,7 +170,7 @@
             // PrevMeal
             // 
             this.PrevMeal.Font = new System.Drawing.Font("Calibri", 13.8F);
-            this.PrevMeal.Location = new System.Drawing.Point(350, 742);
+            this.PrevMeal.Location = new System.Drawing.Point(461, 535);
             this.PrevMeal.Name = "PrevMeal";
             this.PrevMeal.Size = new System.Drawing.Size(95, 31);
             this.PrevMeal.TabIndex = 37;
@@ -181,7 +181,7 @@
             // NextMeal
             // 
             this.NextMeal.Font = new System.Drawing.Font("Calibri", 13.8F);
-            this.NextMeal.Location = new System.Drawing.Point(451, 742);
+            this.NextMeal.Location = new System.Drawing.Point(461, 572);
             this.NextMeal.Name = "NextMeal";
             this.NextMeal.Size = new System.Drawing.Size(95, 31);
             this.NextMeal.TabIndex = 42;
@@ -192,7 +192,7 @@
             // DeleteRequest
             // 
             this.DeleteRequest.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteRequest.Location = new System.Drawing.Point(210, 742);
+            this.DeleteRequest.Location = new System.Drawing.Point(461, 498);
             this.DeleteRequest.Name = "DeleteRequest";
             this.DeleteRequest.Size = new System.Drawing.Size(134, 31);
             this.DeleteRequest.TabIndex = 43;
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 708);
+            this.ClientSize = new System.Drawing.Size(709, 742);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DeleteRequest);
@@ -241,7 +241,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(725, 726);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(725, 780);
+            this.MinimumSize = new System.Drawing.Size(725, 758);
             this.Name = "ApproveMealRequests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MealRequests";

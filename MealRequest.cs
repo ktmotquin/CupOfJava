@@ -95,7 +95,7 @@ namespace OOAD_Project
                 if (!found)
                 { 
                     enteredInfo = "1\n" + enteredInfo + "\n-1";
-                    System.IO.File.WriteAllText(fileName2, overallText);
+                    System.IO.File.WriteAllText(fileName2, enteredInfo);
                     /*
                     //ID.Clear();
                     MealName.Clear();
