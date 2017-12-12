@@ -63,7 +63,7 @@
             // AddMeal
             // 
             this.AddMeal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMeal.Location = new System.Drawing.Point(113, 742);
+            this.AddMeal.Location = new System.Drawing.Point(112, 742);
             this.AddMeal.Name = "AddMeal";
             this.AddMeal.Size = new System.Drawing.Size(91, 31);
             this.AddMeal.TabIndex = 36;

@@ -17,7 +17,7 @@ namespace OOAD_Project
         private int index;          //
         private Meal currentMeal;   // Current meal being displayed
         private RequestMealQueue rmq = new RequestMealQueue();
-        private bool start;
+
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -27,11 +27,16 @@ namespace OOAD_Project
             {
                 InitializeComponent();
                 index = 0;
-                start = true;
+                pictureBox1.Image = rmq.getimg(index);          // Display Image
+                currentMeal = rmq.sendmeal(index);              // Set current meal to next meal
+                MealName.Text = currentMeal.name();             // Display name
+                Type.Text = currentMeal.mealtype();             // Display type
+                Instructions.Text = currentMeal.instructions(); // Display instructions
+                Description.Text = currentMeal.description();   // Display description
+                Ingredients.Text = currentMeal.ingredients();   // Display ingredients
             }
             else
             {
-                start = false;
                 this.Close();
                 MessageBox.Show("No new meal requests availible");
             }
@@ -143,16 +148,6 @@ namespace OOAD_Project
             Instructions.Text = currentMeal.instructions(); // Display instructions
             Description.Text = currentMeal.description();   // Display description
             Ingredients.Text = currentMeal.ingredients();   // Display ingredients
-        }
-        /// <summary>
-        /// Displays the next requested meal in the list. If pressed when at the 
-        /// end of the list, the first meal requested in the list will be displayed.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public bool needwindow()
-        {
-            return start;
         }
 
         /// <summary>
