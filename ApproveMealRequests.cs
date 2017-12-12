@@ -27,6 +27,7 @@ namespace OOAD_Project
             {
                 InitializeComponent();
                 index = 0;
+                this.Show();
             }
             else
             {
