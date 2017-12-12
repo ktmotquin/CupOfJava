@@ -243,8 +243,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(725, 758);
-            this.MinimumSize = new System.Drawing.Size(725, 758);
+            this.MinimumSize = new System.Drawing.Size(725, 726);
             this.Name = "ApproveMealRequests";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MealRequests";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

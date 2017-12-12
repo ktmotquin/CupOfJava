@@ -39,7 +39,7 @@ namespace OOAD_Project
         /// <returns>Returns true if meal successfully added to the order, false otherwise</returns>
         public bool addToOrder(Meal m)
         {
-            if (cust.getCartCounter()[findIndex(m)] < cust.getNumMeals())
+            if (cust.getCartCounter()[findIndex(m)] <= cust.getNumMeals())
             {
                 selectedItems[++index] = m;
                 cust.setNumMeals(-cust.getCartCounter()[findIndex(m)]);

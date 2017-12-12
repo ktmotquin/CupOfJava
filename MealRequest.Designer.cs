@@ -229,6 +229,7 @@
             this.MaximumSize = new System.Drawing.Size(737, 576);
             this.MinimumSize = new System.Drawing.Size(737, 576);
             this.Name = "MealRequest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MealRequest";
             this.ResumeLayout(false);
             this.PerformLayout();
