@@ -6,6 +6,6 @@ Sarah$password$C$Sarah Higgens$higgenss@uwplatt.edu$12345678910$123 Street$11222
 motquink$123456$A$Keeghan Motquin$motu$1234$10
 asdfasdgas$1234$C$dgasdgasd$gasdfas$asdf$asdf$asdf$asdf$asdf$10
 MOTQUIN$1234$C$asdf$df$asdf$asdf$asdf$asdf$asdf$70
-dan$dan$C$Daniel Zellmer$zellmerd@uwplatt.edu$(920) 360-9811$1200 Southwest Road$1234$123$10/12$300
+dan$dan$C$Daniel Zellmer$zellmerd@uwplatt.edu$(920) 360-9811$1200 Southwest Road$1234$123$10/12$150
 murphyS$SRTM$A$Samantha Murphy$murphysam@uwplatt.edu$1112223333
 -1

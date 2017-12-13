@@ -38,7 +38,7 @@ namespace OOAD_Project
         {
             foreach(String mealName in CartList.CheckedItems)
             {
-                for (int i = 0; i < cust.getCartMeals(); i++)
+                for (int i = 0; i < cust.getCart().Length; i++)
                     if (cust.getCart()[i].name() == mealName)
                     {
                         cust.removeItem(cust.getCart()[i]);
@@ -60,7 +60,7 @@ namespace OOAD_Project
             order = new CartManager(cust);
             foreach (string mealName in CartList.CheckedItems)
             {
-               for (int i = 0; i < cust.getCartMeals(); i++)
+               for (int i = 0; i < cust.getCart().Length; i++)
                {
                   if (cust.getCart()[i] != null)
                   {

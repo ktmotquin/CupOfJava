@@ -34,6 +34,7 @@ namespace OOAD_Project
                 Instructions.Text = currentMeal.instructions(); // Display instructions
                 Description.Text = currentMeal.description();   // Display description
                 Ingredients.Text = currentMeal.ingredients();   // Display ingredients
+                this.Show();
             }
             else
             {
