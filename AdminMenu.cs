@@ -58,10 +58,7 @@ namespace OOAD_Project
         private void ApproveMealRequests_Click(object sender, EventArgs e)
         {
             ApproveMealRequests amr = new ApproveMealRequests();
-            if(amr.needwindow())
-            {
-                amr.Show();
-            }
+            amr.Show();
 
         }
 
