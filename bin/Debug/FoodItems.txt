@@ -22,7 +22,7 @@ bread crumbs~35
 broccoli~56
 butter~55
 canned pumpkin~65
-carrots~173
+carrots~100173
 cavatappi pasta~1
 celery~25
 Cheddar cheese~64
@@ -141,4 +141,5 @@ yellow onions~20
 zucchini~65
 peanut butter~10
 jelly~10
+Dr. Pepper~12000
 -$
