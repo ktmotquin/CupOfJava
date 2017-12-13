@@ -14,6 +14,8 @@ namespace OOAD_Project
 {
     public partial class StatsPage : Form
     {
+        int piegraph = 5;
+        int counter = 0;
         //----------------------------------------------------------------
         // Constructor: Initializes the table for Item Stock and the values 
         //              in the pie chart. 
@@ -108,9 +110,10 @@ namespace OOAD_Project
         {
             string text;
             bool done = false;
+            Meal[] temp = new Meal[200];
             String[] meal = new String[200];
             String[] numOrder = new String[200];
-            int counter = 0;
+            //int counter = 0;
             string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\\OrderStats.txt");
             var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
@@ -124,9 +127,9 @@ namespace OOAD_Project
                         if (!text.Equals("$"))
                         {
                             String[] parts = text.Split('~');      // Breaks the current line into parts
-                            meal[counter] = parts[0];
-                            numOrder[counter] = parts[1];
+                            temp[counter] = new Meal(parts[0], parts[1], "", "", "", "");
                             counter++;
+
                         }
 
                     }
@@ -136,18 +139,39 @@ namespace OOAD_Project
                     }
                 }
             }
-            int piegraph = 5;
-            if(counter < 5)
+            Sort(temp);
+
+            if (counter < piegraph)
             {
                 piegraph = counter;
             }
             for (int i = 0; i < piegraph; i++)
             {
-                pieGraph.Series["Meals"].Points.AddY(numOrder[i]);
-                pieGraph.Series["Meals"].Points[i].Label = meal[i];
+                pieGraph.Series["Meals"].Points.AddY(temp[i].description());
+                pieGraph.Series["Meals"].Points[i].Label = temp[i].name();
                 pieGraph.Series[0]["PieLabelStyle"] = "Disabled";
             }
+        }
+        private void Sort(Meal[] meals)
+        {
+            int i, j;
 
+            for (j = counter - 1; j > 0; j--)
+            {
+                for (i = 0; i < j; i++)
+                {
+                    if (Int32.Parse(meals[i].description()) < Int32.Parse(meals[i + 1].description()))
+                        swap(meals, i, i + 1);
+                }
+            }
+        }
+        private void swap(Meal[] meals, int m, int n)
+        {
+            Meal temporary;
+
+            temporary = meals[m];
+            meals[m] = meals[n];
+            meals[n] = temporary;
         }
     }
 }
