@@ -18,8 +18,6 @@ namespace OOAD_Project
       public CustomerMenu(string username)
       {
          InitializeComponent();
-         //lblname.Text = username;
-         //Sam is testing something here - 11/25/17
          if (username == "administrator")
          {
             lblname.Text = "Administrator";
@@ -44,7 +42,7 @@ namespace OOAD_Project
 
       private void Logout_Click(object sender, EventArgs e)
       {
-         this.Close();   // Close this window
+         this.Close();
       }
 
       public void CustomerMenu_Load(object sender, EventArgs e)
@@ -59,9 +57,7 @@ namespace OOAD_Project
                 cust = new Customer("admin", "xxxx", "xxxx",
             "xxxx", "xxxx", "xxxx", "xxxx",
             "xxxx", "xxxx", 0);
-            }
-
-                
+            }   
         }
 
         private void mealSearch_Click(object sender, EventArgs e)
@@ -132,7 +128,6 @@ namespace OOAD_Project
                             {
                                 searchList.Items.Add(m.sendmeal(index).name());
                             }
-
                         }
                         index++;
                     }
@@ -144,10 +139,8 @@ namespace OOAD_Project
                         if(m.checktype(i, type))
                             searchList.Items.Add(m.sendmeal(i).name());
                     }
-
                 }
             }
-
         }
 
         private void mealView_Click(object sender, EventArgs e)
@@ -158,17 +151,15 @@ namespace OOAD_Project
                 {
                     cust = list.returnCustomer(lblname.Text);
                 }
-            
-            string meal = searchList.SelectedItem.ToString();
-            int index = m.searchList(meal);
-            Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index), m.ScaleImage(m.getimg(index)), cust);            
-            mealForm.Show();
+                string meal = searchList.SelectedItem.ToString();
+                int index = m.searchList(meal);
+                Meal_Screen mealForm = new Meal_Screen(m.sendmeal(index), m.ScaleImage(m.getimg(index)), cust);            
+                mealForm.Show();
             }
             else
             {
                 MessageBox.Show("Select Meal!");
             }
-
         }
 
         private void cartButton_Click(object sender, EventArgs e)
@@ -208,16 +199,14 @@ namespace OOAD_Project
             CreateAcc accountedit = new CreateAcc('E',index );
             accountedit.Show();
             this.Close();
-
         }
 
         private void CustomerMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             if(lblname.Text != "Administrator")
             {
-            list.updateMeals(lblname.Text, Int32.Parse(numMealLbl.Text));
-            }
-
+               list.updateMeals(lblname.Text, Int32.Parse(numMealLbl.Text));
+            }               
         }
     }
 }
